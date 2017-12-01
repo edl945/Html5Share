@@ -8,7 +8,7 @@
     var Event = Laya.Event;
 
     (function () {
-        Laya.init(480, 800);
+        Laya.init(750, 1334);
 
         Laya.stage.alignV = Stage.ALIGN_MIDDLE;
         Laya.stage.alignH = Stage.ALIGN_CENTER;

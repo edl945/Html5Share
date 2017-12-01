@@ -22167,7 +22167,7 @@ declare module laya.ui {
          * @param closeOther 是否关闭其它对话框，若值为ture，则关闭其它的对话框。
          * @param showEffect 是否显示弹出效果
          */
-        open(dialog: Dialog, closeOther: boolean, showEffect: boolean): void;
+        open(dialog: Dialog, closeOther?: boolean, showEffect?: boolean): void;
         /**
          * 执行打开对话框。
          * @param dialog 需要关闭的对象框 <code>Dialog</code> 实例。
@@ -22184,7 +22184,7 @@ declare module laya.ui {
          * @param type	关闭的类型，默认为空
          * @param showEffect 是否显示弹出效果
          */
-        close(dialog: Dialog, type: string, showEffect: boolean): void;
+        close(dialog: Dialog, type?: string, showEffect?: boolean): void;
         /**
          * 执行关闭对话框。
          * @param dialog 需要关闭的对象框 <code>Dialog</code> 实例。
@@ -27645,6 +27645,7 @@ declare module laya.webgl.resource {
         size(w: number, h: number): void;
         release(): void;
         recycle(): void;
+        // static create(w: number, h: number, surfaceFormat?: number, surfaceType?: number, depthStencilFormat?: number, mipMap?: boolean, repeat?: boolean, minFifter?: number, magFifter?: number): RenderTarget2D;
         start(): RenderTarget2D;
         clear(r?: number, g?: number, b?: number, a?: number): void;
         end(): void;
@@ -30261,10 +30262,6 @@ declare module Laya {
     }
     class WebGLContext extends laya.webgl.WebGLContext {
     }
-    class DebugPanel extends laya.debug.DebugPanel {
-    }
-    class DebugTool extends laya.debug.DebugTool {
-    }
 }
 declare class Laya3D {
     /**
@@ -30423,5 +30420,3 @@ declare module laya.debug{
          static init(underGame?:boolean,bgColor?:string):void;
     }
 }
-
-

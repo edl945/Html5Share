@@ -37,9 +37,10 @@
 		var Event = laya.events.Event;
 		main_ui.super(this);
 
-		//btn是编辑器界面设定的，代码里面能直接使用，并且有代码提示
-		this.btnResult.on(Event.CLICK, this, onBtnReadmeClick);
-		this.btnStart.on(Event.CLICK, this, onBtnStartClick);
+		var btnStart = this.btnStart;
+		var btnResult = this.btnResult;
+		var wordspanel = this.topicpanel;
+		var keyboard = this.keyboard;
 
         var userlist = _gamelogic.getUserList();
 		this.render.dataSource = {slider: 50, scroll: 80, progress: 0.2, label: {color: "#ff0000", text: "Hello LayaAir"}};
@@ -51,36 +52,102 @@
 		this.lst_players.array = arr;//给list赋值更改list的显示			
 		this.lst_players.renderHandler = new Handler(this, onListRender);//还可以自定义list渲染方式，可以打开下面注释看一下效果
 
+		keyboard.y = 1337;
+		btnResult.on(Event.CLICK, this, onBtnReadmeClick);
+		btnStart.on(Event.CLICK, this, onBtnStartClick);
 
-		console.log(this.topicpanel);
-		var wordspanel = this.topicpanel;
-		var words = _gamelogic.currentWord().words;
-		wordspanel.pinyin1.text = CC2PY(words[0]);
-		wordspanel.word1.text = words[0];
-		wordspanel.pinyin2.text = "";
-		wordspanel.word2.text = "?";
-		wordspanel.pinyin3.text = "";
-		wordspanel.word3.text = "?";
-		wordspanel.pinyin4.text = "";
-		wordspanel.word4.text = "?";
-
-		//add flash effect on word1
-		var flashwords = "圆缘预案";
-		for(var i=0;i<flashwords.length;i++)
+		switchToReady();
+		
+		function switchToReady()
 		{
-			var newlabel = new Laya.Label(flashwords[i]);
-			
-			//newlabel.x = wordspanel.word1.x;
-			newlabel.y = wordspanel.word1.y;
-			newlabel.width = wordspanel.word1.width;
-			newlabel.height = wordspanel.word1.height;
-			newlabel.fontSize = wordspanel.word1.fontSize;
-			newlabel.align = wordspanel.word1.align;
-			newlabel.valign = wordspanel.word1.valign;
-			newlabel.color = wordspanel.word1.color;
-			wordspanel._word1.addChild(newlabel);
+			wordspanel.pinyin1.text = "";
+			wordspanel.word1.text = "";
+			wordspanel.pinyin2.text = "";
+			wordspanel.word2.text = "";
+			wordspanel.pinyin3.text = "";
+			wordspanel.word3.text = "";
+			wordspanel.pinyin4.text = "";
+			wordspanel.word4.text = "";
 		}
 
+		function activeWordIndex(flashwords, index)
+		{
+			var wordsArray = [wordspanel.word1,wordspanel.word2,wordspanel.word3,wordspanel.word4];
+			wordspanel.flashnode.removeChildren();
+
+			var flasharr = new Array();
+			for(var i=0;i<flashwords.length;i++)
+			{
+				var newlabel = new Laya.Label(flashwords[i]);
+				newlabel.width = wordspanel.flashnode.width;
+				newlabel.height = wordspanel.flashnode.height;
+				newlabel.fontSize = wordspanel.flashnode.fontSize;
+				newlabel.align = wordspanel.flashnode.align;
+				newlabel.valign = wordspanel.flashnode.valign;
+				newlabel.color = wordspanel.flashnode.color;
+				wordspanel.flashnode.addChild(newlabel);
+				flasharr[i]=newlabel;
+			}
+			var framecount = 0;
+			var flashroot = wordspanel.flashnode;
+			function onLoop()
+			{
+				framecount++;
+				var childcount = flasharr.length;
+				var currentIndex = framecount%childcount;
+				console.log("frame "+ currentIndex);
+				for(var i=0;i<childcount;i++)
+				{
+					if(i == currentIndex)
+						flasharr[i].visible = true;
+					else
+						flasharr[i].visible = false;
+				}
+			}
+        	//创建一个帧循环，更新容器位置
+			Laya.timer.frameLoop(10, this, onLoop)
+		}
+
+		function switchToBegin(flashwords)
+		{
+			console.log(this.topicpanel);
+			var words = _gamelogic.currentWord().words;
+			wordspanel.pinyin1.text = CC2PY(words[0]);
+			wordspanel.word1.text = "";
+			wordspanel.pinyin2.text = "";
+			wordspanel.word2.text = "?";
+			wordspanel.pinyin3.text = "";
+			wordspanel.word3.text = "?";
+			wordspanel.pinyin4.text = "";
+			wordspanel.word4.text = "?";
+
+			//add flash effect on word1
+			activeWordIndex(flashwords, 0);
+		}
+
+		var timeinterval = 250;
+		function movePanelToGamemode()
+		{
+			function onTween()
+			{
+				console.log("tween over 1");
+				var flashwords = "圆缘预案";
+				switchToBegin(flashwords);
+			}
+			Tween.to(btnStart,{x:-150},timeinterval,Laya.Ease.cubicOut,Handler.create(this,onTween));
+			Tween.to(btnResult,{x:750},timeinterval,Laya.Ease.cubicOut,Handler.create(this,null));
+			Tween.to(keyboard,{y:1027},timeinterval,Laya.Ease.cubicIn,Handler.create(this,null));
+		}
+		function movePanelToRady()
+		{
+			function onTween()
+			{
+				console.log("tween over 2");
+			}
+			Tween.to(btnStart,{x:235},timeinterval,Laya.Ease.cubicOut,Handler.create(this,onTween));
+			Tween.to(btnResult,{x:434},timeinterval,Laya.Ease.cubicOut,Handler.create(this,null));
+			Tween.to(keyboard,{y:1337},timeinterval,Laya.Ease.cubicIn,Handler.create(this,null));
+		}
 
 		function onBtnReadmeClick()
 		{			
@@ -91,8 +158,9 @@
 
 		function onBtnStartClick()
 		{			
-			Laya.stage.removeChild(this);
-			_parent.showGameUI();
+			//Laya.stage.removeChild(this);
+			//_parent.showGameUI();
+			movePanelToGamemode();
 			console.log("btn start pressed");
 		}
 	}

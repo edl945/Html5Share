@@ -3,7 +3,7 @@
     "type":"View",
     "selectedBox":9,
     "selecteID":142,
-    "props":{"width":480,"sceneColor":"#000000","height":800},
+    "props":{"width":750,"sceneColor":"#000000","height":300},
     "nodeParent":-1,
     "label":"View",
     "isOpen":true,
@@ -14,557 +14,8 @@
     "child":[
         {
             "x":15,
-            "type":"Image",
-            "props":{"y":0,"x":0,"width":484,"skin":"main_ui/panel_bg.png","height":797},
-            "nodeParent":1,
-            "label":"Image",
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":5,
-            "child":[
-                ],
-            "$HIDDEN":true
-        },
-        {
-            "x":15,
             "type":"View",
-            "props":{"y":0,"x":0,"width":486,"height":83},
-            "nodeParent":1,
-            "label":"View",
-            "isOpen":true,
-            "isDirectory":true,
-            "isAniNode":true,
-            "hasChild":true,
-            "compId":7,
-            "child":[
-                {
-                    "x":30,
-                    "type":"Image",
-                    "props":{"y":19,"x":72,"var":"userHead","skin":"main_ui/lilith_logo.png"},
-                    "nodeParent":7,
-                    "label":"Image(userHead)",
-                    "isOpen":true,
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":3,
-                    "child":[
-                        ]
-                },
-                {
-                    "x":30,
-                    "type":"Label",
-                    "props":{"y":35,"x":153,"var":"username","text":"烟花开过要吃甜甜圈","fontSize":28,"color":"#ffffff"},
-                    "nodeParent":7,
-                    "label":"Label(username)",
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":4,
-                    "child":[
-                        ]
-                }],
-            "$HIDDEN":false
-        },
-        {
-            "x":15,
-            "type":"View",
-            "props":{"y":103,"x":0,"width":480,"var":"mainInfo","height":141},
-            "nodeParent":1,
-            "label":"View(mainInfo)",
-            "isOpen":false,
-            "isDirectory":true,
-            "isAniNode":true,
-            "hasChild":true,
-            "compId":8,
-            "child":[
-                {
-                    "type":"Image",
-                    "props":{"y":7,"x":52,"width":69,"skin":"main_ui/lilith_logo.png","height":29},
-                    "nodeParent":8,
-                    "label":"Image",
-                    "isOpen":true,
-                    "isDirectory":true,
-                    "isAniNode":true,
-                    "hasChild":true,
-                    "compId":58,
-                    "child":[
-                        {
-                            "type":"Label",
-                            "props":{"y":2,"width":62,"valign":"middle","text":"ren","height":26,"fontSize":20,"color":"#ffffff","centerX":0,"align":"center"},
-                            "nodeParent":58,
-                            "label":"Label",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":75,
-                            "child":[
-                                ]
-                        }]
-                },
-                {
-                    "type":"Image",
-                    "props":{"y":49,"x":52,"width":68,"skin":"main_ui/lilith_logo.png","height":74},
-                    "nodeParent":8,
-                    "label":"Image",
-                    "isOpen":true,
-                    "isDirectory":true,
-                    "isAniNode":true,
-                    "hasChild":true,
-                    "compId":68,
-                    "child":[
-                        {
-                            "type":"Label",
-                            "props":{"y":5,"width":62,"valign":"middle","text":"人","height":64,"fontSize":25,"color":"#ffffff","centerX":0,"align":"center"},
-                            "nodeParent":68,
-                            "label":"Label",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":78,
-                            "child":[
-                                ]
-                        }]
-                },
-                {
-                    "type":"Image",
-                    "props":{"y":7,"x":154,"width":69,"skin":"main_ui/lilith_logo.png","height":29},
-                    "nodeParent":8,
-                    "label":"Image",
-                    "isOpen":true,
-                    "isDirectory":true,
-                    "isAniNode":true,
-                    "hasChild":true,
-                    "compId":79,
-                    "child":[
-                        {
-                            "type":"Label",
-                            "props":{"y":2,"width":62,"valign":"middle","text":"ren","height":26,"fontSize":20,"color":"#ffffff","centerX":0,"align":"center"},
-                            "nodeParent":79,
-                            "label":"Label",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":81,
-                            "child":[
-                                ]
-                        }]
-                },
-                {
-                    "type":"Image",
-                    "props":{"y":49,"x":154,"width":68,"skin":"main_ui/lilith_logo.png","height":74},
-                    "nodeParent":8,
-                    "label":"Image",
-                    "isOpen":true,
-                    "isDirectory":true,
-                    "isAniNode":true,
-                    "hasChild":true,
-                    "compId":80,
-                    "child":[
-                        {
-                            "type":"Label",
-                            "props":{"y":5,"width":62,"valign":"middle","text":"人","height":64,"fontSize":25,"color":"#ffffff","centerX":0,"align":"center"},
-                            "nodeParent":80,
-                            "label":"Label",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":82,
-                            "child":[
-                                ]
-                        }]
-                },
-                {
-                    "type":"Image",
-                    "props":{"y":7,"x":255,"width":69,"skin":"main_ui/lilith_logo.png","height":29},
-                    "nodeParent":8,
-                    "label":"Image",
-                    "isOpen":true,
-                    "isDirectory":true,
-                    "isAniNode":true,
-                    "hasChild":true,
-                    "compId":83,
-                    "child":[
-                        {
-                            "type":"Label",
-                            "props":{"y":2,"width":62,"valign":"middle","text":"ren","height":26,"fontSize":20,"color":"#ffffff","centerX":0,"align":"center"},
-                            "nodeParent":83,
-                            "label":"Label",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":85,
-                            "child":[
-                                ]
-                        }]
-                },
-                {
-                    "type":"Image",
-                    "props":{"y":49,"x":256,"width":68,"skin":"main_ui/lilith_logo.png","height":74},
-                    "nodeParent":8,
-                    "label":"Image",
-                    "isOpen":true,
-                    "isDirectory":true,
-                    "isAniNode":true,
-                    "hasChild":true,
-                    "compId":84,
-                    "child":[
-                        {
-                            "type":"Label",
-                            "props":{"y":5,"width":62,"valign":"middle","text":"人","height":64,"fontSize":25,"color":"#ffffff","centerX":0,"align":"center"},
-                            "nodeParent":84,
-                            "label":"Label",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":86,
-                            "child":[
-                                ]
-                        }]
-                },
-                {
-                    "type":"Image",
-                    "props":{"y":7,"x":357,"width":69,"skin":"main_ui/lilith_logo.png","height":29},
-                    "nodeParent":8,
-                    "label":"Image",
-                    "isOpen":true,
-                    "isDirectory":true,
-                    "isAniNode":true,
-                    "hasChild":true,
-                    "compId":87,
-                    "child":[
-                        {
-                            "type":"Label",
-                            "props":{"y":2,"width":62,"valign":"middle","text":"ren","height":26,"fontSize":20,"color":"#ffffff","centerX":0,"align":"center"},
-                            "nodeParent":87,
-                            "label":"Label",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":89,
-                            "child":[
-                                ]
-                        }]
-                },
-                {
-                    "type":"Image",
-                    "props":{"y":49,"x":358,"width":68,"skin":"main_ui/lilith_logo.png","height":74},
-                    "nodeParent":8,
-                    "label":"Image",
-                    "isOpen":true,
-                    "isDirectory":true,
-                    "isAniNode":true,
-                    "hasChild":true,
-                    "compId":88,
-                    "child":[
-                        {
-                            "type":"Label",
-                            "props":{"y":5,"width":62,"valign":"middle","text":"人","height":64,"fontSize":25,"color":"#ffffff","centerX":0,"align":"center"},
-                            "nodeParent":88,
-                            "label":"Label",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":90,
-                            "child":[
-                                ]
-                        }]
-                }]
-        },
-        {
-            "x":15,
-            "type":"View",
-            "props":{"y":249,"x":0,"width":480,"height":207},
-            "nodeParent":1,
-            "label":"View",
-            "isOpen":true,
-            "isDirectory":true,
-            "isAniNode":true,
-            "hasChild":true,
-            "compId":91,
-            "child":[
-                {
-                    "x":30,
-                    "type":"Image",
-                    "props":{"y":91,"x":52,"width":69,"skin":"main_ui/lilith_logo.png","height":29},
-                    "nodeParent":91,
-                    "label":"Image",
-                    "isOpen":false,
-                    "isDirectory":true,
-                    "isAniNode":true,
-                    "hasChild":true,
-                    "compId":92,
-                    "child":[
-                        {
-                            "type":"Label",
-                            "props":{"y":2,"width":62,"valign":"middle","text":"ren","height":26,"fontSize":20,"color":"#ffffff","centerX":0,"align":"center"},
-                            "nodeParent":92,
-                            "label":"Label",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":93,
-                            "child":[
-                                ]
-                        },
-                        {
-                            "type":"Image",
-                            "props":{"y":-21,"x":13,"width":40,"skin":"main_ui/arrow.png","height":21},
-                            "nodeParent":92,
-                            "label":"Image",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":110,
-                            "child":[
-                                ]
-                        }]
-                },
-                {
-                    "x":30,
-                    "type":"Image",
-                    "props":{"y":133,"x":52,"width":68,"skin":"main_ui/lilith_logo.png","height":74},
-                    "nodeParent":91,
-                    "label":"Image",
-                    "isOpen":false,
-                    "isDirectory":true,
-                    "isAniNode":true,
-                    "hasChild":true,
-                    "compId":94,
-                    "child":[
-                        {
-                            "type":"Label",
-                            "props":{"y":5,"width":62,"valign":"middle","text":"人","height":64,"fontSize":25,"color":"#ffffff","centerX":0,"align":"center"},
-                            "nodeParent":94,
-                            "label":"Label",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":95,
-                            "child":[
-                                ]
-                        }]
-                },
-                {
-                    "x":30,
-                    "type":"Image",
-                    "props":{"y":91,"x":154,"width":69,"skin":"main_ui/lilith_logo.png","height":29},
-                    "nodeParent":91,
-                    "label":"Image",
-                    "isOpen":false,
-                    "isDirectory":true,
-                    "isAniNode":true,
-                    "hasChild":true,
-                    "compId":96,
-                    "child":[
-                        {
-                            "type":"Image",
-                            "props":{"y":-21,"x":13,"width":40,"skin":"main_ui/arrow.png","height":21},
-                            "nodeParent":96,
-                            "label":"Image",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":111,
-                            "child":[
-                                ]
-                        },
-                        {
-                            "type":"Label",
-                            "props":{"y":2,"width":62,"valign":"middle","text":"ren","height":26,"fontSize":20,"color":"#ffffff","centerX":0,"align":"center"},
-                            "nodeParent":96,
-                            "label":"Label",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":97,
-                            "child":[
-                                ]
-                        }]
-                },
-                {
-                    "x":30,
-                    "type":"Image",
-                    "props":{"y":133,"x":154,"width":68,"skin":"main_ui/lilith_logo.png","height":74},
-                    "nodeParent":91,
-                    "label":"Image",
-                    "isOpen":false,
-                    "isDirectory":true,
-                    "isAniNode":true,
-                    "hasChild":true,
-                    "compId":98,
-                    "child":[
-                        {
-                            "type":"Label",
-                            "props":{"y":5,"width":62,"valign":"middle","text":"？","height":64,"fontSize":25,"color":"#ffffff","centerX":0,"align":"center"},
-                            "nodeParent":98,
-                            "label":"Label",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":99,
-                            "child":[
-                                ]
-                        }]
-                },
-                {
-                    "x":30,
-                    "type":"Image",
-                    "props":{"y":91,"x":255,"width":69,"skin":"main_ui/lilith_logo.png","height":29},
-                    "nodeParent":91,
-                    "label":"Image",
-                    "isOpen":false,
-                    "isDirectory":true,
-                    "isAniNode":true,
-                    "hasChild":true,
-                    "compId":100,
-                    "child":[
-                        {
-                            "type":"Label",
-                            "props":{"y":2,"width":62,"valign":"middle","text":"ren","height":26,"fontSize":20,"color":"#ffffff","centerX":0,"align":"center"},
-                            "nodeParent":100,
-                            "label":"Label",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":101,
-                            "child":[
-                                ]
-                        },
-                        {
-                            "type":"Image",
-                            "props":{"y":-21,"x":13,"width":40,"skin":"main_ui/arrow.png","height":21},
-                            "nodeParent":100,
-                            "label":"Image",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":112,
-                            "child":[
-                                ]
-                        }]
-                },
-                {
-                    "x":30,
-                    "type":"Image",
-                    "props":{"y":133,"x":256,"width":68,"skin":"main_ui/lilith_logo.png","height":74},
-                    "nodeParent":91,
-                    "label":"Image",
-                    "isOpen":false,
-                    "isDirectory":true,
-                    "isAniNode":true,
-                    "hasChild":true,
-                    "compId":102,
-                    "child":[
-                        {
-                            "type":"Label",
-                            "props":{"y":5,"width":62,"valign":"middle","text":"？","height":64,"fontSize":25,"color":"#ffffff","centerX":0,"align":"center"},
-                            "nodeParent":102,
-                            "label":"Label",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":103,
-                            "child":[
-                                ]
-                        }]
-                },
-                {
-                    "x":30,
-                    "type":"Image",
-                    "props":{"y":91,"x":357,"width":69,"skin":"main_ui/lilith_logo.png","height":29},
-                    "nodeParent":91,
-                    "label":"Image",
-                    "isOpen":false,
-                    "isDirectory":true,
-                    "isAniNode":true,
-                    "hasChild":true,
-                    "compId":104,
-                    "child":[
-                        {
-                            "type":"Label",
-                            "props":{"y":2,"width":62,"valign":"middle","text":"ren","height":26,"fontSize":20,"color":"#ffffff","centerX":0,"align":"center"},
-                            "nodeParent":104,
-                            "label":"Label",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":105,
-                            "child":[
-                                ]
-                        },
-                        {
-                            "type":"Image",
-                            "props":{"y":-21,"x":13,"width":40,"skin":"main_ui/arrow.png","height":21},
-                            "nodeParent":104,
-                            "label":"Image",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":113,
-                            "child":[
-                                ],
-                            "$HIDDEN":false
-                        }]
-                },
-                {
-                    "x":30,
-                    "type":"Image",
-                    "props":{"y":133,"x":358,"width":68,"skin":"main_ui/lilith_logo.png","height":74},
-                    "nodeParent":91,
-                    "label":"Image",
-                    "isOpen":false,
-                    "isDirectory":true,
-                    "isAniNode":true,
-                    "hasChild":true,
-                    "compId":106,
-                    "child":[
-                        {
-                            "type":"Label",
-                            "props":{"y":5,"width":62,"valign":"middle","text":"？","height":64,"fontSize":25,"color":"#ffffff","centerX":0,"align":"center"},
-                            "nodeParent":106,
-                            "label":"Label",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":107,
-                            "child":[
-                                ]
-                        }]
-                },
-                {
-                    "x":30,
-                    "type":"Label",
-                    "props":{"y":21,"x":46,"text":"开始计时","fontSize":34,"color":"#ffffff"},
-                    "nodeParent":91,
-                    "label":"Label",
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":108,
-                    "child":[
-                        ]
-                },
-                {
-                    "x":30,
-                    "type":"Label",
-                    "props":{"y":19,"x":300,"width":138,"valign":"middle","text":"1","stroke":3,"fontSize":34,"color":"#ffffff","align":"right"},
-                    "nodeParent":91,
-                    "label":"Label",
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":109,
-                    "child":[
-                        ]
-                }],
-            "$HIDDEN":false
-        },
-        {
-            "x":15,
-            "type":"View",
-            "props":{"y":582,"x":5,"width":471,"var":"keyboard","sceneColor":"#a12725","height":195},
+            "props":{"y":0,"x":0,"width":750,"var":"keyboard","sceneColor":"#a12725","height":300},
             "nodeParent":1,
             "label":"View(keyboard)",
             "isOpen":true,
@@ -576,7 +27,7 @@
                 {
                     "x":30,
                     "type":"Button",
-                    "props":{"y":12,"x":5,"width":36,"var":"btn_q","skin":"main_ui/btn_key.png","label":"Q","height":50},
+                    "props":{"y":70,"x":132,"width":36,"var":"btn_q","skin":"main_ui/btn_key.png","label":"Q","height":50},
                     "nodeParent":9,
                     "label":"Button(btn_q)",
                     "isDirectory":false,
@@ -590,7 +41,7 @@
                 {
                     "x":30,
                     "type":"Button",
-                    "props":{"y":12,"x":52,"width":36,"var":"btn_w","skin":"main_ui/btn_key.png","label":"W","height":50},
+                    "props":{"y":70,"x":179,"width":36,"var":"btn_w","skin":"main_ui/btn_key.png","label":"W","height":50},
                     "nodeParent":9,
                     "label":"Button(btn_w)",
                     "isOpen":true,
@@ -605,7 +56,7 @@
                 {
                     "x":30,
                     "type":"Button",
-                    "props":{"y":12,"x":99,"width":36,"var":"btn_e","skin":"main_ui/btn_key.png","label":"E","height":50},
+                    "props":{"y":70,"x":226,"width":36,"var":"btn_e","skin":"main_ui/btn_key.png","label":"E","height":50},
                     "nodeParent":9,
                     "label":"Button(btn_e)",
                     "isDirectory":false,
@@ -619,7 +70,7 @@
                 {
                     "x":30,
                     "type":"Button",
-                    "props":{"y":12,"x":146,"width":36,"var":"btn_r","skin":"main_ui/btn_key.png","label":"R","height":50},
+                    "props":{"y":70,"x":273,"width":36,"var":"btn_r","skin":"main_ui/btn_key.png","label":"R","height":50},
                     "nodeParent":9,
                     "label":"Button(btn_r)",
                     "isDirectory":false,
@@ -633,7 +84,7 @@
                 {
                     "x":30,
                     "type":"Button",
-                    "props":{"y":12,"x":193,"width":36,"var":"btn_t","skin":"main_ui/btn_key.png","label":"T","height":50},
+                    "props":{"y":70,"x":320,"width":36,"var":"btn_t","skin":"main_ui/btn_key.png","label":"T","height":50},
                     "nodeParent":9,
                     "label":"Button(btn_t)",
                     "isDirectory":false,
@@ -647,7 +98,7 @@
                 {
                     "x":30,
                     "type":"Button",
-                    "props":{"y":12,"x":240,"width":36,"var":"btn_y","skin":"main_ui/btn_key.png","label":"Y","height":50},
+                    "props":{"y":70,"x":367,"width":36,"var":"btn_y","skin":"main_ui/btn_key.png","label":"Y","height":50},
                     "nodeParent":9,
                     "label":"Button(btn_y)",
                     "isDirectory":false,
@@ -661,7 +112,7 @@
                 {
                     "x":30,
                     "type":"Button",
-                    "props":{"y":12,"x":287,"width":36,"var":"btn_u","skin":"main_ui/btn_key.png","label":"U","height":50},
+                    "props":{"y":70,"x":414,"width":36,"var":"btn_u","skin":"main_ui/btn_key.png","label":"U","height":50},
                     "nodeParent":9,
                     "label":"Button(btn_u)",
                     "isDirectory":false,
@@ -675,7 +126,7 @@
                 {
                     "x":30,
                     "type":"Button",
-                    "props":{"y":12,"x":334,"width":36,"var":"btn_i","skin":"main_ui/btn_key.png","label":"I","height":50},
+                    "props":{"y":70,"x":461,"width":36,"var":"btn_i","skin":"main_ui/btn_key.png","label":"I","height":50},
                     "nodeParent":9,
                     "label":"Button(btn_i)",
                     "isDirectory":false,
@@ -689,7 +140,7 @@
                 {
                     "x":30,
                     "type":"Button",
-                    "props":{"y":12,"x":381,"width":36,"var":"btn_o","skin":"main_ui/btn_key.png","label":"O","height":50},
+                    "props":{"y":70,"x":508,"width":36,"var":"btn_o","skin":"main_ui/btn_key.png","label":"O","height":50},
                     "nodeParent":9,
                     "label":"Button(btn_o)",
                     "isDirectory":false,
@@ -703,7 +154,7 @@
                 {
                     "x":30,
                     "type":"Button",
-                    "props":{"y":12,"x":428,"width":36,"var":"btn_p","skin":"main_ui/btn_key.png","label":"P","height":50},
+                    "props":{"y":70,"x":555,"width":36,"var":"btn_p","skin":"main_ui/btn_key.png","label":"P","height":50},
                     "nodeParent":9,
                     "label":"Button(btn_p)",
                     "isDirectory":false,
@@ -717,7 +168,7 @@
                 {
                     "x":30,
                     "type":"Button",
-                    "props":{"y":72,"x":18,"width":36,"var":"btn_a","skin":"main_ui/btn_key.png","label":"A","height":50},
+                    "props":{"y":130,"x":145,"width":36,"var":"btn_a","skin":"main_ui/btn_key.png","label":"A","height":50},
                     "nodeParent":9,
                     "label":"Button(btn_a)",
                     "isDirectory":false,
@@ -731,7 +182,7 @@
                 {
                     "x":30,
                     "type":"Button",
-                    "props":{"y":72,"x":65,"width":36,"var":"btn_s","skin":"main_ui/btn_key.png","label":"S","height":50},
+                    "props":{"y":130,"x":192,"width":36,"var":"btn_s","skin":"main_ui/btn_key.png","label":"S","height":50},
                     "nodeParent":9,
                     "label":"Button(btn_s)",
                     "isOpen":true,
@@ -746,7 +197,7 @@
                 {
                     "x":30,
                     "type":"Button",
-                    "props":{"y":72,"x":112,"width":36,"var":"btn_d","skin":"main_ui/btn_key.png","label":"D","height":50},
+                    "props":{"y":130,"x":239,"width":36,"var":"btn_d","skin":"main_ui/btn_key.png","label":"D","height":50},
                     "nodeParent":9,
                     "label":"Button(btn_d)",
                     "isDirectory":false,
@@ -760,7 +211,7 @@
                 {
                     "x":30,
                     "type":"Button",
-                    "props":{"y":72,"x":159,"width":36,"var":"btn_f","skin":"main_ui/btn_key.png","label":"F","height":50},
+                    "props":{"y":130,"x":286,"width":36,"var":"btn_f","skin":"main_ui/btn_key.png","label":"F","height":50},
                     "nodeParent":9,
                     "label":"Button(btn_f)",
                     "isDirectory":false,
@@ -774,7 +225,7 @@
                 {
                     "x":30,
                     "type":"Button",
-                    "props":{"y":72,"x":206,"width":36,"var":"btn_g","skin":"main_ui/btn_key.png","label":"G","height":50},
+                    "props":{"y":130,"x":333,"width":36,"var":"btn_g","skin":"main_ui/btn_key.png","label":"G","height":50},
                     "nodeParent":9,
                     "label":"Button(btn_g)",
                     "isDirectory":false,
@@ -788,7 +239,7 @@
                 {
                     "x":30,
                     "type":"Button",
-                    "props":{"y":72,"x":253,"width":36,"var":"btn_h","skin":"main_ui/btn_key.png","label":"H","height":50},
+                    "props":{"y":130,"x":380,"width":36,"var":"btn_h","skin":"main_ui/btn_key.png","label":"H","height":50},
                     "nodeParent":9,
                     "label":"Button(btn_h)",
                     "isDirectory":false,
@@ -802,7 +253,7 @@
                 {
                     "x":30,
                     "type":"Button",
-                    "props":{"y":72,"x":300,"width":36,"var":"btn_j","skin":"main_ui/btn_key.png","label":"J","height":50},
+                    "props":{"y":130,"x":427,"width":36,"var":"btn_j","skin":"main_ui/btn_key.png","label":"J","height":50},
                     "nodeParent":9,
                     "label":"Button(btn_j)",
                     "isDirectory":false,
@@ -816,7 +267,7 @@
                 {
                     "x":30,
                     "type":"Button",
-                    "props":{"y":72,"x":347,"width":36,"var":"btn_k","skin":"main_ui/btn_key.png","label":"K","height":50},
+                    "props":{"y":130,"x":474,"width":36,"var":"btn_k","skin":"main_ui/btn_key.png","label":"K","height":50},
                     "nodeParent":9,
                     "label":"Button(btn_k)",
                     "isDirectory":false,
@@ -830,7 +281,7 @@
                 {
                     "x":30,
                     "type":"Button",
-                    "props":{"y":72,"x":394,"width":36,"var":"btn_l","skin":"main_ui/btn_key.png","label":"L","height":50},
+                    "props":{"y":130,"x":521,"width":36,"var":"btn_l","skin":"main_ui/btn_key.png","label":"L","height":50},
                     "nodeParent":9,
                     "label":"Button(btn_l)",
                     "isDirectory":false,
@@ -844,7 +295,7 @@
                 {
                     "x":30,
                     "type":"Button",
-                    "props":{"y":132,"x":355,"width":49,"var":"btn_del","skin":"main_ui/btn_key.png","labelColors":"#ff0000","label":"DEL","height":49},
+                    "props":{"y":190,"x":482,"width":49,"var":"btn_del","skin":"main_ui/btn_key.png","labelColors":"#ff0000","label":"DEL","height":49},
                     "nodeParent":9,
                     "label":"Button(btn_del)",
                     "isDirectory":false,
@@ -858,7 +309,7 @@
                 {
                     "x":30,
                     "type":"Button",
-                    "props":{"y":132,"x":26,"width":36,"var":"btn_z","skin":"main_ui/btn_key.png","label":"Z","height":50},
+                    "props":{"y":190,"x":153,"width":36,"var":"btn_z","skin":"main_ui/btn_key.png","label":"Z","height":50},
                     "nodeParent":9,
                     "label":"Button(btn_z)",
                     "isDirectory":false,
@@ -872,7 +323,7 @@
                 {
                     "x":30,
                     "type":"Button",
-                    "props":{"y":132,"x":73,"width":36,"var":"btn_x","skin":"main_ui/btn_key.png","label":"X","height":50},
+                    "props":{"y":190,"x":200,"width":36,"var":"btn_x","skin":"main_ui/btn_key.png","label":"X","height":50},
                     "nodeParent":9,
                     "label":"Button(btn_x)",
                     "isOpen":true,
@@ -887,7 +338,7 @@
                 {
                     "x":30,
                     "type":"Button",
-                    "props":{"y":132,"x":120,"width":36,"var":"btn_c","skin":"main_ui/btn_key.png","label":"C","height":50},
+                    "props":{"y":190,"x":247,"width":36,"var":"btn_c","skin":"main_ui/btn_key.png","label":"C","height":50},
                     "nodeParent":9,
                     "label":"Button(btn_c)",
                     "isDirectory":false,
@@ -901,7 +352,7 @@
                 {
                     "x":30,
                     "type":"Button",
-                    "props":{"y":132,"x":167,"width":36,"var":"btn_v","skin":"main_ui/btn_key.png","label":"Ü","height":50},
+                    "props":{"y":190,"x":294,"width":36,"var":"btn_v","skin":"main_ui/btn_key.png","label":"Ü","height":50},
                     "nodeParent":9,
                     "label":"Button(btn_v)",
                     "isDirectory":false,
@@ -915,7 +366,7 @@
                 {
                     "x":30,
                     "type":"Button",
-                    "props":{"y":132,"x":214,"width":36,"var":"btn_b","skin":"main_ui/btn_key.png","label":"B","height":50},
+                    "props":{"y":190,"x":341,"width":36,"var":"btn_b","skin":"main_ui/btn_key.png","label":"B","height":50},
                     "nodeParent":9,
                     "label":"Button(btn_b)",
                     "isDirectory":false,
@@ -929,7 +380,7 @@
                 {
                     "x":30,
                     "type":"Button",
-                    "props":{"y":132,"x":261,"width":36,"var":"btn_N","skin":"main_ui/btn_key.png","label":"N","height":50},
+                    "props":{"y":190,"x":388,"width":36,"var":"btn_N","skin":"main_ui/btn_key.png","label":"N","height":50},
                     "nodeParent":9,
                     "label":"Button(btn_N)",
                     "isDirectory":false,
@@ -943,7 +394,7 @@
                 {
                     "x":30,
                     "type":"Button",
-                    "props":{"y":132,"x":308,"width":36,"var":"btn_M","skin":"main_ui/btn_key.png","label":"M","height":50},
+                    "props":{"y":190,"x":435,"width":36,"var":"btn_M","skin":"main_ui/btn_key.png","label":"M","height":50},
                     "nodeParent":9,
                     "label":"Button(btn_M)",
                     "isDirectory":false,
@@ -957,7 +408,7 @@
                 {
                     "x":30,
                     "type":"Button",
-                    "props":{"y":132,"x":415,"width":49,"var":"btn_ok","skin":"main_ui/btn_key.png","labelColors":"#0000ff","label":"OK","height":50},
+                    "props":{"y":190,"x":542,"width":49,"var":"btn_ok","skin":"main_ui/btn_key.png","labelColors":"#0000ff","label":"OK","height":50},
                     "nodeParent":9,
                     "label":"Button(btn_ok)",
                     "isDirectory":false,
@@ -969,19 +420,6 @@
                     "$LOCKED":false
                 }],
             "$LOCKED":false
-        },
-        {
-            "x":15,
-            "type":"Button",
-            "props":{"y":12,"x":427,"width":36,"var":"btnReturn","skin":"main_ui/btn_return.png","labelSize":15,"label":"返回","height":53},
-            "nodeParent":1,
-            "label":"Button(btnReturn)",
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":114,
-            "child":[
-                ]
         }],
     "animations":[
         {
