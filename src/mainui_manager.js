@@ -43,6 +43,8 @@
 		var keyboard = this.keyboard;
 		var panelSuccess =this.popup_success;
 		var panelFailed = this.popup_overtime;
+		var focusedPinyin = null;
+		var currentFocusIndex = 0;
 
         var userlist = _gamelogic.getUserList();
 		this.render.dataSource = {slider: 50, scroll: 80, progress: 0.2, label: {color: "#ff0000", text: "Hello LayaAir"}};
@@ -61,6 +63,8 @@
 
 		btnResult.on(Event.CLICK, this, onBtnReadmeClick);
 		btnStart.on(Event.CLICK, this, onBtnStartClick);
+
+		registerKeyboard();
 
 		switchToReady();
 		
@@ -101,7 +105,7 @@
 				framecount++;
 				var childcount = flasharr.length;
 				var currentIndex = framecount%childcount;
-				console.log("frame "+ currentIndex);
+				//console.log("frame "+ currentIndex);
 				for(var i=0;i<childcount;i++)
 				{
 					if(i == currentIndex)
@@ -118,6 +122,9 @@
 		{
 			console.log(this.topicpanel);
 			var words = _gamelogic.currentWord().words;
+
+			//add flash effect on word1
+			activeWordIndex(flashwords, 0);
 			wordspanel.pinyin1.text = CC2PY(words[0]);
 			wordspanel.word1.text = "";
 			wordspanel.pinyin2.text = "";
@@ -127,8 +134,28 @@
 			wordspanel.pinyin4.text = "";
 			wordspanel.word4.text = "?";
 
-			//add flash effect on word1
-			activeWordIndex(flashwords, 0);
+			moveFocus(currentFocusIndex);
+		}
+
+		function moveFocus(index)
+		{
+			var pinyinarrowcells = [
+				wordspanel.pinyin_arr1,
+				wordspanel.pinyin_arr2,
+				wordspanel.pinyin_arr3,
+				wordspanel.pinyin_arr4
+			];
+			var pinyincells = [
+				wordspanel.pinyin1,
+				wordspanel.pinyin2,
+				wordspanel.pinyin3,
+				wordspanel.pinyin4
+			];
+			for(var i=0;i<pinyinarrowcells.length;i++)
+			{
+				pinyinarrowcells[i].visible = (i==index);
+			}
+			focusedPinyin = pinyincells[index];
 		}
 
 		var timeinterval = 250;
@@ -168,6 +195,69 @@
 			//_parent.showGameUI();
 			movePanelToGamemode();
 			console.log("btn start pressed");
+		}
+
+		function registerKeyboard()
+		{
+			function onKeyEnter(sendEvent)
+			{
+				console.log("Key: " + sendEvent.target.label);
+				if (focusedPinyin != null)
+				{
+					focusedPinyin.text = focusedPinyin.text + sendEvent.target.label;
+				}
+			}
+			function onDelWords()
+			{
+				console.log("Key: del");
+				if (focusedPinyin != null)
+				{
+					var newwords ="";
+					for(var i=0;i<focusedPinyin.text.length-1;i++)
+					newwords = newwords + focusedPinyin.text[i];
+					focusedPinyin.text = newwords;
+				}
+			}
+			function onRetun()
+			{
+				console.log("Key: ok");
+				if(currentFocusIndex < 3)
+					currentFocusIndex ++;
+				else
+				{
+					panelSuccess.visible = true;
+				}
+				moveFocus(currentFocusIndex);
+			}
+			keyboard.btn_a.on(Event.CLICK, this, onKeyEnter);
+			keyboard.btn_b.on(Event.CLICK, this, onKeyEnter);
+			keyboard.btn_c.on(Event.CLICK, this, onKeyEnter);
+			keyboard.btn_d.on(Event.CLICK, this, onKeyEnter);
+			keyboard.btn_e.on(Event.CLICK, this, onKeyEnter);
+			keyboard.btn_f.on(Event.CLICK, this, onKeyEnter);
+			keyboard.btn_g.on(Event.CLICK, this, onKeyEnter);
+			keyboard.btn_h.on(Event.CLICK, this, onKeyEnter);
+			keyboard.btn_i.on(Event.CLICK, this, onKeyEnter);
+			keyboard.btn_j.on(Event.CLICK, this, onKeyEnter);
+			keyboard.btn_k.on(Event.CLICK, this, onKeyEnter);
+			keyboard.btn_l.on(Event.CLICK, this, onKeyEnter);
+			keyboard.btn_m.on(Event.CLICK, this, onKeyEnter);
+			keyboard.btn_n.on(Event.CLICK, this, onKeyEnter);
+			keyboard.btn_o.on(Event.CLICK, this, onKeyEnter);
+			keyboard.btn_p.on(Event.CLICK, this, onKeyEnter);
+			keyboard.btn_q.on(Event.CLICK, this, onKeyEnter);
+			keyboard.btn_r.on(Event.CLICK, this, onKeyEnter);
+			keyboard.btn_s.on(Event.CLICK, this, onKeyEnter);
+			keyboard.btn_t.on(Event.CLICK, this, onKeyEnter);
+			keyboard.btn_u.on(Event.CLICK, this, onKeyEnter);
+			keyboard.btn_v.on(Event.CLICK, this, onKeyEnter);
+			keyboard.btn_w.on(Event.CLICK, this, onKeyEnter);
+			keyboard.btn_x.on(Event.CLICK, this, onKeyEnter);
+			keyboard.btn_y.on(Event.CLICK, this, onKeyEnter);
+			keyboard.btn_z.on(Event.CLICK, this, onKeyEnter);
+
+			keyboard.btn_del.on(Event.CLICK, this, onDelWords);
+			keyboard.btn_ok.on(Event.CLICK, this, onRetun);
 		}
 	}
 
