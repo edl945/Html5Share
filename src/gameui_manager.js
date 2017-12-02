@@ -40,6 +40,7 @@
 		{
 			Laya.stage.addChild(new game_ui());
 		}
+		Laya.loader.load("res/atlas/pic.json", Handler.create(this, null), null, Loader.ATLAS);
 		Laya.loader.load("res/atlas/main_ui.json", Handler.create(this, onAssetLoaded), null, Loader.ATLAS);
     }
 })();
