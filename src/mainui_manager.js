@@ -41,6 +41,8 @@
 		var btnResult = this.btnResult;
 		var wordspanel = this.topicpanel;
 		var keyboard = this.keyboard;
+		var panelSuccess =this.popup_success;
+		var panelFailed = this.popup_overtime;
 
         var userlist = _gamelogic.getUserList();
 		this.render.dataSource = {slider: 50, scroll: 80, progress: 0.2, label: {color: "#ff0000", text: "Hello LayaAir"}};
@@ -53,6 +55,10 @@
 		this.lst_players.renderHandler = new Handler(this, onListRender);//还可以自定义list渲染方式，可以打开下面注释看一下效果
 
 		keyboard.y = 1337;
+		panelFailed.visible = false;
+		panelSuccess.visible = false;
+
+
 		btnResult.on(Event.CLICK, this, onBtnReadmeClick);
 		btnStart.on(Event.CLICK, this, onBtnStartClick);
 
@@ -136,7 +142,7 @@
 			}
 			Tween.to(btnStart,{x:-150},timeinterval,Laya.Ease.cubicOut,Handler.create(this,onTween));
 			Tween.to(btnResult,{x:750},timeinterval,Laya.Ease.cubicOut,Handler.create(this,null));
-			Tween.to(keyboard,{y:1027},timeinterval,Laya.Ease.cubicIn,Handler.create(this,null));
+			Tween.to(keyboard,{y:911},timeinterval,Laya.Ease.cubicIn,Handler.create(this,null));
 		}
 		function movePanelToRady()
 		{
@@ -183,6 +189,8 @@
 		{
 			Laya.stage.addChild(new main_ui());
 		}
+		
+		Laya.loader.load("res/atlas/pic.json", Handler.create(this, null), null, Loader.ATLAS);
 		Laya.loader.load("res/atlas/main_ui.json", Handler.create(this, onAssetLoaded), null, Loader.ATLAS);
     }
 })();

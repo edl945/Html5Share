@@ -1,8 +1,8 @@
 {
     "x":0,
     "type":"View",
-    "selectedBox":176,
-    "selecteID":187,
+    "selectedBox":1,
+    "selecteID":13,
     "props":{"width":750,"sceneColor":"#000000","height":1334},
     "nodeParent":-1,
     "label":"View",
@@ -15,7 +15,7 @@
         {
             "x":15,
             "type":"Panel",
-            "props":{"y":696,"x":0,"width":750,"var":"pan_mytopic","height":635},
+            "props":{"y":550,"x":-1,"width":750,"var":"pan_mytopic","height":374},
             "nodeParent":1,
             "label":"Panel(pan_mytopic)",
             "isOpen":true,
@@ -343,7 +343,7 @@
             "x":15,
             "type":"UIView",
             "source":"game_ui.ui",
-            "props":{"y":915,"x":0,"width":750,"var":"keyboard","height":419},
+            "props":{"y":911,"x":3,"width":750,"var":"keyboard","height":419},
             "nodeParent":1,
             "label":"UIView(keyboard)",
             "isDirectory":false,
@@ -360,14 +360,13 @@
             "props":{"var":"popup_success"},
             "nodeParent":1,
             "label":"View(popup_success)",
-            "isOpen":true,
+            "isOpen":false,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":173,
             "child":[
                 {
-                    "x":30,
                     "type":"Image",
                     "props":{"y":58,"x":53,"skin":"pic/popup_success.png"},
                     "nodeParent":173,
@@ -381,7 +380,6 @@
                     "$HIDDEN":false
                 },
                 {
-                    "x":30,
                     "type":"Button",
                     "props":{"y":1112,"x":71,"width":286,"var":"btn_share","labelSize":30,"labelFont":"SimSun","labelColors":"#ffffff","labelBold":true,"label":"邀请好友答题","height":99},
                     "nodeParent":173,
@@ -393,7 +391,6 @@
                     "compId":179,
                     "child":[
                         {
-                            "x":45,
                             "type":"Image",
                             "props":{"y":0,"x":0,"skin":"pic/button_red.png"},
                             "nodeParent":179,
@@ -408,7 +405,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Button",
                     "props":{"y":1112,"x":410,"width":286,"var":"btn_rule","labelSize":30,"labelColors":"#ffffff","labelBold":true,"label":"规则说明","height":99},
                     "nodeParent":173,
@@ -420,7 +416,6 @@
                     "compId":180,
                     "child":[
                         {
-                            "x":45,
                             "type":"Image",
                             "props":{"skin":"pic/button_red.png"},
                             "nodeParent":180,
@@ -441,14 +436,13 @@
             "props":{"y":10,"x":10,"var":"popup_overtime"},
             "nodeParent":1,
             "label":"View(popup_overtime)",
-            "isOpen":true,
+            "isOpen":false,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":176,
             "child":[
                 {
-                    "x":30,
                     "type":"Image",
                     "props":{"y":52,"x":66,"skin":"pic/popup_overtime.png"},
                     "nodeParent":176,
@@ -462,7 +456,6 @@
                     "$HIDDEN":false
                 },
                 {
-                    "x":30,
                     "type":"Button",
                     "props":{"y":1112,"x":71,"width":286,"labelSize":30,"labelFont":"SimSun","labelColors":"#ffffff","labelBold":true,"label":"    向朋友求助","height":99},
                     "nodeParent":176,
@@ -474,7 +467,6 @@
                     "compId":186,
                     "child":[
                         {
-                            "x":45,
                             "type":"Image",
                             "props":{"y":0,"x":0,"skin":"pic/button_red.png"},
                             "nodeParent":186,
@@ -488,7 +480,6 @@
                                 ]
                         },
                         {
-                            "x":45,
                             "type":"Image",
                             "props":{"y":21,"x":24,"width":49,"skin":"pic/icon_monents.png","height":49},
                             "nodeParent":186,
@@ -502,7 +493,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Button",
                     "props":{"y":1112,"x":410,"width":286,"labelSize":30,"labelColors":"#ffffff","labelBold":true,"label":"规则说明","height":99},
                     "nodeParent":176,
@@ -514,7 +504,6 @@
                     "compId":187,
                     "child":[
                         {
-                            "x":45,
                             "type":"Image",
                             "props":{"skin":"pic/button_red.png"},
                             "nodeParent":187,
@@ -527,7 +516,7 @@
                                 ]
                         }]
                 }],
-            "$HIDDEN":false
+            "$HIDDEN":true
         }],
     "animations":[
         {
