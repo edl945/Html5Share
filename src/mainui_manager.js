@@ -64,6 +64,7 @@
 		var keyboard = this.keyboard;
 		var panelSuccess =this.popup_success;
 		var panelFailed = this.popup_overtime;
+		var countDownNumber = this.countDownNumber;
 		var focusedPinyin = null;
 		var currentFocusIndex = 1;
 
@@ -81,6 +82,7 @@
 		keyboard.y = 1337;
 		panelFailed.visible = false;
 		panelSuccess.visible = false;
+		countDownNumber.visible = false;
 		this.result_title.font = defaultFont;
 
 		btnRule.on(Event.CLICK, this, onBtnReadmeClick);
@@ -101,6 +103,18 @@
 			wordspanel.pinyin4.text = "";
 			wordspanel.word4.text = "";
 			formatWordPanel(wordspanel);
+		}
+		var toastpanel = this.toast;
+		var toastmsg = this.toastMsg;
+		function showToastMsg(msg)
+		{
+			toastpanel.visible = true;
+			toastmsg.text = msg;
+			function hideToast()
+			{
+				toastpanel.visible = false;
+			}
+			Laya.timer.once(1000,this,hideToast);
 		}
 
 		var wordsArray = [wordspanel.word1,wordspanel.word2,wordspanel.word3,wordspanel.word4];
@@ -188,6 +202,25 @@
 			focusedPinyin = pinyincells[index];
 		}
 
+		var countdownleft = 30;
+		var countloopfunc = null;
+		function startCountDown()
+		{
+			countdownleft = 30;
+			countloopfunc = function onLoop()
+			{
+				countdownleft--;
+				countDownNumber.text = countdownleft.toString();
+				if(countdownleft == 0)
+				{
+					panelFailed.visible = true;
+					Laya.timer.clear(this, countloopfunc)
+				}
+			}
+        	//创建一个帧循环，更新容器位置
+			Laya.timer.frameLoop(30, this, countloopfunc)
+		}
+
 		var timeinterval = 250;
 		function movePanelToGamemode()
 		{
@@ -203,6 +236,8 @@
 					for(var i=0;i<arr.length;i++)
 						flashwords += arr[i];
 					switchToBegin(flashwords, lastPInyin);
+
+					startCountDown();
 				}
 			}
 			Tween.to(btnBtnPanel,{y:1337},timeinterval,Laya.Ease.cubicOut,Handler.create(this,onTween));
@@ -240,7 +275,10 @@
 				console.log("Key: " + sendEvent.target.label);
 				if (focusedPinyin != null)
 				{
-					focusedPinyin.text = focusedPinyin.text + sendEvent.target.label;
+					if(focusedPinyin.text.length > 5)
+						showToastMsg("你不觉得这拼音太长了么");
+					else
+						focusedPinyin.text = focusedPinyin.text + sendEvent.target.label;
 				}
 			}
 			function onDelWords()
@@ -259,7 +297,8 @@
 				console.log("Key: ok");
 				if(pinyincells[currentFocusIndex].text.trim().length == 0)
 				{
-					console.log(currentFocusIndex + "！不能为空");				
+					console.log(currentFocusIndex + "！不能为空");			
+					showToastMsg("请输入拼音后再点OK！");	
 				}
 				else
 				{								
@@ -291,11 +330,14 @@
 							currentFocusIndex ++;
 						else
 						{
+							Laya.timer.clear(this, countloopfunc);
 							panelSuccess.visible = true;
 						}
 						unflashTheWord(0);
 						moveFocus(currentFocusIndex);
 					}
+					else
+						showToastMsg("这拼音不对，删了重来！");
 				}								
 			}
 			keyboard.btn_a.on(Event.CLICK, this, onKeyEnter);

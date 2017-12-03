@@ -1,8 +1,8 @@
 {
     "x":0,
     "type":"View",
-    "selectedBox":13,
-    "selecteID":21,
+    "selectedBox":29,
+    "selecteID":200,
     "props":{"width":750,"sceneColor":"#000000","height":1334},
     "nodeParent":-1,
     "label":"View",
@@ -68,18 +68,19 @@
                 {
                     "x":30,
                     "type":"View",
-                    "props":{"y":86,"x":1,"width":746,"height":165},
+                    "props":{"y":29,"x":0,"width":746,"height":165},
                     "nodeParent":13,
                     "label":"View",
-                    "isOpen":false,
+                    "isOpen":true,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
                     "compId":28,
                     "child":[
                         {
+                            "x":45,
                             "type":"Image",
-                            "props":{"y":14,"x":16,"width":23,"skin":"main_ui/arrow.png","height":23},
+                            "props":{"y":5,"x":29,"width":23,"skin":"main_ui/arrow.png","height":23},
                             "nodeParent":28,
                             "label":"Image",
                             "isOpen":true,
@@ -89,14 +90,28 @@
                             "compId":29,
                             "child":[
                                 {
+                                    "x":60,
                                     "type":"Label",
-                                    "props":{"y":4,"x":27,"text":"你的答案","fontSize":16,"color":"#ffffff"},
+                                    "props":{"y":-3,"x":27,"text":"你的答案","fontSize":30,"color":"#030303"},
                                     "nodeParent":29,
                                     "label":"Label",
                                     "isDirectory":false,
                                     "isAniNode":true,
                                     "hasChild":false,
                                     "compId":30,
+                                    "child":[
+                                        ]
+                                },
+                                {
+                                    "x":60,
+                                    "type":"Label",
+                                    "props":{"y":3,"x":615,"width":66,"var":"countDownNumber","valign":"middle","text":"30","height":62,"fontSize":45,"color":"#000000","align":"center"},
+                                    "nodeParent":29,
+                                    "label":"Label(countDownNumber)",
+                                    "isDirectory":false,
+                                    "isAniNode":true,
+                                    "hasChild":false,
+                                    "compId":200,
                                     "child":[
                                         ]
                                 }]
@@ -106,16 +121,17 @@
                 {
                     "x":30,
                     "type":"View",
-                    "props":{"y":24,"x":167,"width":400,"height":71},
+                    "props":{"y":24,"x":122,"width":400,"height":71},
                     "nodeParent":13,
                     "label":"View",
-                    "isOpen":false,
+                    "isOpen":true,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
                     "compId":51,
                     "child":[
                         {
+                            "x":45,
                             "type":"UIView",
                             "source":"words.ui",
                             "props":{"y":98,"x":2,"var":"topicpanel"},
@@ -125,43 +141,6 @@
                             "isAniNode":true,
                             "hasChild":false,
                             "compId":83,
-                            "child":[
-                                ]
-                        },
-                        {
-                            "type":"Image",
-                            "props":{"y":5,"x":16,"skin":"main_ui/lilith_logo.png"},
-                            "nodeParent":51,
-                            "label":"Image",
-                            "isOpen":true,
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":52,
-                            "child":[
-                                ]
-                        },
-                        {
-                            "type":"Label",
-                            "props":{"y":7,"x":83,"text":"烟花开过要吃甜甜圈","fontSize":25,"color":"#ffffff"},
-                            "nodeParent":51,
-                            "label":"Label",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":53,
-                            "child":[
-                                ]
-                        },
-                        {
-                            "type":"Label",
-                            "props":{"y":40,"x":84,"text":"题目：？？？圈","fontSize":25,"color":"#ffffff"},
-                            "nodeParent":51,
-                            "label":"Label",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":56,
                             "child":[
                                 ]
                         }],
@@ -517,14 +496,13 @@
             "props":{"y":911,"x":3,"width":750,"var":"readyPanel","height":419},
             "nodeParent":1,
             "label":"View(readyPanel)",
-            "isOpen":true,
+            "isOpen":false,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":195,
             "child":[
                 {
-                    "x":30,
                     "type":"Button",
                     "props":{"y":211,"x":417,"width":286,"var":"btn_rule_ready","labelSize":30,"labelColors":"#ffffff","labelBold":true,"label":"规则说明","height":99},
                     "nodeParent":195,
@@ -536,7 +514,6 @@
                     "compId":192,
                     "child":[
                         {
-                            "x":45,
                             "type":"Image",
                             "props":{"skin":"pic/button_red.png"},
                             "nodeParent":192,
@@ -550,7 +527,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Button",
                     "props":{"y":211,"x":78,"width":286,"var":"btn_start","labelSize":30,"labelFont":"SimSun","labelColors":"#ffffff","labelBold":true,"label":"开始答题（限时30秒）","height":99},
                     "nodeParent":195,
@@ -562,7 +538,6 @@
                     "compId":191,
                     "child":[
                         {
-                            "x":45,
                             "type":"Image",
                             "props":{"y":0,"x":0,"skin":"pic/button_red.png"},
                             "nodeParent":191,
@@ -578,6 +553,46 @@
                     "$HIDDEN":false
                 }],
             "$HIDDEN":false
+        },
+        {
+            "x":15,
+            "type":"View",
+            "props":{"y":394,"x":0,"width":750,"visible":false,"var":"toast","height":500},
+            "nodeParent":1,
+            "label":"View(toast)",
+            "isOpen":true,
+            "isDirectory":true,
+            "isAniNode":true,
+            "hasChild":true,
+            "compId":197,
+            "child":[
+                {
+                    "x":30,
+                    "type":"Image",
+                    "props":{"y":133,"x":0,"width":747,"skin":"pic/blackmask.png","height":211},
+                    "nodeParent":197,
+                    "label":"Image",
+                    "isOpen":true,
+                    "isDirectory":true,
+                    "isAniNode":true,
+                    "hasChild":true,
+                    "compId":198,
+                    "child":[
+                        {
+                            "x":45,
+                            "type":"Label",
+                            "props":{"y":0,"x":0,"width":750,"var":"toastMsg","valign":"middle","text":"这是一个提示","height":210,"fontSize":35,"color":"#ffffff","align":"center"},
+                            "nodeParent":198,
+                            "label":"Label(toastMsg)",
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":199,
+                            "child":[
+                                ]
+                        }]
+                }],
+            "$HIDDEN":true
         }],
     "animations":[
         {
