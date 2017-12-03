@@ -13,7 +13,7 @@
 		var Event = laya.events.Event;
 		readme_ui.super(this);
 
-		this.btn_ok.on(Event.CLICK, this, onBtnOkClick);
+		this.btn_iknow.on(Event.CLICK, this, onBtnOkClick);
 
 		function onBtnOkClick()
 		{
