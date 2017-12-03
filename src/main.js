@@ -6,8 +6,8 @@
     var Stat = Laya.Stat;
     var Sprite = Laya.Sprite;
     var Event = Laya.Event;
-    var Browser = laya.utils.Browser;
-
+    //var Browser = Laya.utils.Browser;
+    var Font = Laya.Font;
     (function () {
         Laya.init(750, 1334);
 
@@ -27,7 +27,7 @@
         txt.color = "#FFFFFF";
         txt.width = 750;
         txt.height = 1334;
-        txt.fontSize=40;                
+        txt.fontSize = 40;                
         Laya.stage.addChild(txt);
         this.text_loading = txt;
 
@@ -46,12 +46,12 @@
 //      {url:"sound/enemy3_out.mp3", type:Loader.SOUND}
 
         //for native
-        var arr = Laya.loader.getRes("res/atlas/DFYuanW7-GB2312.ttf");
-        console.log(arr);
-        if(Browser.window.conch){
-            Browser.window.conch.setFontFaceFromBuffer("DFYuanW7",arr);
-            this.text_loading.font = "DFYuanW7";
-        }
+        // var arr = Laya.loader.getRes("res/atlas/DFYuanW7-GB2312.ttf");
+        // console.log(arr);
+        // if(Browser.window.conch){
+        //     Browser.window.conch.setFontFaceFromBuffer("DFYuanW7",arr);
+        //     this.text_loading.font = "DFYuanW7";
+        // }
 
         // var xhr = new XMLHttpRequest();
         // xhr.responseType = 'arraybuffer';
@@ -68,7 +68,7 @@
         // };
         // xhr.send(null);
 
-        Laya.loader.load(res, Handler.create(this, onComplete),Handler.create(this,onProgress));
+        Laya.loader.load(res, Handler.create(this, onComplete), Handler.create(this,onProgress));
     }
 
     function onComplete() {
@@ -77,8 +77,12 @@
     }
     function onProgress(loadNum)
     {
+        console.log(Font.defaultFont);
+        Font.defaultFont = '25px DFYuanW7';
+        console.log(Font.defaultFont);
+
         //显示加载进度
         console.log("Loading:" + loadNum);
-        this.text_loading.text="资源加载中，当前进度："+parseInt(loadNum*100)+"%";
+        this.text_loading.text = "资源加载中，当前进度：" + parseInt(loadNum*100) + "%";
     }
 })();

@@ -34,6 +34,7 @@
 		wordspanel.pinyin4.text = CC2PY(words[3]);
 		wordspanel.word4.text = words[3];
 	}
+
 	function main_ui()
 	{
 		var Event = laya.events.Event;
@@ -83,9 +84,9 @@
 			wordspanel.word4.text = "";
 		}
 
+		var wordsArray = [wordspanel.word1,wordspanel.word2,wordspanel.word3,wordspanel.word4];
 		function activeWordIndex(flashwords, index)
 		{
-			var wordsArray = [wordspanel.word1,wordspanel.word2,wordspanel.word3,wordspanel.word4];
 			wordspanel.flashnode.removeChildren();
 
 			var flasharr = new Array();
@@ -140,6 +141,12 @@
 			moveFocus(currentFocusIndex);
 		}
 
+		var pinyincells = [
+				wordspanel.pinyin1,
+				wordspanel.pinyin2,
+				wordspanel.pinyin3,
+				wordspanel.pinyin4
+			];
 		function moveFocus(index)
 		{
 			var pinyinarrowcells = [
@@ -148,12 +155,7 @@
 				wordspanel.pinyin_arr3,
 				wordspanel.pinyin_arr4
 			];
-			var pinyincells = [
-				wordspanel.pinyin1,
-				wordspanel.pinyin2,
-				wordspanel.pinyin3,
-				wordspanel.pinyin4
-			];
+		
 			for(var i=0;i<pinyinarrowcells.length;i++)
 			{
 				pinyinarrowcells[i].visible = (i==index);
@@ -222,13 +224,45 @@
 			function onRetun()
 			{
 				console.log("Key: ok");
-				if(currentFocusIndex < 3)
-					currentFocusIndex ++;
-				else
+				if(pinyincells[currentFocusIndex].text.trim().length == 0)
 				{
-					panelSuccess.visible = true;
+					console.log(currentFocusIndex + "！不能为空");				
 				}
-				moveFocus(currentFocusIndex);
+				else
+				{								
+					var pinyinstr = "";
+					for(var i=0;i<pinyincells.length;i++)
+					{
+						var text = pinyincells[i].text.trim();
+						if (text.length > 0)
+							pinyinstr += text + ",";					
+					}
+					if(pinyinstr[pinyinstr.length-1] == ",")
+					{
+						var newwords = "";
+						for(var i=0;i<pinyinstr.length-1;i++)
+							newwords = newwords + pinyinstr[i];
+						pinyinstr = newwords;
+					}
+
+					var checkResult = checkIfChengyuMatch(pinyinstr);
+					if (checkResult != null)
+					{
+						var resstrcount = checkResult.length; //可能这么多词
+						resstrcount = Math.min(resstrcount, currentFocusIndex+1);//不能超过当前最大数字
+
+						for(var i=0;i<resstrcount;i++)
+							wordsArray[i].text = checkResult[i];
+
+						if(currentFocusIndex < 3)
+							currentFocusIndex ++;
+						else
+						{
+							panelSuccess.visible = true;
+						}
+						moveFocus(currentFocusIndex);
+					}
+				}								
 			}
 			keyboard.btn_a.on(Event.CLICK, this, onKeyEnter);
 			keyboard.btn_b.on(Event.CLICK, this, onKeyEnter);
