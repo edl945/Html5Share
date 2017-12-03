@@ -1,8 +1,8 @@
 {
     "x":0,
     "type":"View",
-    "selectedBox":23,
-    "selecteID":24,
+    "selectedBox":13,
+    "selecteID":21,
     "props":{"width":750,"sceneColor":"#000000","height":1334},
     "nodeParent":-1,
     "label":"View",
@@ -62,32 +62,6 @@
                     "isAniNode":true,
                     "hasChild":false,
                     "compId":14,
-                    "child":[
-                        ]
-                },
-                {
-                    "x":30,
-                    "type":"Button",
-                    "props":{"y":300,"x":434,"width":128,"var":"btnResult","skin":"main_ui/btn_ok.png","label":"规则","height":35},
-                    "nodeParent":13,
-                    "label":"Button(btnResult)",
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":21,
-                    "child":[
-                        ]
-                },
-                {
-                    "x":30,
-                    "type":"Button",
-                    "props":{"y":300,"x":235,"width":128,"var":"btnStart","skin":"main_ui/btn_cancel.png","label":"开  始","height":35},
-                    "nodeParent":13,
-                    "label":"Button(btnStart)",
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":22,
                     "child":[
                         ]
                 },
@@ -336,17 +310,18 @@
             "props":{"y":28,"x":289,"width":157,"skin":"main_ui/lilith_logo.png","height":45},
             "nodeParent":1,
             "label":"Image",
-            "isOpen":false,
+            "isOpen":true,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":9,
             "child":[
                 {
+                    "x":30,
                     "type":"Label",
-                    "props":{"y":7,"x":47,"text":"记录","fontSize":30,"color":"#d6ff00"},
+                    "props":{"y":7,"x":47,"var":"result_title","text":"记录","fontSize":30,"color":"#d6ff00"},
                     "nodeParent":9,
-                    "label":"Label",
+                    "label":"Label(result_title)",
                     "isDirectory":false,
                     "isAniNode":true,
                     "hasChild":false,
@@ -539,16 +514,17 @@
         {
             "x":15,
             "type":"View",
-            "props":{"y":911,"x":3,"width":750,"var":"ready","height":419},
+            "props":{"y":911,"x":3,"width":750,"var":"readyPanel","height":419},
             "nodeParent":1,
-            "label":"View(ready)",
-            "isOpen":false,
+            "label":"View(readyPanel)",
+            "isOpen":true,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":195,
             "child":[
                 {
+                    "x":30,
                     "type":"Button",
                     "props":{"y":211,"x":417,"width":286,"var":"btn_rule_ready","labelSize":30,"labelColors":"#ffffff","labelBold":true,"label":"规则说明","height":99},
                     "nodeParent":195,
@@ -560,6 +536,7 @@
                     "compId":192,
                     "child":[
                         {
+                            "x":45,
                             "type":"Image",
                             "props":{"skin":"pic/button_red.png"},
                             "nodeParent":192,
@@ -573,6 +550,7 @@
                         }]
                 },
                 {
+                    "x":30,
                     "type":"Button",
                     "props":{"y":211,"x":78,"width":286,"var":"btn_start","labelSize":30,"labelFont":"SimSun","labelColors":"#ffffff","labelBold":true,"label":"开始答题（限时30秒）","height":99},
                     "nodeParent":195,
@@ -584,6 +562,7 @@
                     "compId":191,
                     "child":[
                         {
+                            "x":45,
                             "type":"Image",
                             "props":{"y":0,"x":0,"skin":"pic/button_red.png"},
                             "nodeParent":191,

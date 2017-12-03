@@ -44,9 +44,10 @@
         //res.push({url: "res/atlas/DFYuanW7-GB2312.ttf", type: Loader.FONT});
         
 //      {url:"sound/enemy3_out.mp3", type:Loader.SOUND}
+
+        //for native
         var arr = Laya.loader.getRes("res/atlas/DFYuanW7-GB2312.ttf");
         console.log(arr);
-
         if(Browser.window.conch){
             Browser.window.conch.setFontFaceFromBuffer("DFYuanW7",arr);
             this.text_loading.font = "DFYuanW7";

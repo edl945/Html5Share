@@ -39,8 +39,9 @@
 		var Event = laya.events.Event;
 		main_ui.super(this);
 
-		var btnStart = this.btnStart;
-		var btnResult = this.btnResult;
+		var btnStart = this.btn_start;
+		var btnRule = this.btn_rule_ready;
+		var btnBtnPanel = this.readyPanel;
 		var wordspanel = this.topicpanel;
 		var keyboard = this.keyboard;
 		var panelSuccess =this.popup_success;
@@ -63,7 +64,7 @@
 		panelSuccess.visible = false;
 		this.result_title.font = defaultFont;
 
-		btnResult.on(Event.CLICK, this, onBtnReadmeClick);
+		btnRule.on(Event.CLICK, this, onBtnReadmeClick);
 		btnStart.on(Event.CLICK, this, onBtnStartClick);
 
 		registerKeyboard();
@@ -169,8 +170,7 @@
 				var flashwords = "圆缘预案";
 				switchToBegin(flashwords);
 			}
-			Tween.to(btnStart,{x:-150},timeinterval,Laya.Ease.cubicOut,Handler.create(this,onTween));
-			Tween.to(btnResult,{x:750},timeinterval,Laya.Ease.cubicOut,Handler.create(this,null));
+			Tween.to(btnBtnPanel,{y:1337},timeinterval,Laya.Ease.cubicOut,Handler.create(this,onTween));
 			Tween.to(keyboard,{y:911},timeinterval,Laya.Ease.cubicIn,Handler.create(this,null));
 		}
 		function movePanelToRady()
@@ -179,8 +179,7 @@
 			{
 				console.log("tween over 2");
 			}
-			Tween.to(btnStart,{x:235},timeinterval,Laya.Ease.cubicOut,Handler.create(this,onTween));
-			Tween.to(btnResult,{x:434},timeinterval,Laya.Ease.cubicOut,Handler.create(this,null));
+			Tween.to(btnBtnPanel,{x:911},timeinterval,Laya.Ease.cubicOut,Handler.create(this,onTween));
 			Tween.to(keyboard,{y:1337},timeinterval,Laya.Ease.cubicIn,Handler.create(this,null));
 		}
 
