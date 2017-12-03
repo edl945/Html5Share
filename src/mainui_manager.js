@@ -10,6 +10,8 @@
 
 	var _parent;
 	var _gamelogic;
+	var defaultFont = "DFYuanW7";
+
 	function onListRender(item, index)
 	{
 		//自定义list的渲染方式
@@ -59,7 +61,7 @@
 		keyboard.y = 1337;
 		panelFailed.visible = false;
 		panelSuccess.visible = false;
-
+		this.result_title.font = defaultFont;
 
 		btnResult.on(Event.CLICK, this, onBtnReadmeClick);
 		btnStart.on(Event.CLICK, this, onBtnStartClick);
@@ -213,8 +215,8 @@
 				if (focusedPinyin != null)
 				{
 					var newwords ="";
-					for(var i=0;i<focusedPinyin.text.length-1;i++)
-					newwords = newwords + focusedPinyin.text[i];
+					// for(var i=0;i<focusedPinyin.text.length-1;i++)
+					// newwords = newwords + focusedPinyin.text[i];
 					focusedPinyin.text = newwords;
 				}
 			}
