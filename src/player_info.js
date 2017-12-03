@@ -3,7 +3,7 @@ function playerInfo()
 {
     this.UserId = 0; //0-4
     this.UserName = ""; //5-
-    this.Words = ""; //chengyu
+    this.Pinyins = ""; //chengyu
     this.Time = 0; //
 
     this.Parse = function(VarTypeUser)
@@ -34,15 +34,20 @@ function player(playername, words, time)
     var playerinfo = new playerInfo();
     this.playerinfo = playerinfo;
     playerinfo.UserName = playername;
-    playerinfo.Words = words;
+    playerinfo.Pinyins = words;
     playerinfo.Time = time;
     
     this.UserName = function(){
         return playerinfo.UserName;
     }
 
-    this.Words = function() {
-        return playerinfo.Words;
+    this.Pinyins = function() {
+        return playerinfo.Pinyins;
+    }
+    this.PinyinArray = function()
+    {
+        var arr = playerinfo.Pinyins.split(",");
+		return arr;
     }
     
     this.Time = function(){

@@ -11,6 +11,20 @@
 	var _parent;
 	var _gamelogic;
 	var defaultFont = "DFYuanW7";
+	var pinyinSize = 25;
+	var chengyuSize = 45;
+
+	function formatWordPanel(wordspanel)
+	{
+		formatText(wordspanel.pinyin1, pinyinSize);
+		formatText(wordspanel.word1, null);
+		formatText(wordspanel.pinyin2, pinyinSize);
+		formatText(wordspanel.word2, null);
+		formatText(wordspanel.pinyin3, pinyinSize);
+		formatText(wordspanel.word3, null);
+		formatText(wordspanel.pinyin4, pinyinSize);
+		formatText(wordspanel.word4, null);
+	}
 
 	function onListRender(item, index)
 	{
@@ -24,15 +38,18 @@
 		boxview.getChildByName("playertime").text = userinfo.Time();
 
 		var wordspanel = boxview.getChildByName("words");
-		var words = userinfo.Words();
-		wordspanel.pinyin1.text = CC2PY(words[0]);
+		var words = checkIfChengyuMatch(userinfo.Pinyins()) ;
+		var pinyinarray = userinfo.PinyinArray();
+		wordspanel.pinyin1.text = pinyinarray[0];
 		wordspanel.word1.text = words[0];
-		wordspanel.pinyin2.text = CC2PY(words[1]);
+		wordspanel.pinyin2.text = pinyinarray[1];
 		wordspanel.word2.text = words[1];
-		wordspanel.pinyin3.text = CC2PY(words[2]);
+		wordspanel.pinyin3.text = pinyinarray[2];
 		wordspanel.word3.text = words[2];
-		wordspanel.pinyin4.text = CC2PY(words[3]);
+		wordspanel.pinyin4.text = pinyinarray[3];
 		wordspanel.word4.text = words[3];
+
+		formatWordPanel(wordspanel);
 	}
 
 	function main_ui()
@@ -48,7 +65,7 @@
 		var panelSuccess =this.popup_success;
 		var panelFailed = this.popup_overtime;
 		var focusedPinyin = null;
-		var currentFocusIndex = 0;
+		var currentFocusIndex = 1;
 
         var userlist = _gamelogic.getUserList();
 		this.render.dataSource = {slider: 50, scroll: 80, progress: 0.2, label: {color: "#ff0000", text: "Hello LayaAir"}};
@@ -59,6 +76,7 @@
 		}		
 		this.lst_players.array = arr;//给list赋值更改list的显示			
 		this.lst_players.renderHandler = new Handler(this, onListRender);//还可以自定义list渲染方式，可以打开下面注释看一下效果
+		this.lst_players.scrollBar.value = 9999;
 
 		keyboard.y = 1337;
 		panelFailed.visible = false;
@@ -82,29 +100,37 @@
 			wordspanel.word3.text = "";
 			wordspanel.pinyin4.text = "";
 			wordspanel.word4.text = "";
+			formatWordPanel(wordspanel);
 		}
 
 		var wordsArray = [wordspanel.word1,wordspanel.word2,wordspanel.word3,wordspanel.word4];
-		function activeWordIndex(flashwords, index)
+		var loopfunc = null;
+		function unflashTheWord(index)
 		{
 			wordspanel.flashnode.removeChildren();
-
+			Laya.timer.clear(this, loopfunc)
+		}
+		function flashTheWord(flashwords, index)
+		{
+			wordspanel.flashnode.removeChildren();
 			var flasharr = new Array();
+			var framecount = 0;
+			var flashroot = wordspanel.flashnode;
 			for(var i=0;i<flashwords.length;i++)
 			{
 				var newlabel = new Laya.Label(flashwords[i]);
+				formatText(wordspanel.flashnode, null);
 				newlabel.width = wordspanel.flashnode.width;
 				newlabel.height = wordspanel.flashnode.height;
 				newlabel.fontSize = wordspanel.flashnode.fontSize;
 				newlabel.align = wordspanel.flashnode.align;
 				newlabel.valign = wordspanel.flashnode.valign;
 				newlabel.color = wordspanel.flashnode.color;
+				newlabel.visible = false;
 				wordspanel.flashnode.addChild(newlabel);
-				flasharr[i]=newlabel;
+				flasharr[i] = newlabel;
 			}
-			var framecount = 0;
-			var flashroot = wordspanel.flashnode;
-			function onLoop()
+			loopfunc = function onLoop()
 			{
 				framecount++;
 				var childcount = flasharr.length;
@@ -119,17 +145,16 @@
 				}
 			}
         	//创建一个帧循环，更新容器位置
-			Laya.timer.frameLoop(10, this, onLoop)
+			Laya.timer.frameLoop(10, this, loopfunc)
 		}
 
-		function switchToBegin(flashwords)
+		function switchToBegin(flashwords, lastPinyin)
 		{
 			console.log(this.topicpanel);
-			var words = _gamelogic.currentWord().words;
 
 			//add flash effect on word1
-			activeWordIndex(flashwords, 0);
-			wordspanel.pinyin1.text = CC2PY(words[0]);
+			flashTheWord(flashwords, 0);
+			wordspanel.pinyin1.text = lastPinyin.toUpperCase();
 			wordspanel.word1.text = "";
 			wordspanel.pinyin2.text = "";
 			wordspanel.word2.text = "?";
@@ -169,8 +194,16 @@
 			function onTween()
 			{
 				console.log("tween over 1");
-				var flashwords = "圆缘预案";
-				switchToBegin(flashwords);
+				var words = _gamelogic.currentWord().words;
+				var lastPInyin = getLastPinin(words);
+				if(lastPInyin != null){
+					var tempstr = checkIfChengyuMatch(lastPInyin);
+ 					var arr = tempstr.split(",");
+					var flashwords = "";
+					for(var i=0;i<arr.length;i++)
+						flashwords += arr[i];
+					switchToBegin(flashwords, lastPInyin);
+				}
 			}
 			Tween.to(btnBtnPanel,{y:1337},timeinterval,Laya.Ease.cubicOut,Handler.create(this,onTween));
 			Tween.to(keyboard,{y:911},timeinterval,Laya.Ease.cubicIn,Handler.create(this,null));
@@ -260,6 +293,7 @@
 						{
 							panelSuccess.visible = true;
 						}
+						unflashTheWord(0);
 						moveFocus(currentFocusIndex);
 					}
 				}								

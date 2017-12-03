@@ -8,6 +8,7 @@
     var Event = Laya.Event;
     //var Browser = Laya.utils.Browser;
     var Font = Laya.Font;
+
     (function () {
         Laya.init(750, 1334);
 

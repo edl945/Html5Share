@@ -35,10 +35,9 @@
         }
                 
         var testarray =  [
-            "\"name\":\"一条老腊肉\", \"words\":\"喜出望外\", \"time\":3",
-            "\"name\":\"两条老腊肉\", \"words\":\"外国人渣\", \"time\":6",
-            "\"name\":\"三条老腊肉\", \"words\":\"渣程序员\", \"time\":1",
-            "\"name\":\"四条老腊肉\", \"words\":\"员圆圆圆\", \"time\":10",
+            "\"name\":\"小骨头\", \"words\":\"xia,li,ba,ren\", \"time\":3",
+            "\"name\":\"两条老腊肉\", \"words\":\"ren,zhi,yi,jin\", \"time\":6",
+            "\"name\":\"阳光下的白爷\", \"words\":\"jin,guo,ying,xiong\", \"time\":1",
             ];
         var urljson = JSON.stringify(testarray);
         console.log("urljson: " +  urljson);

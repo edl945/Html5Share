@@ -32701,3 +32701,26 @@ function checkIfChengyuMatch(inputpinyin)
     ret = chengyu[inputpinyin];
     return ret;
 }
+
+function getLastPinin(inputpinyin)
+{
+    inputpinyin = inputpinyin.toLowerCase();
+    var ret = null;
+    var arr = inputpinyin.split(",");
+    if(arr.length>0)
+    {
+        return arr[arr.length-1];
+    }
+    return null;
+}
+
+
+formatText = function(_this, size)
+{
+    if (size != null)
+        _this.fontSize = size;
+    else
+        _this.fontSize = 40;
+    _this.color = "#000000";
+    _this.Font = "DFYuanW7";
+}
