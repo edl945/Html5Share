@@ -6,6 +6,9 @@
    <item name="pic/words_bg_unlock.png" type="Image" compress="0" pack="1" quality="80" props="" picType="0"/>
    <item name="pic/background.png" type="Image" compress="0" pack="1" quality="80" props="" picType="0"/>
    <item name="pic/keyboard_bg.png" type="Image" compress="0" pack="1" quality="80" props="" picType="0"/>
-   <item name="pic/list_scrollbar.png" type="List" compress="0" pack="1" quality="80" props="" picType="0"/>
+   <item name="pic/list_scrollbar.png" type="Image" compress="0" pack="1" quality="80" props="" picType="0"/>
    <item name="pic/popup_overtime.png" type="Image" compress="0" pack="1" quality="80" props="" picType="0"/>
+   <item name="pic/list_scrollbar_pointer.png" type="Image" compress="0" pack="0" quality="80" props="" picType="0"/>
+   <item name="pic/progress_bg.png" type="Image" compress="0" pack="0" quality="80" props="" picType="0"/>
+   <item name="pic/progress.png" type="Image" compress="0" pack="0" quality="80" props="" picType="0"/>
 </res>
