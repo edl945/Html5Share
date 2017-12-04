@@ -60,6 +60,9 @@
 		var btnStart = this.btn_start;
 		var btnRule = this.btn_rule_ready;
 		var btnRecord = this.btn_record;
+		var btnCloseRecord = this.btn_record;
+		var btn_enter_history = this.btn_enter_history;
+
 		var btnBtnPanel = this.readyPanel;
 		var btn_rule_success = this.btn_rule_success;
 		var btn_rule_fail = this.btn_rule_fail;
@@ -97,10 +100,12 @@
 		panelFailed.visible = false;
 		panelSuccess.visible = false;
 		countDownNumber.visible = false;
+		btnCloseRecord.visible = false;
 
 		btnRule.on(Event.CLICK, this, onBtnReadmeClick);
 		btnStart.on(Event.CLICK, this, onBtnStartClick);
-		btnRecord.on(Event.CLICK, this, onBtnShowRecord);
+		btn_enter_history.on(Event.CLICK, this, onBtnShowRecord);
+		btnCloseRecord.on(Event.CLICK, this, onBtnHideRecord);
 		btn_rule_success.on(Event.CLICK, this, onBtnReadmeClick);
 		btn_rule_fail.on(Event.CLICK, this, onBtnReadmeClick);
 		
@@ -333,15 +338,21 @@
 
 		function onBtnShowRecord()
 		{
-			if (recordPanel.y == 0)
-			{
-				Tween.to(recordPanel,{y:-1260},timeinterval,Laya.Ease.cubicIn,Handler.create(this,null));
-			}else
-			{
-				Tween.to(recordPanel,{y:0},timeinterval,Laya.Ease.cubicIn,Handler.create(this,null));
-			}
+			btnCloseRecord.visible = true;
+			btn_enter_history.visible = false;
+		
+			Tween.to(recordPanel,{y:0},timeinterval,Laya.Ease.cubicIn,Handler.create(this,null));
 			SoundManager.playSound("sound/click.mp3");
-			console.log("btn start pressed");
+			console.log("onBtnShowRecord");
+		}
+		function onBtnHideRecord()
+		{
+			btnCloseRecord.visible = false;
+			btn_enter_history.visible = true;
+
+			Tween.to(recordPanel,{y:-1260},timeinterval,Laya.Ease.cubicIn,Handler.create(this,null));
+			SoundManager.playSound("sound/click.mp3");
+			console.log("onBtnHideRecord");
 		}
 
 		function registerKeyboard()

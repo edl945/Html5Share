@@ -32717,10 +32717,10 @@ function getLastPinin(inputpinyin)
 
 formatText = function(_this, size)
 {
-    if (size != null)
-        _this.fontSize = size;
-    else
-        _this.fontSize = 40;
-    _this.color = "#000000";
-    _this.Font = "DFYuanW7";
+    // if (size != null)
+    //     _this.fontSize = size;
+    // else
+    //     _this.fontSize = 40;
+    //_this.color = "#000000";
+    //_this.Font = "DFYuanW7";
 }
