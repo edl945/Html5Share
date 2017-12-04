@@ -74,13 +74,14 @@
                     "props":{"y":164,"x":109,"var":"lasttopicPanel_unshown"},
                     "nodeParent":13,
                     "label":"View(lasttopicPanel_unshown)",
-                    "isOpen":false,
+                    "isOpen":true,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
                     "compId":216,
                     "child":[
                         {
+                            "x":45,
                             "type":"Image",
                             "props":{"skin":"pic/lasttopic_unshown.png"},
                             "nodeParent":216,
@@ -93,6 +94,7 @@
                                 ]
                         },
                         {
+                            "x":45,
                             "type":"Label",
                             "props":{"y":197,"x":154,"text":"开始答题后揭晓","fontSize":30,"color":"#5d343a","bold":true,"align":"center"},
                             "nodeParent":216,
@@ -741,7 +743,7 @@
                     "child":[
                         ]
                 }],
-            "$HIDDEN":false
+            "$HIDDEN":true
         }],
     "animations":[
         {
