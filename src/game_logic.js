@@ -39,9 +39,11 @@
             playerList = new LList();
         }
         var testarray =  [
-            "\"name\":\"小骨头\", \"words\":\"xia,li,ba,ren\", \"time\":3",
-            "\"name\":\"两条老腊肉\", \"words\":\"ren,zhi,yi,jin\", \"time\":6",
-            "\"name\":\"阳光下的白爷\", \"words\":\"jin,guo,ying,xiong\", \"time\":1",
+            "\"name\":\"翻腾大王\", \"words\":\"xia,li,ba,ren\", \"time\":12",
+            "\"name\":\"一条成年老腊肉\", \"words\":\"ren,ru,fu,zhong\", \"time\":26",
+            "\"name\":\"白影\", \"words\":\"zhong,liu,di,zhu\", \"time\":11",
+            "\"name\":\"艾伦要iPhone\", \"words\":\"zhu,bao,ping,an\", \"time\":15",
+            "\"name\":\"艾莲胖\", \"words\":\"an,jian,shang,ren\", \"time\":28",
             ];
 
         var urljson = JSON.stringify(testarray);
