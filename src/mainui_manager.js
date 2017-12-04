@@ -92,7 +92,7 @@
 		keyboard.y = 1337;
 		recordPanel.y = -1260;
 		panelFailed.visible = false;
-		panelSuccess.visible = true;
+		panelSuccess.visible = false;
 		countDownNumber.visible = false;
 
 		btnRule.on(Event.CLICK, this, onBtnReadmeClick);
@@ -311,8 +311,10 @@
 			SoundManager.playSound("sound/click.mp3");
 		}
 		function onGenShreUrl()
-		{
-			btnshareUrl.text = window.location;
+		{						
+			var pinyinwords = wordspanel.pinyin1.text.trim() + "," + wordspanel.pinyin2.text.trim() + "," +wordspanel.pinyin3.text.trim() + "," +wordspanel.pinyin4.text.trim();
+            _gamelogic.getUserList().insert("这是一个成功者", new player("这是一个成功者", pinyinwords.toLowerCase(), 30 - countdownleft));
+			btnshareUrl.text = window.location + "?id=" + _gamelogic.genJsonStr();
 		}
 
 		function onBtnStartClick()

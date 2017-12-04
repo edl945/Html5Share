@@ -11,8 +11,7 @@
 
     function GameLogic() {
         var _this = this;
-        GameLogic.super(_this);
-        
+        GameLogic.super(_this);        
         _this.initGame();
     }
 
@@ -24,21 +23,27 @@
         var _this = this;
         playerList = new LList();
 
-        //初始化测试数据
-        _this.initTestData();
+        //初始化测试数据        
+        var Lid = LoadUrlGetValues('id');
+        if (Lid != null && Lid.length > 10)
+        {
+            _this.genDataFromUrl(Lid);
+        }  
+        else
+            _this.initTestData();        
     }
 
     _proto.initTestData = function(){
         if (playerList != null){
             playerList = null;
-            playerList =new LList();
+            playerList = new LList();
         }
-                
         var testarray =  [
             "\"name\":\"小骨头\", \"words\":\"xia,li,ba,ren\", \"time\":3",
             "\"name\":\"两条老腊肉\", \"words\":\"ren,zhi,yi,jin\", \"time\":6",
             "\"name\":\"阳光下的白爷\", \"words\":\"jin,guo,ying,xiong\", \"time\":1",
             ];
+
         var urljson = JSON.stringify(testarray);
         console.log("urljson: " +  urljson);
         var newArr = JSON.parse(urljson);
@@ -54,13 +59,45 @@
         //     alert('复制成功');
         // });        
 
-        var clipboard = new Clipboard('.btn');         
-        clipboard.on('success', function(e) { 
-            var msg = e.trigger.getAttribute('aria-label'); 
-            alert(msg); 
-            e.clearSelection(); 
-        }); 
+        // var clipboard = new Clipboard('.btn');         
+        // clipboard.on('success', function(e) { 
+        //     var msg = e.trigger.getAttribute('aria-label'); 
+        //     alert(msg); 
+        //     e.clearSelection(); 
+        // }); 
 
+        //this.genJsonStr();
+    }
+
+    _proto.genDataFromUrl = function(jsonstr)
+    {
+        if(jsonstr != null)
+        {
+            if (playerList != null){
+                playerList = null;
+                playerList =new LList();
+            }                    
+            var urljson = jsonstr;
+            var newArr = JSON.parse(urljson);
+            this.initWithJson(urljson);
+        }
+    }
+
+    _proto.genJsonStr = function()
+    {
+        var arr = playerList.arr;
+        var jsonstr = "";
+        for (var x = 0; x < arr.length; x++) {
+            console.log(arr[x].value);
+            var player = arr[x].value;
+            if(x == arr.length-1)
+                jsonstr += "\"" + "\\\"name\\\":\\\""+ player.UserName() + "\\\", \\\"words\\\":\\\"" + player.Pinyins() + "\\\", \\\"time\\\":" + player.Time() + "\"";
+            else            
+                jsonstr += "\"" + "\\\"name\\\":\\\""+ player.UserName() + "\\\", \\\"words\\\":\\\"" + player.Pinyins() + "\\\", \\\"time\\\":" + player.Time() + "\",";
+        }
+        jsonstr = "[" + jsonstr + "]";    
+        console.log("urljson: "+ jsonstr);
+        return jsonstr;
     }
 
     _proto.initWithJson = function(jsonstr){

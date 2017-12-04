@@ -6,8 +6,9 @@ function LoadUrlGetValues(key)
     return result ? decodeURIComponent(result[2]) : null;
 }
 
-var Lid = LoadUrlGetValues('id');
+//var Lid = LoadUrlGetValues('id');
 //if (Lid != null)    alert(Lid);
+
 
 var jiathis_config = {
 	slide:{
