@@ -1,8 +1,8 @@
 {
     "x":0,
     "type":"View",
-    "selectedBox":2,
-    "selecteID":18,
+    "selectedBox":20,
+    "selecteID":30,
     "props":{"width":525,"sceneColor":"#000000","height":170},
     "nodeParent":-1,
     "label":"View",
@@ -173,9 +173,9 @@
                         {
                             "x":45,
                             "type":"Label",
-                            "props":{"y":0,"x":206,"width":103,"var":"flashnode","valign":"middle","height":103,"fontSize":25,"color":"#ffffff","centerX":0,"align":"center"},
+                            "props":{"y":0,"x":206,"width":103,"var":"flashnode1","valign":"middle","height":103,"fontSize":55,"font":"SimSun","color":"#FFFCDD","centerX":0,"bold":true,"align":"center"},
                             "nodeParent":8,
-                            "label":"Label(flashnode)",
+                            "label":"Label(flashnode1)",
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
@@ -190,12 +190,25 @@
                     "props":{"y":62,"x":142,"width":103,"var":"word2","valign":"middle","text":"？","height":103,"fontSize":55,"font":"SimSun","color":"#FFFCDD","bold":true,"align":"center"},
                     "nodeParent":2,
                     "label":"Label(word2)",
-                    "isDirectory":false,
+                    "isOpen":true,
+                    "isDirectory":true,
                     "isAniNode":true,
-                    "hasChild":false,
+                    "hasChild":true,
                     "compId":12,
                     "child":[
-                        ]
+                        {
+                            "x":45,
+                            "type":"Label",
+                            "props":{"y":0,"x":69,"width":103,"var":"flashnode2","valign":"middle","height":103,"fontSize":55,"font":"SimSun","color":"#FFFCDD","centerX":0,"bold":true,"align":"center"},
+                            "nodeParent":12,
+                            "label":"Label(flashnode2)",
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":28,
+                            "child":[
+                                ]
+                        }]
                 },
                 {
                     "x":30,
@@ -203,12 +216,25 @@
                     "props":{"y":62,"x":279,"width":103,"var":"word3","valign":"middle","text":"？","height":103,"fontSize":55,"font":"SimSun","color":"#FFFCDD","bold":true,"align":"center"},
                     "nodeParent":2,
                     "label":"Label(word3)",
-                    "isDirectory":false,
+                    "isOpen":true,
+                    "isDirectory":true,
                     "isAniNode":true,
-                    "hasChild":false,
+                    "hasChild":true,
                     "compId":16,
                     "child":[
-                        ]
+                        {
+                            "x":45,
+                            "type":"Label",
+                            "props":{"y":0,"x":-68,"width":103,"var":"flashnode3","valign":"middle","height":103,"fontSize":55,"font":"SimSun","color":"#FFFCDD","centerX":0,"bold":true,"align":"center"},
+                            "nodeParent":16,
+                            "label":"Label(flashnode3)",
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":29,
+                            "child":[
+                                ]
+                        }]
                 },
                 {
                     "x":30,
@@ -216,12 +242,25 @@
                     "props":{"y":62,"x":416,"width":103,"var":"word4","valign":"middle","text":"？","height":103,"fontSize":55,"font":"SimSun","color":"#FFFCDD","bold":true,"align":"center"},
                     "nodeParent":2,
                     "label":"Label(word4)",
-                    "isDirectory":false,
+                    "isOpen":true,
+                    "isDirectory":true,
                     "isAniNode":true,
-                    "hasChild":false,
+                    "hasChild":true,
                     "compId":20,
                     "child":[
-                        ]
+                        {
+                            "x":45,
+                            "type":"Label",
+                            "props":{"y":0,"x":-205,"width":103,"var":"flashnode4","valign":"middle","height":103,"fontSize":55,"font":"SimSun","color":"#FFFCDD","centerX":0,"bold":true,"align":"center"},
+                            "nodeParent":20,
+                            "label":"Label(flashnode4)",
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":30,
+                            "child":[
+                                ]
+                        }]
                 }],
             "$HIDDEN":false
         }],
