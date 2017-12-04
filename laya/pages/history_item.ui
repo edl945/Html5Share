@@ -2,7 +2,7 @@
     "x":0,
     "type":"View",
     "selectedBox":1,
-    "selecteID":2,
+    "selecteID":11,
     "props":{"width":750,"visible":false,"height":305},
     "nodeParent":-1,
     "label":"View",
@@ -47,25 +47,25 @@
             "props":{"y":31,"x":130,"var":"avatar_bg","skin":"pic/player_avatar_bg.png"},
             "nodeParent":1,
             "label":"Image(avatar_bg)",
-            "isDirectory":false,
+            "isOpen":true,
+            "isDirectory":true,
             "isAniNode":true,
-            "hasChild":false,
+            "hasChild":true,
             "compId":6,
             "child":[
-                ]
-        },
-        {
-            "x":15,
-            "type":"Image",
-            "props":{"y":42,"x":24,"skin":"pic/list_scrollbar_pointer.png"},
-            "nodeParent":1,
-            "label":"Image",
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":10,
-            "child":[
-                ]
+                {
+                    "x":30,
+                    "type":"Image",
+                    "props":{"y":2,"x":2,"width":64,"var":"avatar_pic","height":64},
+                    "nodeParent":6,
+                    "label":"Image(avatar_pic)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":14,
+                    "child":[
+                        ]
+                }]
         },
         {
             "x":15,

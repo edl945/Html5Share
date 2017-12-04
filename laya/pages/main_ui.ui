@@ -1,8 +1,8 @@
 {
     "x":0,
     "type":"View",
-    "selectedBox":29,
-    "selecteID":200,
+    "selectedBox":1,
+    "selecteID":205,
     "props":{"width":750,"sceneColor":"#000000","height":1334},
     "nodeParent":-1,
     "label":"View",
@@ -557,7 +557,7 @@
         {
             "x":15,
             "type":"View",
-            "props":{"y":394,"x":0,"width":750,"visible":false,"var":"toast","height":500},
+            "props":{"y":394,"x":0,"width":372,"visible":false,"var":"toast","height":141},
             "nodeParent":1,
             "label":"View(toast)",
             "isOpen":true,
@@ -569,28 +569,140 @@
                 {
                     "x":30,
                     "type":"Image",
-                    "props":{"y":133,"x":0,"width":747,"skin":"pic/blackmask.png","height":211},
+                    "props":{"y":0,"x":0,"skin":"pic/tip_warning_bg.png"},
                     "nodeParent":197,
                     "label":"Image",
-                    "isOpen":true,
-                    "isDirectory":true,
+                    "isDirectory":false,
                     "isAniNode":true,
-                    "hasChild":true,
-                    "compId":198,
+                    "hasChild":false,
+                    "compId":204,
                     "child":[
-                        {
-                            "x":45,
-                            "type":"Label",
-                            "props":{"y":0,"x":0,"width":750,"var":"toastMsg","valign":"middle","text":"这是一个提示","height":210,"fontSize":35,"color":"#ffffff","align":"center"},
-                            "nodeParent":198,
-                            "label":"Label(toastMsg)",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":199,
-                            "child":[
-                                ]
-                        }]
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"Image",
+                    "props":{"y":0,"x":0,"visible":false,"skin":"pic/temp_warning.png"},
+                    "nodeParent":197,
+                    "label":"Image",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":201,
+                    "child":[
+                        ],
+                    "$HIDDEN":true
+                },
+                {
+                    "x":30,
+                    "type":"Label",
+                    "props":{"y":80,"x":282,"width":233,"var":"toastMsg","valign":"middle","text":"已经被我使用过啦！","pivotY":33,"pivotX":177,"height":59,"fontSize":25,"font":"SimSun","color":"#5D343A","bold":true,"align":"left"},
+                    "nodeParent":197,
+                    "label":"Label(toastMsg)",
+                    "isOpen":false,
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":199,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"Image",
+                    "props":{"y":31,"x":30,"width":64,"var":"toast_avatar_pic","height":64},
+                    "nodeParent":197,
+                    "label":"Image(toast_avatar_pic)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":202,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"Label",
+                    "props":{"y":44,"x":282,"width":233,"var":"toastMsg_words","valign":"middle","text":"“呼风唤雨”","pivotY":33,"pivotX":177,"height":59,"fontSize":25,"font":"SimSun","color":"#a7433e","bold":true,"align":"left"},
+                    "nodeParent":197,
+                    "label":"Label(toastMsg_words)",
+                    "isOpen":false,
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":203,
+                    "child":[
+                        ]
+                }],
+            "$HIDDEN":true
+        },
+        {
+            "x":15,
+            "type":"View",
+            "props":{"y":394,"x":0,"width":421,"var":"chat","height":141},
+            "nodeParent":1,
+            "label":"View(chat)",
+            "isOpen":true,
+            "isDirectory":true,
+            "isAniNode":true,
+            "hasChild":true,
+            "compId":205,
+            "child":[
+                {
+                    "x":30,
+                    "type":"Image",
+                    "props":{"y":-34,"x":-155,"visible":false,"skin":"pic/temp_chat.png"},
+                    "nodeParent":205,
+                    "label":"Image",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":206,
+                    "child":[
+                        ],
+                    "$HIDDEN":true
+                },
+                {
+                    "x":30,
+                    "type":"Image",
+                    "props":{"skin":"pic/tip_chat_bg.png"},
+                    "nodeParent":205,
+                    "label":"Image",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":207,
+                    "child":[
+                        ],
+                    "$HIDDEN":false
+                },
+                {
+                    "x":30,
+                    "type":"Label",
+                    "props":{"y":81,"x":237,"width":344,"valign":"middle","text":"不是成语哦！","pivotY":33,"pivotX":177,"height":59,"fontSize":25,"font":"SimSun","color":"#5D343A","bold":true,"align":"center"},
+                    "nodeParent":205,
+                    "label":"Label",
+                    "isOpen":false,
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":208,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"Label",
+                    "props":{"y":45,"x":238,"width":346,"valign":"middle","text":"“HU HU HA HA”","pivotY":33,"pivotX":177,"height":59,"fontSize":25,"font":"SimSun","color":"#a7433e","bold":true,"align":"center"},
+                    "nodeParent":205,
+                    "label":"Label",
+                    "isOpen":false,
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":210,
+                    "child":[
+                        ]
                 }],
             "$HIDDEN":true
         }],
