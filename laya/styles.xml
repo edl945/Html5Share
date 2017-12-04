@@ -16,4 +16,5 @@
    <item name="pic/temp_listbox.png" type="Image" compress="0" pack="1" quality="80" props="" picType="0"/>
    <item name="pic/temp_main.png" type="Image" compress="0" pack="1" quality="80" props="" picType="0"/>
    <item name="pic/rule.png" type="Image" compress="0" pack="1" quality="80" props="" picType="0"/>
+   <item name="pic/url_copy.png" type="Image" compress="0" pack="1" quality="80" props="" picType="0"/>
 </res>

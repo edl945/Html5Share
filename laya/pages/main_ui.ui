@@ -2,7 +2,7 @@
     "x":0,
     "type":"View",
     "selectedBox":173,
-    "selecteID":226,
+    "selecteID":239,
     "props":{"width":750,"sceneColor":"#000000","height":1334},
     "nodeParent":-1,
     "label":"View",
@@ -12,20 +12,6 @@
     "hasChild":true,
     "compId":1,
     "child":[
-        {
-            "x":15,
-            "type":"Image",
-            "props":{"y":0,"x":0,"visible":false,"skin":"pic/temp_main.png"},
-            "nodeParent":1,
-            "label":"Image",
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":215,
-            "child":[
-                ],
-            "$HIDDEN":true
-        },
         {
             "x":15,
             "type":"Image",
@@ -91,7 +77,8 @@
                             "hasChild":false,
                             "compId":217,
                             "child":[
-                                ]
+                                ],
+                            "$HIDDEN":false
                         },
                         {
                             "x":45,
@@ -189,7 +176,8 @@
                     "hasChild":false,
                     "compId":208,
                     "child":[
-                        ]
+                        ],
+                    "$HIDDEN":false
                 }],
             "$HIDDEN":false
         },
@@ -222,35 +210,35 @@
             "child":[
                 {
                     "x":30,
-                    "type":"TextInput",
-                    "props":{"y":1016,"x":80,"wordWrap":true,"width":611,"var":"shareUrl","text":"shareUrl","multiline":true,"height":91,"fontSize":20,"editable":false},
-                    "nodeParent":173,
-                    "label":"TextInput(shareUrl)",
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":226,
-                    "child":[
-                        ]
-                },
-                {
-                    "x":30,
                     "type":"Image",
-                    "props":{"y":58,"x":53,"skin":"pic/popup_success.png"},
+                    "props":{"y":552,"x":65,"var":"shareUrl_dialog","skin":"pic/url_copy.png"},
                     "nodeParent":173,
-                    "label":"Image",
-                    "isDirectory":false,
+                    "label":"Image(shareUrl_dialog)",
+                    "isOpen":true,
+                    "isDirectory":true,
                     "isAniNode":true,
-                    "hasChild":false,
-                    "compId":175,
+                    "hasChild":true,
+                    "compId":239,
                     "child":[
-                        ],
-                    "$HIDDEN":false
+                        {
+                            "x":45,
+                            "type":"TextInput",
+                            "props":{"y":152,"x":79,"wordWrap":true,"width":476,"var":"shareUrl","multiline":true,"height":214,"fontSize":20,"editable":false},
+                            "nodeParent":239,
+                            "label":"TextInput(shareUrl)",
+                            "isOpen":true,
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":226,
+                            "child":[
+                                ]
+                        }]
                 },
                 {
                     "x":30,
                     "type":"Button",
-                    "props":{"y":1112,"x":71,"width":286,"var":"btn_share","labelSize":30,"labelFont":"SimSun","labelColors":"#ffffff","labelBold":true,"label":"邀请好友答题","height":99},
+                    "props":{"y":1112,"x":71,"width":286,"var":"btn_share","labelSize":30,"labelFont":"SimSun","labelColors":"#ffffff","labelBold":true,"height":99},
                     "nodeParent":173,
                     "label":"Button(btn_share)",
                     "isOpen":true,
@@ -272,12 +260,25 @@
                             "compId":183,
                             "child":[
                                 ]
+                        },
+                        {
+                            "x":45,
+                            "type":"Label",
+                            "props":{"y":16,"x":6,"width":276,"valign":"middle","text":"邀请好友答题","height":62,"fontSize":30,"font":"SimSun","color":"#fdffff","bold":true,"align":"center"},
+                            "nodeParent":179,
+                            "label":"Label",
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":233,
+                            "child":[
+                                ]
                         }]
                 },
                 {
                     "x":30,
                     "type":"Button",
-                    "props":{"y":1112,"x":410,"width":286,"var":"btn_rule_success","labelSize":30,"labelColors":"#ffffff","labelBold":true,"label":"规则说明","height":99},
+                    "props":{"y":1112,"x":410,"width":286,"var":"btn_rule_success","labelSize":30,"labelColors":"#ffffff","labelBold":true,"height":99},
                     "nodeParent":173,
                     "label":"Button(btn_rule_success)",
                     "isOpen":true,
@@ -298,8 +299,36 @@
                             "compId":184,
                             "child":[
                                 ]
-                        }]
+                        },
+                        {
+                            "x":45,
+                            "type":"Label",
+                            "props":{"y":16,"x":4,"width":276,"valign":"middle","text":"规则说明","height":62,"fontSize":30,"font":"SimSun","color":"#fdffff","bold":true,"align":"center"},
+                            "nodeParent":180,
+                            "label":"Label",
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":232,
+                            "child":[
+                                ]
+                        }],
+                    "$HIDDEN":false
                 }],
+            "$HIDDEN":false
+        },
+        {
+            "x":15,
+            "type":"Image",
+            "props":{"y":58,"x":53,"skin":"pic/popup_success.png"},
+            "nodeParent":1,
+            "label":"Image",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":175,
+            "child":[
+                ],
             "$HIDDEN":false
         },
         {
@@ -329,7 +358,7 @@
                 },
                 {
                     "type":"Button",
-                    "props":{"y":1112,"x":71,"width":286,"var":"btn_moments","labelSize":30,"labelFont":"SimSun","labelColors":"#ffffff","labelBold":true,"label":"    向朋友求助","height":99},
+                    "props":{"y":1112,"x":71,"width":286,"var":"btn_moments","labelSize":30,"labelFont":"SimSun","labelColors":"#ffffff","labelBold":true,"height":99},
                     "nodeParent":176,
                     "label":"Button(btn_moments)",
                     "isOpen":true,
@@ -362,11 +391,23 @@
                             "compId":189,
                             "child":[
                                 ]
+                        },
+                        {
+                            "type":"Label",
+                            "props":{"y":16,"x":6,"width":276,"valign":"middle","text":" 向朋友求助","height":62,"fontSize":30,"font":"SimSun","color":"#fdffff","bold":true,"align":"center"},
+                            "nodeParent":186,
+                            "label":"Label",
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":231,
+                            "child":[
+                                ]
                         }]
                 },
                 {
                     "type":"Button",
-                    "props":{"y":1112,"x":410,"width":286,"var":"btn_rule_fail","labelSize":30,"labelColors":"#ffffff","labelBold":true,"label":"规则说明","height":99},
+                    "props":{"y":1112,"x":410,"width":286,"var":"btn_rule_fail","labelSize":30,"labelColors":"#ffffff","labelBold":true,"height":99},
                     "nodeParent":176,
                     "label":"Button(btn_rule_fail)",
                     "isOpen":true,
@@ -386,7 +427,20 @@
                             "compId":190,
                             "child":[
                                 ]
-                        }]
+                        },
+                        {
+                            "type":"Label",
+                            "props":{"y":16,"x":6,"width":276,"valign":"middle","text":"规则说明","height":62,"fontSize":30,"font":"SimSun","color":"#fdffff","bold":true,"align":"center"},
+                            "nodeParent":187,
+                            "label":"Label",
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":230,
+                            "child":[
+                                ]
+                        }],
+                    "$HIDDEN":false
                 }],
             "$HIDDEN":true
         },
@@ -404,7 +458,7 @@
             "child":[
                 {
                     "type":"Button",
-                    "props":{"y":211,"x":417,"width":286,"var":"btn_rule_ready","labelSize":30,"labelColors":"#ffffff","labelBold":true,"label":"规则说明","height":99},
+                    "props":{"y":211,"x":417,"width":286,"var":"btn_rule_ready","labelSize":30,"labelColors":"#ffffff","labelBold":true,"height":99},
                     "nodeParent":195,
                     "label":"Button(btn_rule_ready)",
                     "isOpen":true,
@@ -424,11 +478,23 @@
                             "compId":194,
                             "child":[
                                 ]
+                        },
+                        {
+                            "type":"Label",
+                            "props":{"y":11,"x":7,"width":276,"valign":"middle","text":"规则说明","height":62,"fontSize":30,"font":"SimSun","color":"#fdffff","bold":true,"align":"center"},
+                            "nodeParent":192,
+                            "label":"Label",
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":228,
+                            "child":[
+                                ]
                         }]
                 },
                 {
                     "type":"Button",
-                    "props":{"y":211,"x":78,"width":286,"var":"btn_start","labelSize":30,"labelFont":"SimSun","labelColors":"#ffffff","labelBold":true,"label":"开始答题（限时30秒）","height":99},
+                    "props":{"y":211,"x":78,"width":286,"var":"btn_start","labelSize":30,"labelFont":"SimSun","labelColors":"#ffffff","labelBold":true,"labelAlign":"none","height":99},
                     "nodeParent":195,
                     "label":"Button(btn_start)",
                     "isOpen":true,
@@ -449,6 +515,30 @@
                             "compId":193,
                             "child":[
                                 ]
+                        },
+                        {
+                            "type":"Label",
+                            "props":{"y":-1,"x":3,"width":276,"valign":"middle","text":"开始答题","height":62,"fontSize":30,"font":"SimSun","color":"#fdffff","bold":true,"align":"center"},
+                            "nodeParent":191,
+                            "label":"Label",
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":227,
+                            "child":[
+                                ]
+                        },
+                        {
+                            "type":"Label",
+                            "props":{"y":29,"x":3,"width":276,"valign":"middle","text":"（限时30秒）","height":62,"fontSize":25,"font":"SimSun","color":"#fdffff","bold":true,"align":"center"},
+                            "nodeParent":191,
+                            "label":"Label",
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":229,
+                            "child":[
+                                ]
                         }],
                     "$HIDDEN":false
                 }],
@@ -460,13 +550,14 @@
             "props":{"y":0,"x":0,"width":750,"var":"pan_result","height":1334},
             "nodeParent":1,
             "label":"Panel(pan_result)",
-            "isOpen":false,
+            "isOpen":true,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":23,
             "child":[
                 {
+                    "x":30,
                     "type":"Image",
                     "props":{"y":0,"x":0,"width":750,"skin":"pic/background.png","sizeGrid":"5,5,5,5","height":1334},
                     "nodeParent":23,
@@ -480,11 +571,12 @@
                     "$HIDDEN":false
                 },
                 {
+                    "x":30,
                     "type":"List",
-                    "props":{"y":77,"x":0,"width":750,"var":"lst_players","vScrollBarSkin":"pic/scrollbar/1p_trans.png","repeatY":10,"repeatX":1,"height":1179},
+                    "props":{"y":0,"x":0,"width":750,"var":"lst_players","vScrollBarSkin":"pic/scrollbar/1p_trans.png","repeatY":10,"repeatX":1,"height":1334},
                     "nodeParent":23,
                     "label":"List(lst_players)",
-                    "isOpen":true,
+                    "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
@@ -619,16 +711,43 @@
                     "$HIDDEN":false
                 },
                 {
+                    "x":30,
                     "type":"Button",
-                    "props":{"y":1254,"x":0,"width":750,"var":"btn_record","skin":"main_ui/btn_ok.png","sizeGrid":"3,3,3,3","labelSize":50,"labelAlign":"center","label":"^","height":80},
+                    "props":{"y":1291,"x":0,"width":750,"var":"btn_record","skin":"main_ui/btn_ok.png","sizeGrid":"3,3,3,3","labelSize":50,"labelAlign":"center","height":44},
                     "nodeParent":23,
                     "label":"Button(btn_record)",
-                    "isDirectory":false,
+                    "isOpen":true,
+                    "isDirectory":true,
                     "isAniNode":true,
-                    "hasChild":false,
+                    "hasChild":true,
                     "compId":206,
                     "child":[
-                        ],
+                        {
+                            "x":45,
+                            "type":"Image",
+                            "props":{"skin":"pic/history_button_bg.png"},
+                            "nodeParent":206,
+                            "label":"Image",
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":234,
+                            "child":[
+                                ]
+                        },
+                        {
+                            "x":45,
+                            "type":"Label",
+                            "props":{"y":10,"x":0,"width":750,"text":"点击回到题目","height":27,"fontSize":27,"font":"SimSun","color":"#444242","bold":true,"align":"center"},
+                            "nodeParent":206,
+                            "label":"Label",
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":235,
+                            "child":[
+                                ]
+                        }],
                     "$HIDDEN":false
                 }],
             "$HIDDEN":true
@@ -704,14 +823,13 @@
             "props":{"y":232,"x":172,"width":421,"var":"chat","height":141},
             "nodeParent":1,
             "label":"View(chat)",
-            "isOpen":true,
+            "isOpen":false,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":211,
             "child":[
                 {
-                    "x":30,
                     "type":"Image",
                     "props":{"skin":"pic/tip_chat_bg.png"},
                     "nodeParent":211,
@@ -724,7 +842,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Label",
                     "props":{"y":50,"x":60,"width":344,"var":"chatMsg","valign":"middle","text":"不是成语哦！","height":59,"fontSize":25,"font":"SimSun","color":"#5d343a","bold":true,"align":"center"},
                     "nodeParent":211,
@@ -738,7 +855,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Label",
                     "props":{"y":11,"x":61,"width":344,"var":"chatMsg_pingyin","valign":"middle","text":"\"HU HA HU HA\"","height":59,"fontSize":25,"font":"SimSun","color":"#a7433e","bold":true,"align":"center"},
                     "nodeParent":211,
@@ -748,6 +864,46 @@
                     "isAniNode":true,
                     "hasChild":false,
                     "compId":214,
+                    "child":[
+                        ]
+                }],
+            "$HIDDEN":true
+        },
+        {
+            "x":15,
+            "type":"Button",
+            "props":{"y":0,"x":0,"width":750,"var":"btn_enter_history","skin":"main_ui/btn_ok.png","sizeGrid":"3,3,3,3","labelSize":50,"labelAlign":"center","height":44},
+            "nodeParent":1,
+            "label":"Button(btn_enter_history)",
+            "isOpen":true,
+            "isDirectory":true,
+            "isAniNode":true,
+            "hasChild":true,
+            "compId":236,
+            "child":[
+                {
+                    "x":30,
+                    "type":"Image",
+                    "props":{"skin":"pic/history_button_bg.png"},
+                    "nodeParent":236,
+                    "label":"Image",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":237,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"Label",
+                    "props":{"y":10,"x":0,"width":750,"text":"点击查看历史","height":27,"fontSize":27,"font":"SimSun","color":"#444242","bold":true,"align":"center"},
+                    "nodeParent":236,
+                    "label":"Label",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":238,
                     "child":[
                         ]
                 }],
