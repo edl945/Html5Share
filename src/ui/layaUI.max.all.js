@@ -55,15 +55,9 @@ var main_uiUI=(function(_super){
 		function main_uiUI(){
 			
 		    this.pan_mytopic=null;
+		    this.lasttopicpanel=null;
 		    this.topicpanel=null;
 		    this.countDownNumber=null;
-		    this.pan_result=null;
-		    this.lst_players=null;
-		    this._boxview=null;
-		    this._playerico=null;
-		    this._playername=null;
-		    this._playertime=null;
-		    this.result_title=null;
 		    this.keyboard=null;
 		    this.popup_success=null;
 		    this.btn_share=null;
@@ -74,6 +68,13 @@ var main_uiUI=(function(_super){
 		    this.readyPanel=null;
 		    this.btn_rule_ready=null;
 		    this.btn_start=null;
+		    this.pan_result=null;
+		    this.lst_players=null;
+		    this._boxview=null;
+		    this._playerico=null;
+		    this._playername=null;
+		    this._playertime=null;
+		    this.btn_record=null;
 		    this.toast=null;
 		    this.toastMsg=null;
 
@@ -84,6 +85,7 @@ var main_uiUI=(function(_super){
 		var __proto__=main_uiUI.prototype;
 		__proto__.createChildren=function(){
 		    			View.regComponent("ui.wordsUI",ui.wordsUI);
+			View.regComponent("ui.playerinfoUI",ui.playerinfoUI);
 			View.regComponent("ui.game_uiUI",ui.game_uiUI);
 
 			laya.ui.Component.prototype.createChildren.call(this);
@@ -91,8 +93,30 @@ var main_uiUI=(function(_super){
 
 		}
 
-		main_uiUI.uiView={"type":"View","props":{"width":750,"height":1334},"child":[{"type":"Image","props":{"y":0,"x":0,"skin":"pic/background.png"}},{"type":"Panel","props":{"y":600,"x":0,"width":750,"var":"pan_mytopic","height":402},"child":[{"type":"Image","props":{"y":0,"x":0,"width":750,"height":381}},{"type":"View","props":{"y":1,"x":0,"width":750,"height":123},"child":[{"type":"Image","props":{"y":131,"x":171,"skin":"pic/progress_bg.png"}},{"type":"words","props":{"y":164,"x":124,"var":"topicpanel","runtime":"ui.wordsUI"}},{"type":"Image","props":{"y":5,"x":48,"width":23,"height":23},"child":[{"type":"Label","props":{"y":43,"x":-21,"text":"你的答案：","fontSize":35,"color":"#4e0100"}},{"type":"Label","props":{"y":-3,"x":355,"width":66,"var":"countDownNumber","valign":"middle","text":"30","height":62,"fontSize":45,"color":"#4e0100","align":"center"},"child":[{"type":"Label","props":{"y":-2,"x":-148,"width":66,"valign":"middle","text":"倒计时：","height":62,"fontSize":45,"color":"#4e0100","align":"center"}}]}]}]}]},{"type":"Panel","props":{"y":0,"x":0,"width":747,"var":"pan_result","height":549},"child":[{"type":"Image","props":{"y":0,"x":0,"width":750,"height":814}},{"type":"List","props":{"y":77,"x":0,"width":750,"var":"lst_players","vScrollBarSkin":"pic/list_scrollbar.png","repeatY":10,"repeatX":1,"height":472},"child":[{"type":"Box","props":{"y":0,"x":0,"width":750,"name":"render","height":243},"child":[{"type":"View","props":{"y":13,"x":117,"var":"_boxview","name":"boxview"},"child":[{"type":"words","props":{"y":45,"x":63,"name":"words","runtime":"ui.wordsUI"}},{"type":"Image","props":{"y":3,"x":-38,"var":"_playerico","skin":"main_ui/btn_key.png","name":"playerico"}},{"type":"Label","props":{"y":6,"x":16,"var":"_playername","text":"这是一个人的名字","name":"playername","fontSize":30}},{"type":"Label","props":{"y":6,"x":531,"width":36,"var":"_playertime","text":"30","name":"playertime","height":34,"fontSize":30,"color":"#3e0100","align":"right"},"child":[{"type":"Label","props":{"y":1,"x":34,"text":"秒","fontSize":30}}]}]}]}]}]},{"type":"Image","props":{"y":28,"x":289,"width":157,"skin":"main_ui/lilith_logo.png","height":45},"child":[{"type":"Label","props":{"y":7,"x":47,"var":"result_title","text":"记录","fontSize":30,"color":"#d6ff00"}}]},{"type":"game_ui","props":{"y":911,"x":0,"width":750,"var":"keyboard","height":419,"runtime":"ui.game_uiUI"}},{"type":"View","props":{"y":0,"x":0,"width":750,"var":"popup_success","height":1334},"child":[{"type":"Image","props":{"y":58,"x":53,"skin":"pic/popup_success.png"}},{"type":"Button","props":{"y":1112,"x":71,"width":286,"var":"btn_share","labelSize":30,"labelFont":"SimSun","labelColors":"#ffffff","labelBold":true,"label":"邀请好友答题","height":99},"child":[{"type":"Image","props":{"y":0,"x":0,"skin":"pic/button_red.png"}}]},{"type":"Button","props":{"y":1112,"x":410,"width":286,"var":"btn_rule_success","labelSize":30,"labelColors":"#ffffff","labelBold":true,"label":"规则说明","height":99},"child":[{"type":"Image","props":{"skin":"pic/button_red.png"}}]}]},{"type":"View","props":{"y":0,"x":0,"width":750,"var":"popup_overtime","height":1334},"child":[{"type":"Image","props":{"y":52,"x":39,"skin":"pic/popup_overtime.png"}},{"type":"Button","props":{"y":1112,"x":71,"width":286,"var":"btn_moments","labelSize":30,"labelFont":"SimSun","labelColors":"#ffffff","labelBold":true,"label":"    向朋友求助","height":99},"child":[{"type":"Image","props":{"y":0,"x":0,"skin":"pic/button_red.png"}},{"type":"Image","props":{"y":21,"x":24,"width":49,"skin":"pic/icon_monents.png","height":49}}]},{"type":"Button","props":{"y":1112,"x":410,"width":286,"var":"btn_rule_fail","labelSize":30,"labelColors":"#ffffff","labelBold":true,"label":"规则说明","height":99},"child":[{"type":"Image","props":{"skin":"pic/button_red.png"}}]}]},{"type":"View","props":{"y":917,"x":0,"width":750,"var":"readyPanel","height":419},"child":[{"type":"Button","props":{"y":211,"x":417,"width":286,"var":"btn_rule_ready","labelSize":30,"labelColors":"#ffffff","labelBold":true,"label":"规则说明","height":99},"child":[{"type":"Image","props":{"skin":"pic/button_red.png"}}]},{"type":"Button","props":{"y":211,"x":78,"width":286,"var":"btn_start","labelSize":30,"labelFont":"SimSun","labelColors":"#ffffff","labelBold":true,"label":"开始答题（限时30秒）","height":99},"child":[{"type":"Image","props":{"y":0,"x":0,"skin":"pic/button_red.png"}}]}]},{"type":"View","props":{"y":394,"x":0,"width":750,"visible":false,"var":"toast","height":500},"child":[{"type":"Image","props":{"y":133,"x":0,"width":747,"skin":"pic/blackmask.png","height":211},"child":[{"type":"Label","props":{"y":0,"x":0,"width":750,"var":"toastMsg","valign":"middle","text":"这是一个提示","height":210,"fontSize":35,"color":"#ffffff","align":"center"}}]}]}]};
+		main_uiUI.uiView={"type":"View","props":{"width":750,"height":1334},"child":[{"type":"Image","props":{"y":0,"x":0,"skin":"pic/background.png"}},{"type":"Panel","props":{"y":142,"x":0,"width":750,"var":"pan_mytopic","height":860},"child":[{"type":"words","props":{"y":106,"x":123,"var":"lasttopicpanel","runtime":"ui.wordsUI"}},{"type":"Image","props":{"y":429,"x":-4,"width":750,"height":381}},{"type":"View","props":{"y":430,"x":-4,"width":750,"height":123},"child":[{"type":"Image","props":{"y":131,"x":171,"skin":"pic/progress_bg.png"}},{"type":"words","props":{"y":164,"x":124,"var":"topicpanel","runtime":"ui.wordsUI"}},{"type":"Image","props":{"y":5,"x":48,"width":23,"height":23},"child":[{"type":"Label","props":{"y":43,"x":-21,"text":"你的答案：","fontSize":35,"color":"#4e0100"}},{"type":"Label","props":{"y":-3,"x":355,"width":66,"var":"countDownNumber","valign":"middle","text":"30","height":62,"fontSize":45,"color":"#4e0100","align":"center"},"child":[{"type":"Label","props":{"y":-2,"x":-148,"width":66,"valign":"middle","text":"倒计时：","height":62,"fontSize":45,"color":"#4e0100","align":"center"}}]}]}]},{"type":"playerinfo","props":{"y":-11,"x":17,"runtime":"ui.playerinfoUI"}}]},{"type":"game_ui","props":{"y":911,"x":0,"width":750,"var":"keyboard","height":419,"runtime":"ui.game_uiUI"}},{"type":"View","props":{"y":0,"x":0,"width":750,"var":"popup_success","height":1334},"child":[{"type":"Image","props":{"y":58,"x":53,"skin":"pic/popup_success.png"}},{"type":"Button","props":{"y":1112,"x":71,"width":286,"var":"btn_share","labelSize":30,"labelFont":"SimSun","labelColors":"#ffffff","labelBold":true,"label":"邀请好友答题","height":99},"child":[{"type":"Image","props":{"y":0,"x":0,"skin":"pic/button_red.png"}}]},{"type":"Button","props":{"y":1112,"x":410,"width":286,"var":"btn_rule_success","labelSize":30,"labelColors":"#ffffff","labelBold":true,"label":"规则说明","height":99},"child":[{"type":"Image","props":{"skin":"pic/button_red.png"}}]}]},{"type":"View","props":{"y":0,"x":0,"width":750,"var":"popup_overtime","height":1334},"child":[{"type":"Image","props":{"y":52,"x":39,"skin":"pic/popup_overtime.png"}},{"type":"Button","props":{"y":1112,"x":71,"width":286,"var":"btn_moments","labelSize":30,"labelFont":"SimSun","labelColors":"#ffffff","labelBold":true,"label":"    向朋友求助","height":99},"child":[{"type":"Image","props":{"y":0,"x":0,"skin":"pic/button_red.png"}},{"type":"Image","props":{"y":21,"x":24,"width":49,"skin":"pic/icon_monents.png","height":49}}]},{"type":"Button","props":{"y":1112,"x":410,"width":286,"var":"btn_rule_fail","labelSize":30,"labelColors":"#ffffff","labelBold":true,"label":"规则说明","height":99},"child":[{"type":"Image","props":{"skin":"pic/button_red.png"}}]}]},{"type":"View","props":{"y":917,"x":0,"width":750,"var":"readyPanel","height":419},"child":[{"type":"Button","props":{"y":211,"x":417,"width":286,"var":"btn_rule_ready","labelSize":30,"labelColors":"#ffffff","labelBold":true,"label":"规则说明","height":99},"child":[{"type":"Image","props":{"skin":"pic/button_red.png"}}]},{"type":"Button","props":{"y":211,"x":78,"width":286,"var":"btn_start","labelSize":30,"labelFont":"SimSun","labelColors":"#ffffff","labelBold":true,"label":"开始答题（限时30秒）","height":99},"child":[{"type":"Image","props":{"y":0,"x":0,"skin":"pic/button_red.png"}}]}]},{"type":"Panel","props":{"y":0,"x":0,"width":750,"var":"pan_result","height":1334},"child":[{"type":"Image","props":{"y":0,"x":0,"width":750,"skin":"main_ui/btn_cancel.png","sizeGrid":"5,5,5,5","height":1334}},{"type":"List","props":{"y":77,"x":0,"width":750,"var":"lst_players","vScrollBarSkin":"pic/list_scrollbar.png","repeatY":10,"repeatX":1,"height":1179},"child":[{"type":"Box","props":{"y":0,"x":0,"width":750,"name":"render","height":243},"child":[{"type":"View","props":{"y":13,"x":117,"var":"_boxview","name":"boxview"},"child":[{"type":"words","props":{"y":45,"x":63,"name":"words","runtime":"ui.wordsUI"}},{"type":"Image","props":{"y":3,"x":-38,"var":"_playerico","skin":"main_ui/btn_key.png","name":"playerico"}},{"type":"Label","props":{"y":6,"x":16,"var":"_playername","text":"这是一个人的名字","name":"playername","fontSize":30}},{"type":"Label","props":{"y":6,"x":531,"width":36,"var":"_playertime","text":"30","name":"playertime","height":34,"fontSize":30,"color":"#3e0100","align":"right"},"child":[{"type":"Label","props":{"y":1,"x":34,"text":"秒","fontSize":30}}]}]}]}]},{"type":"Button","props":{"y":1254,"x":0,"width":750,"var":"btn_record","skin":"main_ui/btn_ok.png","sizeGrid":"3,3,3,3","labelSize":50,"labelAlign":"center","label":"^","height":80}}]},{"type":"View","props":{"y":394,"x":0,"width":750,"visible":false,"var":"toast","height":500},"child":[{"type":"Image","props":{"y":133,"x":0,"width":747,"skin":"pic/blackmask.png","height":211},"child":[{"type":"Label","props":{"y":0,"x":0,"width":750,"var":"toastMsg","valign":"middle","text":"这是一个提示","height":210,"fontSize":35,"color":"#ffffff","align":"center"}}]}]}]};
 		return main_uiUI;
+	})(View);
+var playerinfoUI=(function(_super){
+		function playerinfoUI(){
+			
+		    this.player_ico=null;
+		    this.player_name=null;
+		    this.player_no=null;
+
+			playerinfoUI.__super.call(this);
+		}
+
+		CLASS$(playerinfoUI,'ui.playerinfoUI',_super);
+		var __proto__=playerinfoUI.prototype;
+		__proto__.createChildren=function(){
+		    
+			laya.ui.Component.prototype.createChildren.call(this);
+			this.createView(playerinfoUI.uiView);
+
+		}
+
+		playerinfoUI.uiView={"type":"View","props":{"width":480,"height":80},"child":[{"type":"Image","props":{"y":9,"x":75,"var":"player_ico","skin":"main_ui/lilith_logo.png"}},{"type":"Label","props":{"y":26,"x":201,"var":"player_name","text":"这是一个人的名字","fontSize":30,"color":"#ffffff"}},{"type":"Label","props":{"y":26,"x":4,"visible":false,"var":"player_no","text":"1楼","fontSize":30,"color":"#ffffff"}}]};
+		return playerinfoUI;
 	})(View);
 var readme_uiUI=(function(_super){
 		function readme_uiUI(){

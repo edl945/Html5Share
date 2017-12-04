@@ -59,6 +59,7 @@
 
 		var btnStart = this.btn_start;
 		var btnRule = this.btn_rule_ready;
+		var btnRecord = this.btn_record;
 		var btnBtnPanel = this.readyPanel;
 		var wordspanel = this.topicpanel;
 		var mytopicpanel = this.pan_mytopic;
@@ -82,15 +83,16 @@
 		this.lst_players.renderHandler = new Handler(this, onListRender);//还可以自定义list渲染方式，可以打开下面注释看一下效果
 		this.lst_players.scrollBar.value = 9999;
 
-
 		keyboard.y = 1337;
+		recordPanel.y = -1260;
 		panelFailed.visible = false;
 		panelSuccess.visible = false;
 		countDownNumber.visible = false;
-		this.result_title.font = defaultFont;
 
 		btnRule.on(Event.CLICK, this, onBtnReadmeClick);
 		btnStart.on(Event.CLICK, this, onBtnStartClick);
+		btnRecord.on(Event.CLICK, this, onBtnShowRecord);
+		
 
 		registerKeyboard();
 
@@ -247,8 +249,8 @@
 			}
 			Tween.to(btnBtnPanel,{y:1337},timeinterval,Laya.Ease.cubicOut,Handler.create(this,onTween));
 			Tween.to(keyboard,{y:911},timeinterval,Laya.Ease.cubicIn,Handler.create(this,null));
-			Tween.to(mytopicpanel,{y:500},timeinterval,Laya.Ease.cubicIn,Handler.create(this,null));			
-			Tween.to(recordPanel,{y:-100},timeinterval,Laya.Ease.cubicIn,Handler.create(this,null));						
+			Tween.to(mytopicpanel,{y:100},timeinterval,Laya.Ease.cubicIn,Handler.create(this,null));			
+			recordPanel.visible = false;
 		}
 		function movePanelToRady()
 		{
@@ -272,6 +274,18 @@
 			//Laya.stage.removeChild(this);
 			//_parent.showGameUI();
 			movePanelToGamemode();
+			console.log("btn start pressed");
+		}
+
+		function onBtnShowRecord()
+		{
+			if (recordPanel.y == 0)
+			{
+				Tween.to(recordPanel,{y:-1260},timeinterval,Laya.Ease.cubicIn,Handler.create(this,null));
+			}else
+			{
+				Tween.to(recordPanel,{y:0},timeinterval,Laya.Ease.cubicIn,Handler.create(this,null));
+			}
 			console.log("btn start pressed");
 		}
 

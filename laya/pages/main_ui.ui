@@ -29,7 +29,7 @@
         {
             "x":15,
             "type":"Panel",
-            "props":{"y":600,"x":0,"width":750,"var":"pan_mytopic","height":402},
+            "props":{"y":142,"x":0,"width":750,"var":"pan_mytopic","height":860},
             "nodeParent":1,
             "label":"Panel(pan_mytopic)",
             "isOpen":true,
@@ -40,8 +40,22 @@
             "child":[
                 {
                     "x":30,
+                    "type":"UIView",
+                    "source":"words.ui",
+                    "props":{"y":106,"x":123,"var":"lasttopicpanel"},
+                    "nodeParent":13,
+                    "label":"UIView(lasttopicpanel)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":207,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
                     "type":"Image",
-                    "props":{"y":0,"x":0,"width":750,"height":381},
+                    "props":{"y":429,"x":-4,"width":750,"height":381},
                     "nodeParent":13,
                     "label":"Image",
                     "isDirectory":false,
@@ -55,7 +69,7 @@
                 {
                     "x":30,
                     "type":"View",
-                    "props":{"y":1,"x":0,"width":750,"height":123},
+                    "props":{"y":430,"x":-4,"width":750,"height":123},
                     "nodeParent":13,
                     "label":"View",
                     "isOpen":true,
@@ -144,168 +158,21 @@
                             "$HIDDEN":false
                         }],
                     "$HIDDEN":false
-                }],
-            "$HIDDEN":false
-        },
-        {
-            "x":15,
-            "type":"Panel",
-            "props":{"y":0,"x":0,"width":747,"var":"pan_result","height":549},
-            "nodeParent":1,
-            "label":"Panel(pan_result)",
-            "isOpen":true,
-            "isDirectory":true,
-            "isAniNode":true,
-            "hasChild":true,
-            "compId":23,
-            "child":[
-                {
-                    "x":30,
-                    "type":"Image",
-                    "props":{"y":0,"x":0,"width":750,"height":814},
-                    "nodeParent":23,
-                    "label":"Image",
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":24,
-                    "child":[
-                        ],
-                    "$HIDDEN":false
                 },
                 {
                     "x":30,
-                    "type":"List",
-                    "props":{"y":77,"x":0,"width":750,"var":"lst_players","vScrollBarSkin":"pic/list_scrollbar.png","repeatY":10,"repeatX":1,"height":472},
-                    "nodeParent":23,
-                    "label":"List(lst_players)",
-                    "isOpen":true,
-                    "isDirectory":true,
-                    "isAniNode":true,
-                    "hasChild":true,
-                    "compId":26,
-                    "child":[
-                        {
-                            "x":45,
-                            "type":"Box",
-                            "props":{"y":0,"x":0,"width":750,"name":"render","height":243},
-                            "nodeParent":26,
-                            "label":"Box(render)",
-                            "isOpen":true,
-                            "isDirectory":true,
-                            "isAniNode":false,
-                            "hasChild":true,
-                            "compId":57,
-                            "child":[
-                                {
-                                    "x":60,
-                                    "type":"View",
-                                    "props":{"y":13,"x":117,"var":"_boxview","name":"boxview"},
-                                    "nodeParent":57,
-                                    "label":"View(_boxview)",
-                                    "isOpen":false,
-                                    "isDirectory":true,
-                                    "isAniNode":false,
-                                    "hasChild":true,
-                                    "compId":58,
-                                    "child":[
-                                        {
-                                            "type":"UIView",
-                                            "source":"words.ui",
-                                            "props":{"y":45,"x":63,"name":"words"},
-                                            "nodeParent":58,
-                                            "label":"UIView(words)",
-                                            "isDirectory":false,
-                                            "isAniNode":false,
-                                            "hasChild":false,
-                                            "compId":82,
-                                            "child":[
-                                                ],
-                                            "$HIDDEN":false
-                                        },
-                                        {
-                                            "type":"Image",
-                                            "props":{"y":3,"x":-38,"var":"_playerico","skin":"main_ui/btn_key.png","name":"playerico"},
-                                            "nodeParent":58,
-                                            "label":"Image(_playerico)",
-                                            "isDirectory":false,
-                                            "isAniNode":false,
-                                            "hasChild":false,
-                                            "compId":59,
-                                            "child":[
-                                                ],
-                                            "$HIDDEN":false
-                                        },
-                                        {
-                                            "type":"Label",
-                                            "props":{"y":6,"x":16,"var":"_playername","text":"这是一个人的名字","name":"playername","fontSize":30},
-                                            "nodeParent":58,
-                                            "label":"Label(_playername)",
-                                            "isDirectory":false,
-                                            "isAniNode":false,
-                                            "hasChild":false,
-                                            "compId":60,
-                                            "child":[
-                                                ],
-                                            "$LOCKED":false
-                                        },
-                                        {
-                                            "type":"Label",
-                                            "props":{"y":6,"x":531,"width":36,"var":"_playertime","text":"30","name":"playertime","height":34,"fontSize":30,"color":"#3e0100","align":"right"},
-                                            "nodeParent":58,
-                                            "label":"Label(_playertime)",
-                                            "isOpen":true,
-                                            "isDirectory":true,
-                                            "isAniNode":false,
-                                            "hasChild":true,
-                                            "compId":61,
-                                            "child":[
-                                                {
-                                                    "type":"Label",
-                                                    "props":{"y":1,"x":34,"text":"秒","fontSize":30},
-                                                    "nodeParent":61,
-                                                    "label":"Label",
-                                                    "isDirectory":false,
-                                                    "isAniNode":false,
-                                                    "hasChild":false,
-                                                    "compId":205,
-                                                    "child":[
-                                                        ]
-                                                }]
-                                        }],
-                                    "$HIDDEN":false
-                                }]
-                        }],
-                    "$HIDDEN":false
-                }],
-            "$HIDDEN":false
-        },
-        {
-            "x":15,
-            "type":"Image",
-            "props":{"y":28,"x":289,"width":157,"skin":"main_ui/lilith_logo.png","height":45},
-            "nodeParent":1,
-            "label":"Image",
-            "isOpen":true,
-            "isDirectory":true,
-            "isAniNode":true,
-            "hasChild":true,
-            "compId":9,
-            "child":[
-                {
-                    "x":30,
-                    "type":"Label",
-                    "props":{"y":7,"x":47,"var":"result_title","text":"记录","fontSize":30,"color":"#d6ff00"},
-                    "nodeParent":9,
-                    "label":"Label(result_title)",
+                    "type":"UIView",
+                    "source":"playerinfo.ui",
+                    "props":{"y":-11,"x":17},
+                    "nodeParent":13,
+                    "label":"UIView",
                     "isDirectory":false,
                     "isAniNode":true,
                     "hasChild":false,
-                    "compId":27,
+                    "compId":208,
                     "child":[
                         ]
                 }],
-            "$LOCKED":true,
             "$HIDDEN":false
         },
         {
@@ -550,6 +417,153 @@
                     "$HIDDEN":false
                 }],
             "$HIDDEN":false
+        },
+        {
+            "x":15,
+            "type":"Panel",
+            "props":{"y":0,"x":0,"width":750,"var":"pan_result","height":1334},
+            "nodeParent":1,
+            "label":"Panel(pan_result)",
+            "isOpen":true,
+            "isDirectory":true,
+            "isAniNode":true,
+            "hasChild":true,
+            "compId":23,
+            "child":[
+                {
+                    "x":30,
+                    "type":"Image",
+                    "props":{"y":0,"x":0,"width":750,"skin":"main_ui/btn_cancel.png","sizeGrid":"5,5,5,5","height":1334},
+                    "nodeParent":23,
+                    "label":"Image",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":24,
+                    "child":[
+                        ],
+                    "$HIDDEN":false
+                },
+                {
+                    "x":30,
+                    "type":"List",
+                    "props":{"y":77,"x":0,"width":750,"var":"lst_players","vScrollBarSkin":"pic/list_scrollbar.png","repeatY":10,"repeatX":1,"height":1179},
+                    "nodeParent":23,
+                    "label":"List(lst_players)",
+                    "isOpen":true,
+                    "isDirectory":true,
+                    "isAniNode":true,
+                    "hasChild":true,
+                    "compId":26,
+                    "child":[
+                        {
+                            "x":45,
+                            "type":"Box",
+                            "props":{"y":0,"x":0,"width":750,"name":"render","height":243},
+                            "nodeParent":26,
+                            "label":"Box(render)",
+                            "isOpen":true,
+                            "isDirectory":true,
+                            "isAniNode":false,
+                            "hasChild":true,
+                            "compId":57,
+                            "child":[
+                                {
+                                    "x":60,
+                                    "type":"View",
+                                    "props":{"y":13,"x":117,"var":"_boxview","name":"boxview"},
+                                    "nodeParent":57,
+                                    "label":"View(_boxview)",
+                                    "isOpen":false,
+                                    "isDirectory":true,
+                                    "isAniNode":false,
+                                    "hasChild":true,
+                                    "compId":58,
+                                    "child":[
+                                        {
+                                            "type":"UIView",
+                                            "source":"words.ui",
+                                            "props":{"y":45,"x":63,"name":"words"},
+                                            "nodeParent":58,
+                                            "label":"UIView(words)",
+                                            "isDirectory":false,
+                                            "isAniNode":false,
+                                            "hasChild":false,
+                                            "compId":82,
+                                            "child":[
+                                                ],
+                                            "$HIDDEN":false
+                                        },
+                                        {
+                                            "type":"Image",
+                                            "props":{"y":3,"x":-38,"var":"_playerico","skin":"main_ui/btn_key.png","name":"playerico"},
+                                            "nodeParent":58,
+                                            "label":"Image(_playerico)",
+                                            "isDirectory":false,
+                                            "isAniNode":false,
+                                            "hasChild":false,
+                                            "compId":59,
+                                            "child":[
+                                                ],
+                                            "$HIDDEN":false
+                                        },
+                                        {
+                                            "type":"Label",
+                                            "props":{"y":6,"x":16,"var":"_playername","text":"这是一个人的名字","name":"playername","fontSize":30},
+                                            "nodeParent":58,
+                                            "label":"Label(_playername)",
+                                            "isDirectory":false,
+                                            "isAniNode":false,
+                                            "hasChild":false,
+                                            "compId":60,
+                                            "child":[
+                                                ],
+                                            "$LOCKED":false
+                                        },
+                                        {
+                                            "type":"Label",
+                                            "props":{"y":6,"x":531,"width":36,"var":"_playertime","text":"30","name":"playertime","height":34,"fontSize":30,"color":"#3e0100","align":"right"},
+                                            "nodeParent":58,
+                                            "label":"Label(_playertime)",
+                                            "isOpen":true,
+                                            "isDirectory":true,
+                                            "isAniNode":false,
+                                            "hasChild":true,
+                                            "compId":61,
+                                            "child":[
+                                                {
+                                                    "type":"Label",
+                                                    "props":{"y":1,"x":34,"text":"秒","fontSize":30},
+                                                    "nodeParent":61,
+                                                    "label":"Label",
+                                                    "isDirectory":false,
+                                                    "isAniNode":false,
+                                                    "hasChild":false,
+                                                    "compId":205,
+                                                    "child":[
+                                                        ]
+                                                }]
+                                        }],
+                                    "$HIDDEN":false
+                                }]
+                        }],
+                    "$HIDDEN":false
+                },
+                {
+                    "x":30,
+                    "type":"Button",
+                    "props":{"y":1254,"x":0,"width":750,"var":"btn_record","skin":"main_ui/btn_ok.png","sizeGrid":"3,3,3,3","labelSize":50,"labelAlign":"center","label":"^","height":80},
+                    "nodeParent":23,
+                    "label":"Button(btn_record)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":206,
+                    "child":[
+                        ],
+                    "$HIDDEN":false
+                }],
+            "$HIDDEN":true
         },
         {
             "x":15,
