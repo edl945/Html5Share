@@ -1,8 +1,8 @@
 {
     "x":0,
     "type":"View",
-    "selectedBox":20,
-    "selecteID":30,
+    "selectedBox":2,
+    "selecteID":18,
     "props":{"width":525,"sceneColor":"#000000","height":170},
     "nodeParent":-1,
     "label":"View",
@@ -83,7 +83,7 @@
                 {
                     "x":30,
                     "type":"Label",
-                    "props":{"y":0,"x":142,"width":104,"var":"pinyin2","valign":"middle","text":"REN","height":43,"fontSize":30,"font":"SimSun","color":"#a7433e","bold":true,"align":"center"},
+                    "props":{"y":0,"x":142,"width":104,"var":"pinyin2","valign":"middle","text":"REN","name":"pinyin2","height":43,"fontSize":30,"font":"SimSun","color":"#a7433e","bold":true,"align":"center"},
                     "nodeParent":2,
                     "label":"Label(pinyin2)",
                     "isOpen":true,
@@ -109,7 +109,7 @@
                 {
                     "x":30,
                     "type":"Label",
-                    "props":{"y":0,"x":279,"width":104,"var":"pinyin3","valign":"middle","text":"REN","height":43,"fontSize":30,"font":"SimSun","color":"#a7433e","bold":true,"align":"center"},
+                    "props":{"y":0,"x":279,"width":104,"var":"pinyin3","valign":"middle","text":"REN","name":"pinyin3","height":43,"fontSize":30,"font":"SimSun","color":"#a7433e","bold":true,"align":"center"},
                     "nodeParent":2,
                     "label":"Label(pinyin3)",
                     "isOpen":true,
@@ -135,7 +135,7 @@
                 {
                     "x":30,
                     "type":"Label",
-                    "props":{"y":0,"x":416,"width":104,"var":"pinyin4","valign":"middle","text":"REN","height":43,"fontSize":30,"font":"SimSun","color":"#a7433e","bold":true,"align":"center"},
+                    "props":{"y":0,"x":416,"width":104,"var":"pinyin4","valign":"middle","text":"REN","name":"pinyin4","height":43,"fontSize":30,"font":"SimSun","color":"#a7433e","bold":true,"align":"center"},
                     "nodeParent":2,
                     "label":"Label(pinyin4)",
                     "isOpen":true,

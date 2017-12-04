@@ -107,9 +107,9 @@
 		btn_enter_history.on(Event.CLICK, this, onBtnShowRecord);
 		btnCloseRecord.on(Event.CLICK, this, onBtnHideRecord);
 		btn_rule_success.on(Event.CLICK, this, onBtnReadmeClick);
-		btn_rule_fail.on(Event.CLICK, this, onBtnReadmeClick);
-		
+		btn_rule_fail.on(Event.CLICK, this, onBtnReadmeClick);			
 		btn_share.on(Event.CLICK, this, onGenShreUrl);
+		
 
 		registerKeyboard();
 
@@ -215,6 +215,7 @@
 		function switchToBegin(flashwords, lastPinyin)
 		{
 			console.log(this.topicpanel);
+			btn_enter_history.visible = false;
 
 			//add flash effect on word1
 			flashTheWord(flashwords, 0);
@@ -251,12 +252,12 @@
 			}
 			focusedPinyin = pinyincells[index];
 		}
-
-		var countdownleft = 30;
+		var DEF_TIME = 900;
+		var countdownleft = DEF_TIME;
 		var countloopfunc = null;
 		function startCountDown()
 		{
-			countdownleft = 30;
+			countdownleft = DEF_TIME;
 			countDownNumber.visible = true;			
 			countloopfunc = function onLoop()
 			{
@@ -388,9 +389,35 @@
 					focusedPinyin.text = newwords;
 				}
 			}
+
 			function onRetun()
 			{
-				console.log("Key: ok");
+				function checkFinished()
+				{
+					var checkResult = checkIfChengyuMatch(pinyinstr);
+					if(checkResult)
+					{
+						var historyRescord = _gamelogic.getUserList().Exist(pinyinstr);
+						if(historyRescord)
+						{
+							showChatMsg(historyRescord.UserName() + "用过了", pinyinstr);
+							return false;							
+						}
+						else
+						{
+							Laya.timer.clear(this, countloopfunc);
+							panelSuccess.visible = true;
+							shareUrl_dialog.visible = false;
+							return true;	
+						}						
+					}
+					else
+					{
+						showChatMsg("不是一个成语！", pinyinstr);	
+						return false;							
+					}			
+				}
+
 				SoundManager.playSound("sound/click.mp3");
 				if(pinyincells[currentFocusIndex].text.trim().length == 0)
 				{
@@ -413,13 +440,19 @@
 							newwords = newwords + pinyinstr[i];
 						pinyinstr = newwords;
 					}
-					
+
+					var anyresult = checkIfChengyuMatch(pinyinstr);
+					if(anyresult != null && anyresult.length == 4 && checkFinished())
+					{
+						return;
+					}
+
 					//var checkSingleResult = checkIfChengyuMatch(pinyincells[currentFocusIndex].text.trim());
 					var checkSingleResult = PY2CC(pinyincells[currentFocusIndex].text.trim().toLowerCase());
 					if(checkSingleResult == null)
 						checkSingleResult = "这个拼音有问题";						
 
-					var checkResult = "";//checkIfChengyuMatch(pinyinstr);
+					var checkResult = "";//
 					if (checkSingleResult != null)
 					{
 						var resstrcount = checkResult.length; //可能这么多词
@@ -435,17 +468,8 @@
 							currentFocusIndex ++;
 						else
 						{
-							var checkResult = checkIfChengyuMatch(pinyinstr);
-							if(checkResult)
-							{
-								Laya.timer.clear(this, countloopfunc);
-								panelSuccess.visible = true;
-								shareUrl_dialog.visible = false;
-							}
-							else
-							{
-								showChatMsg("不是一个成语！",pinyinstr);								
-							}							
+							currentFocusIndex ++;
+							checkFinished();
 						}
 						//unflashTheWord(0);
 
@@ -456,6 +480,29 @@
 						showToastMsg("这拼音不对，删了重来！");
 				}								
 			}
+
+			function clickBack(sendEvent)
+			{
+				if(sendEvent.target.name == "pinyin2")
+				{
+					currentFocusIndex = 1;
+				}
+				else if(sendEvent.target.name == "pinyin3")
+				{
+					currentFocusIndex = 2;
+				}
+				else if(sendEvent.target.name == "pinyin4")
+				{
+					currentFocusIndex = 3;					
+				}
+				moveFocus(currentFocusIndex);
+			}			
+			wordspanel.pinyin2.on(Event.CLICK, this, clickBack);
+			wordspanel.pinyin3.on(Event.CLICK, this, clickBack);
+			wordspanel.pinyin4.on(Event.CLICK, this, clickBack);
+
+
+
 			keyboard.btn_a.on(Event.CLICK, this, onKeyEnter);
 			keyboard.btn_b.on(Event.CLICK, this, onKeyEnter);
 			keyboard.btn_c.on(Event.CLICK, this, onKeyEnter);

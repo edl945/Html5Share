@@ -38,6 +38,17 @@ function LList() {
             console.log(this.arr[x].key + " : " +  this.arr[x].value.Words());
         }
     }
+    
+    this.Exist = function(pinyin)
+    {
+        for (var x = 0; x < this.arr.length; x++) {
+            if(pinyin.toLowerCase() == this.arr[x].value.Words())
+            {
+                return this.arr[x].value;
+            }
+        }
+        return null;
+    }
 
     var clear = function()
     {
