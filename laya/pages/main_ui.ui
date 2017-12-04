@@ -1,8 +1,8 @@
 {
     "x":0,
     "type":"View",
-    "selectedBox":173,
-    "selecteID":239,
+    "selectedBox":1,
+    "selecteID":173,
     "props":{"width":750,"sceneColor":"#000000","height":1334},
     "nodeParent":-1,
     "label":"View",
@@ -211,6 +211,20 @@
                 {
                     "x":30,
                     "type":"Image",
+                    "props":{"y":58,"x":53,"skin":"pic/popup_success.png"},
+                    "nodeParent":173,
+                    "label":"Image",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":175,
+                    "child":[
+                        ],
+                    "$HIDDEN":false
+                },
+                {
+                    "x":30,
+                    "type":"Image",
                     "props":{"y":552,"x":65,"var":"shareUrl_dialog","skin":"pic/url_copy.png"},
                     "nodeParent":173,
                     "label":"Image(shareUrl_dialog)",
@@ -315,21 +329,7 @@
                         }],
                     "$HIDDEN":false
                 }],
-            "$HIDDEN":false
-        },
-        {
-            "x":15,
-            "type":"Image",
-            "props":{"y":58,"x":53,"skin":"pic/popup_success.png"},
-            "nodeParent":1,
-            "label":"Image",
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":175,
-            "child":[
-                ],
-            "$HIDDEN":false
+            "$HIDDEN":true
         },
         {
             "x":15,
@@ -337,13 +337,14 @@
             "props":{"y":0,"x":0,"width":750,"var":"popup_overtime","height":1334},
             "nodeParent":1,
             "label":"View(popup_overtime)",
-            "isOpen":false,
+            "isOpen":true,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":176,
             "child":[
                 {
+                    "x":30,
                     "type":"Image",
                     "props":{"y":52,"x":39,"skin":"pic/popup_overtime.png"},
                     "nodeParent":176,
@@ -357,6 +358,7 @@
                     "$HIDDEN":false
                 },
                 {
+                    "x":30,
                     "type":"Button",
                     "props":{"y":1112,"x":71,"width":286,"var":"btn_moments","labelSize":30,"labelFont":"SimSun","labelColors":"#ffffff","labelBold":true,"height":99},
                     "nodeParent":176,
@@ -368,6 +370,7 @@
                     "compId":186,
                     "child":[
                         {
+                            "x":45,
                             "type":"Image",
                             "props":{"y":0,"x":0,"skin":"pic/button_red.png"},
                             "nodeParent":186,
@@ -381,6 +384,7 @@
                                 ]
                         },
                         {
+                            "x":45,
                             "type":"Image",
                             "props":{"y":21,"x":24,"width":49,"skin":"pic/icon_monents.png","height":49},
                             "nodeParent":186,
@@ -393,6 +397,7 @@
                                 ]
                         },
                         {
+                            "x":45,
                             "type":"Label",
                             "props":{"y":16,"x":6,"width":276,"valign":"middle","text":" 向朋友求助","height":62,"fontSize":30,"font":"SimSun","color":"#fdffff","bold":true,"align":"center"},
                             "nodeParent":186,
@@ -406,6 +411,7 @@
                         }]
                 },
                 {
+                    "x":30,
                     "type":"Button",
                     "props":{"y":1112,"x":410,"width":286,"var":"btn_rule_fail","labelSize":30,"labelColors":"#ffffff","labelBold":true,"height":99},
                     "nodeParent":176,
@@ -417,6 +423,7 @@
                     "compId":187,
                     "child":[
                         {
+                            "x":45,
                             "type":"Image",
                             "props":{"skin":"pic/button_red.png"},
                             "nodeParent":187,
@@ -429,6 +436,7 @@
                                 ]
                         },
                         {
+                            "x":45,
                             "type":"Label",
                             "props":{"y":16,"x":6,"width":276,"valign":"middle","text":"规则说明","height":62,"fontSize":30,"font":"SimSun","color":"#fdffff","bold":true,"align":"center"},
                             "nodeParent":187,
@@ -738,7 +746,7 @@
                         {
                             "x":45,
                             "type":"Label",
-                            "props":{"y":10,"x":0,"width":750,"text":"点击回到题目","height":27,"fontSize":27,"font":"SimSun","color":"#444242","bold":true,"align":"center"},
+                            "props":{"y":10,"x":0,"width":750,"text":"点击关闭历史记录","height":27,"fontSize":27,"font":"SimSun","color":"#444242","bold":true,"align":"center"},
                             "nodeParent":206,
                             "label":"Label",
                             "isDirectory":false,
@@ -897,7 +905,7 @@
                 {
                     "x":30,
                     "type":"Label",
-                    "props":{"y":10,"x":0,"width":750,"text":"点击查看历史","height":27,"fontSize":27,"font":"SimSun","color":"#444242","bold":true,"align":"center"},
+                    "props":{"y":10,"x":0,"width":750,"text":"点击查看历史记录","height":27,"fontSize":27,"font":"SimSun","color":"#444242","bold":true,"align":"center"},
                     "nodeParent":236,
                     "label":"Label",
                     "isDirectory":false,
