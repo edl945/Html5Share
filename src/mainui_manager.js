@@ -61,6 +61,10 @@
 		var btnRule = this.btn_rule_ready;
 		var btnRecord = this.btn_record;
 		var btnBtnPanel = this.readyPanel;
+		var btn_rule_success = this.btn_rule_success;
+		var btn_share = this.btn_share;
+		var btnshareUrl = this.shareUrl;
+
 		var wordspanel = this.topicpanel;
 		var mytopicpanel = this.pan_mytopic;
 		var lasttopicPanelUnshown = this.lasttopicPanel_unshown;
@@ -88,18 +92,20 @@
 		keyboard.y = 1337;
 		recordPanel.y = -1260;
 		panelFailed.visible = false;
-		panelSuccess.visible = false;
+		panelSuccess.visible = true;
 		countDownNumber.visible = false;
 
 		btnRule.on(Event.CLICK, this, onBtnReadmeClick);
 		btnStart.on(Event.CLICK, this, onBtnStartClick);
 		btnRecord.on(Event.CLICK, this, onBtnShowRecord);
-		
+		btn_rule_success.on(Event.CLICK, this, onBtnReadmeClick);
+		btn_share.on(Event.CLICK, this, onGenShreUrl);
 
 		registerKeyboard();
 
 		switchToReady();
-		
+					
+
 		function switchToReady()
 		{
 			wordspanel.pinyin1.text = "";
@@ -298,17 +304,19 @@
 		}
 
 		function onBtnReadmeClick()
-		{			
-		//	Laya.stage.removeChild(this);
+		{
+			//document.write("<button class='btn' data-clipboard-text='这里是要复制的内容' aria-label='复制成功！'>复制</button> ");
 			_parent.showReadme();
 			console.log("btn readme pressed");
 			SoundManager.playSound("sound/click.mp3");
 		}
+		function onGenShreUrl()
+		{
+			btnshareUrl.text = window.location;
+		}
 
 		function onBtnStartClick()
 		{			
-			//Laya.stage.removeChild(this);
-			//_parent.showGameUI();
 			movePanelToGamemode();
 			SoundManager.playSound("sound/click.mp3");
 			console.log("btn start pressed");

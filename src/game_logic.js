@@ -43,6 +43,24 @@
         console.log("urljson: " +  urljson);
         var newArr = JSON.parse(urljson);
         this.initWithJson(urljson);
+
+        // var clipboard = new Clipboard('.js-copy', {
+        //     text: function() {
+        //         console.log("adfadf");
+        //         return '这里被复制的内容';
+        //     }
+        // });
+        // clipboard.on('success', function(e) {
+        //     alert('复制成功');
+        // });        
+
+        var clipboard = new Clipboard('.btn');         
+        clipboard.on('success', function(e) { 
+            var msg = e.trigger.getAttribute('aria-label'); 
+            alert(msg); 
+            e.clearSelection(); 
+        }); 
+
     }
 
     _proto.initWithJson = function(jsonstr){
