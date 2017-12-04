@@ -169,22 +169,29 @@
 		}
 		function flashTheWord(flashwords, index)
 		{
-			wordspanel.flashnode.removeChildren();
+			var flashnodearr = [
+				wordspanel.flashnode1,
+				wordspanel.flashnode2,
+				wordspanel.flashnode3,
+				wordspanel.flashnode4
+			];
+			var flashnode = flashnodearr[index];
+			flashnode.removeChildren();
 			var flasharr = new Array();
 			var framecount = 0;
-			var flashroot = wordspanel.flashnode;
+			var flashroot = flashnode;
 			for(var i=0;i<flashwords.length;i++)
 			{
 				var newlabel = new Laya.Label(flashwords[i]);
-				formatText(wordspanel.flashnode, null);
-				newlabel.width = wordspanel.flashnode.width;
-				newlabel.height = wordspanel.flashnode.height;
-				newlabel.fontSize = wordspanel.flashnode.fontSize;
-				newlabel.align = wordspanel.flashnode.align;
-				newlabel.valign = wordspanel.flashnode.valign;
-				newlabel.color = wordspanel.flashnode.color;
+				formatText(flashnode, null);
+				newlabel.width = flashnode.width;
+				newlabel.height = flashnode.height;
+				newlabel.fontSize = flashnode.fontSize;
+				newlabel.align = flashnode.align;
+				newlabel.valign = flashnode.valign;
+				newlabel.color = flashnode.color;
 				newlabel.visible = false;
-				wordspanel.flashnode.addChild(newlabel);
+				flashnode.addChild(newlabel);
 				flasharr[i] = newlabel;
 			}
 			loopfunc = function onLoop()
@@ -406,25 +413,43 @@
 							newwords = newwords + pinyinstr[i];
 						pinyinstr = newwords;
 					}
+					
+					//var checkSingleResult = checkIfChengyuMatch(pinyincells[currentFocusIndex].text.trim());
+					var checkSingleResult = PY2CC(pinyincells[currentFocusIndex].text.trim().toLowerCase());
+					if(checkSingleResult == null)
+						checkSingleResult = "这个拼音有问题";						
 
-					var checkResult = checkIfChengyuMatch(pinyinstr);
-					if (checkResult != null)
+					var checkResult = "";//checkIfChengyuMatch(pinyinstr);
+					if (checkSingleResult != null)
 					{
 						var resstrcount = checkResult.length; //可能这么多词
 						resstrcount = Math.min(resstrcount, currentFocusIndex+1);//不能超过当前最大数字
 
-						for(var i=0;i<resstrcount;i++)
-							wordsArray[i].text = checkResult[i];
+						for(var i=0;i<currentFocusIndex+1;i++)
+						{
+							//wordsArray[i].text = checkResult[i];
+							wordsArray[i].text = "";
+						}							
 
 						if(currentFocusIndex < 3)
 							currentFocusIndex ++;
 						else
 						{
-							Laya.timer.clear(this, countloopfunc);
-							panelSuccess.visible = true;
-							shareUrl_dialog.visible = false;
+							var checkResult = checkIfChengyuMatch(pinyinstr);
+							if(checkResult)
+							{
+								Laya.timer.clear(this, countloopfunc);
+								panelSuccess.visible = true;
+								shareUrl_dialog.visible = false;
+							}
+							else
+							{
+								showChatMsg("不是一个成语！",pinyinstr);								
+							}							
 						}
-						unflashTheWord(0);
+						//unflashTheWord(0);
+
+						flashTheWord(checkSingleResult ,currentFocusIndex-1);
 						moveFocus(currentFocusIndex);
 					}
 					else
