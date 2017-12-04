@@ -39,6 +39,11 @@
         var res = [];
         res.push({url: "res/atlas/main_ui.atlas", type: Loader.ATLAS});
         res.push({url: "res/atlas/pic.atlas", type: Loader.ATLAS});
+        res.push({url: "res/atlas/pic/letters.atlas", type: Loader.ATLAS});
+        res.push({url: "res/atlas/pic/scrollbar.atlas", type: Loader.ATLAS});
+        
+        res.push({url: "res/atlas/pic/letters.png", type: Loader.IMAGE});
+        res.push({url: "res/atlas/pic/scrollbar.png", type: Loader.IMAGE});
         res.push({url: "res/atlas/main_ui.png", type: Loader.IMAGE});
         res.push({url: "res/atlas/pic.png", type: Loader.IMAGE});
         res.push({url: "res/atlas/pic1.png", type: Loader.IMAGE});

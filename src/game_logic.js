@@ -69,5 +69,10 @@
     _proto.currentWord = function(){
         return currentWord;
     }
-
+    
+    _proto.pinyinArray = function()
+    {
+        var arr = currentWord.words.split(",");
+		return arr;
+    }
 })();

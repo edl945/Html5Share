@@ -1,8 +1,8 @@
 {
     "x":0,
     "type":"View",
-    "selectedBox":1,
-    "selecteID":211,
+    "selectedBox":211,
+    "selecteID":214,
     "props":{"width":750,"sceneColor":"#000000","height":1334},
     "nodeParent":-1,
     "label":"View",
@@ -442,14 +442,13 @@
             "props":{"y":0,"x":0,"width":750,"var":"pan_result","height":1334},
             "nodeParent":1,
             "label":"Panel(pan_result)",
-            "isOpen":true,
+            "isOpen":false,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":23,
             "child":[
                 {
-                    "x":30,
                     "type":"Image",
                     "props":{"y":0,"x":0,"width":750,"skin":"pic/background.png","sizeGrid":"5,5,5,5","height":1334},
                     "nodeParent":23,
@@ -463,7 +462,6 @@
                     "$HIDDEN":false
                 },
                 {
-                    "x":30,
                     "type":"List",
                     "props":{"y":77,"x":0,"width":750,"var":"lst_players","vScrollBarSkin":"pic/scrollbar/1p_trans.png","repeatY":10,"repeatX":1,"height":1179},
                     "nodeParent":23,
@@ -475,7 +473,6 @@
                     "compId":26,
                     "child":[
                         {
-                            "x":45,
                             "type":"Box",
                             "props":{"y":0,"x":0,"width":750,"name":"render","height":305},
                             "nodeParent":26,
@@ -487,7 +484,6 @@
                             "compId":57,
                             "child":[
                                 {
-                                    "x":60,
                                     "type":"Image",
                                     "props":{"y":0,"x":0,"visible":false,"skin":"pic/temp_listbox.png"},
                                     "nodeParent":57,
@@ -501,7 +497,6 @@
                                     "$HIDDEN":true
                                 },
                                 {
-                                    "x":60,
                                     "type":"View",
                                     "props":{"y":13,"x":117,"var":"_boxview","name":"boxview"},
                                     "nodeParent":57,
@@ -513,7 +508,6 @@
                                     "compId":58,
                                     "child":[
                                         {
-                                            "x":75,
                                             "type":"UIView",
                                             "source":"words.ui",
                                             "props":{"y":104,"x":44,"name":"words"},
@@ -528,7 +522,6 @@
                                             "$HIDDEN":false
                                         },
                                         {
-                                            "x":75,
                                             "type":"Image",
                                             "props":{"y":10,"x":14,"skin":"pic/player_avatar_bg.png"},
                                             "nodeParent":58,
@@ -540,7 +533,6 @@
                                             "compId":220,
                                             "child":[
                                                 {
-                                                    "x":90,
                                                     "type":"Image",
                                                     "props":{"y":2,"x":2,"width":64,"var":"_playerico","name":"playerico","height":64},
                                                     "nodeParent":220,
@@ -555,7 +547,6 @@
                                                 }]
                                         },
                                         {
-                                            "x":75,
                                             "type":"Label",
                                             "props":{"y":28,"x":102,"var":"_playername","text":"这是一个人的名字","name":"playername","fontSize":30,"font":"SimSun","color":"#533c3b","bold":true},
                                             "nodeParent":58,
@@ -569,7 +560,6 @@
                                             "$LOCKED":false
                                         },
                                         {
-                                            "x":75,
                                             "type":"Label",
                                             "props":{"y":30,"x":513,"width":36,"var":"_playertime","text":"30","name":"playertime","height":34,"fontSize":27,"font":"SimSun","color":"#533c3b","bold":true,"align":"right"},
                                             "nodeParent":58,
@@ -581,7 +571,6 @@
                                             "compId":61,
                                             "child":[
                                                 {
-                                                    "x":90,
                                                     "type":"Label",
                                                     "props":{"y":1,"x":34,"text":"s","fontSize":27,"font":"SimSun","color":"#533c3b","bold":true},
                                                     "nodeParent":61,
@@ -597,7 +586,6 @@
                                     "$HIDDEN":false
                                 },
                                 {
-                                    "x":60,
                                     "type":"Image",
                                     "props":{"skin":"pic/list_scrollbar.png"},
                                     "nodeParent":57,
@@ -613,7 +601,6 @@
                     "$HIDDEN":false
                 },
                 {
-                    "x":30,
                     "type":"Button",
                     "props":{"y":1254,"x":0,"width":750,"var":"btn_record","skin":"main_ui/btn_ok.png","sizeGrid":"3,3,3,3","labelSize":50,"labelAlign":"center","label":"^","height":80},
                     "nodeParent":23,
@@ -699,13 +686,14 @@
             "props":{"y":232,"x":172,"width":421,"var":"chat","height":141},
             "nodeParent":1,
             "label":"View(chat)",
-            "isOpen":false,
+            "isOpen":true,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":211,
             "child":[
                 {
+                    "x":30,
                     "type":"Image",
                     "props":{"skin":"pic/tip_chat_bg.png"},
                     "nodeParent":211,
@@ -718,6 +706,7 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"Label",
                     "props":{"y":50,"x":60,"width":344,"var":"chatMsg","valign":"middle","text":"不是成语哦！","height":59,"fontSize":25,"font":"SimSun","color":"#5d343a","bold":true,"align":"center"},
                     "nodeParent":211,
@@ -731,6 +720,7 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"Label",
                     "props":{"y":11,"x":61,"width":344,"var":"chatMsg_pingyin","valign":"middle","text":"\"HU HA HU HA\"","height":59,"fontSize":25,"font":"SimSun","color":"#a7433e","bold":true,"align":"center"},
                     "nodeParent":211,
@@ -743,7 +733,7 @@
                     "child":[
                         ]
                 }],
-            "$HIDDEN":true
+            "$HIDDEN":false
         }],
     "animations":[
         {

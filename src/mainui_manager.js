@@ -63,6 +63,8 @@
 		var btnBtnPanel = this.readyPanel;
 		var wordspanel = this.topicpanel;
 		var mytopicpanel = this.pan_mytopic;
+		var lasttopicPanelUnshown = this.lasttopicPanel_unshown;
+		var lasttopicpanel = this.lasttopicpanel;
 		var keyboard = this.keyboard;
 		var panelSuccess =this.popup_success;
 		var panelFailed = this.popup_overtime;
@@ -123,6 +125,23 @@
 			Laya.timer.once(1000,this,hideToast);
 		}
 
+		var chatpanel = this.chat;
+		var chatMsg = this.chatMsg;
+		var chatMsg_pingyin = this.chatMsg_pingyin;
+		chatpanel.visible = false;
+		function showChatMsg(msg, pinyin)
+		{
+			chatpanel.visible = true;
+			chatMsg.text = msg;
+			chatMsg_pingyin.text = pinyin;
+			function hideChat()
+			{
+				chatpanel.visible = false;
+			}
+			Laya.timer.once(1500, this, hideChat);
+		}
+
+
 		var wordsArray = [wordspanel.word1,wordspanel.word2,wordspanel.word3,wordspanel.word4];
 		var loopfunc = null;
 		function unflashTheWord(index)
@@ -181,7 +200,7 @@
 			wordspanel.pinyin3.text = "";
 			wordspanel.word3.text = "?";
 			wordspanel.pinyin4.text = "";
-			wordspanel.word4.text = "?";
+			wordspanel.word4.text = "?";			
 
 			moveFocus(currentFocusIndex);
 		}
@@ -245,6 +264,20 @@
 					switchToBegin(flashwords, lastPInyin);
 
 					startCountDown();
+					lasttopicPanelUnshown.visible = false;			
+
+					tempstr = checkIfChengyuMatch(words);
+					lasttopicpanel.word1.text = tempstr[0];
+					lasttopicpanel.word2.text = tempstr[1];
+					lasttopicpanel.word3.text = tempstr[2];
+					lasttopicpanel.word4.text = tempstr[3];		
+					tempstr = _gamelogic.pinyinArray()
+					lasttopicpanel.pinyin1.text = tempstr[0].toUpperCase();
+					lasttopicpanel.pinyin2.text = tempstr[1].toUpperCase();
+					lasttopicpanel.pinyin3.text = tempstr[2].toUpperCase();
+					lasttopicpanel.pinyin4.text = tempstr[3].toUpperCase();
+
+
 				}
 			}
 			Tween.to(btnBtnPanel,{y:1337},timeinterval,Laya.Ease.cubicOut,Handler.create(this,onTween));
@@ -293,7 +326,7 @@
 		{
 			function onKeyEnter(sendEvent)
 			{
-				console.log("Key: " + sendEvent.target.label);
+				console.log("Key: " + sendEvent.target.name);
 				if (focusedPinyin != null)
 				{
 					if(focusedPinyin.text.length > 5)

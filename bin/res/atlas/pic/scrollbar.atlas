@@ -1,0 +1,92 @@
+{
+    "frames": {
+        "1p_trans$bar.png": {
+            "frame": {
+                "h": 1,
+                "idx": 0,
+                "w": 1,
+                "x": 0,
+                "y": 0
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 1,
+                "w": 1
+            },
+            "spriteSourceSize": {
+                "h": 1,
+                "w": 1,
+                "x": 0,
+                "y": 0
+            },
+            "trimmed": false
+        },
+        "1p_trans$down.png": {
+            "frame": {
+                "h": 1,
+                "idx": 0,
+                "w": 1,
+                "x": 0,
+                "y": 2
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 1,
+                "w": 1
+            },
+            "spriteSourceSize": {
+                "h": 1,
+                "w": 1,
+                "x": 0,
+                "y": 0
+            },
+            "trimmed": false
+        },
+        "1p_trans$up.png": {
+            "frame": {
+                "h": 1,
+                "idx": 0,
+                "w": 1,
+                "x": 0,
+                "y": 4
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 1,
+                "w": 1
+            },
+            "spriteSourceSize": {
+                "h": 1,
+                "w": 1,
+                "x": 0,
+                "y": 0
+            },
+            "trimmed": false
+        },
+        "1p_trans.png": {
+            "frame": {
+                "h": 1,
+                "idx": 0,
+                "w": 1,
+                "x": 0,
+                "y": 6
+            },
+            "rotated": false,
+            "sourceSize": {
+                "h": 1,
+                "w": 1
+            },
+            "spriteSourceSize": {
+                "h": 1,
+                "w": 1,
+                "x": 0,
+                "y": 0
+            },
+            "trimmed": false
+        }
+    },
+    "meta": {
+        "image": "scrollbar.png",
+        "prefix": "pic/scrollbar/"
+    }
+}
