@@ -36,6 +36,7 @@ function player(playername, words, time)
     playerinfo.UserName = playername;
     playerinfo.Pinyins = words;
     playerinfo.Time = time;
+    this.index = 0;
     
     this.UserName = function(){
         return playerinfo.UserName;

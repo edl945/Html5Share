@@ -13,6 +13,7 @@ function LList() {
                 return;
             }
         }
+        value.index = this.arr.length;
         this.arr[this.arr.length] = new struct(key, value);
     }
     /*根据容器获取容器中的值*/
@@ -42,7 +43,7 @@ function LList() {
     this.Exist = function(pinyin)
     {
         for (var x = 0; x < this.arr.length; x++) {
-            if(pinyin.toLowerCase() == this.arr[x].value.Words())
+            if(pinyin.toLowerCase() == this.arr[x].value.Pinyins())
             {
                 return this.arr[x].value;
             }

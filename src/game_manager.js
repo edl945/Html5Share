@@ -42,7 +42,7 @@
         this.addChild(gameContainer);
 
         gameBgPanel = new Sprite();//游戏区背景
-        gameBgPanel.loadImage("res/mainui_bg.png");
+        //gameBgPanel.loadImage("res/mainui_bg.png");
         gameContainer.addChild(gameBgPanel);
     }
 

@@ -1,1 +1,1 @@
-{"build":{"versionName":"2","merge":false,"compress":false,"recompile":true,"regenerateUI":true,"regenerateAtlas":true}}
+{"build":{"versionName":"4","merge":false,"compress":false,"recompile":true,"regenerateUI":true,"regenerateAtlas":true},"pngquant":{"showAdvanceOptions":false,"colors":8,"speed":3,"quality":[50,90],"table":{"unselectedFiles":[]}}}

@@ -36,6 +36,11 @@
 		var boxview = item.getChildByName("boxview");
 		boxview.getChildByName("playername").text = userinfo.UserName();
 		boxview.getChildByName("playertime").text = userinfo.Time();
+		
+		console.log(boxview._playericoframe);
+		var icoindex = index % 9;
+		boxview.getChildByName("playericoframe").getChildByName("playerico").skin = "pic/avatar/" + icoindex + ".jpg";		
+
 
 		var wordpanel = boxview.getChildByName("words");
 		var words = checkIfChengyuMatch(userinfo.Pinyins()) ;
@@ -96,7 +101,7 @@
 		this.lst_players.scrollBar.value = 9999;
 
 		keyboard.y = 1337;
-		recordPanel.y = -1260;
+		recordPanel.y = -1337;
 		panelFailed.visible = false;
 		panelSuccess.visible = false;
 		countDownNumber.visible = false;
@@ -115,6 +120,7 @@
 
 		switchToReady();
 					
+		var toastTime = 2000;
 
 		function switchToReady()
 		{
@@ -130,16 +136,22 @@
 		}
 		var toastpanel = this.toast;
 		var toastmsg = this.toastMsg;
-		function showToastMsg(msg)
+		var toast_avatar_pic = this.toast_avatar_pic;
+		var toastMsg_words = this.toastMsg_words;
+
+		function showToastMsg(msg, playerinfo)
 		{
 			toastpanel.visible = true;
-			toastmsg.text = msg;
+			toastmsg.text = "我已经用过了";
+			toastMsg_words.text = msg;
+			toast_avatar_pic.skin = "pic/avatar/" + playerinfo.index + ".jpg";
+			
 			SoundManager.playSound("sound/tip.mp3");
 			function hideToast()
 			{
 				toastpanel.visible = false;
 			}
-			Laya.timer.once(1000,this,hideToast);
+			Laya.timer.once(toastTime,this,hideToast);
 		}
 
 		var chatpanel = this.chat;
@@ -156,7 +168,7 @@
 			{
 				chatpanel.visible = false;
 			}
-			Laya.timer.once(1500, this, hideChat);
+			Laya.timer.once(toastTime, this, hideChat);
 		}
 
 
@@ -252,7 +264,7 @@
 			}
 			focusedPinyin = pinyincells[index];
 		}
-		var DEF_TIME = 900;
+		var DEF_TIME = 30;
 		var countdownleft = DEF_TIME;
 		var countloopfunc = null;
 		function startCountDown()
@@ -302,8 +314,6 @@
 					lasttopicpanel.pinyin2.text = tempstr[1].toUpperCase();
 					lasttopicpanel.pinyin3.text = tempstr[2].toUpperCase();
 					lasttopicpanel.pinyin4.text = tempstr[3].toUpperCase();
-
-
 				}
 			}
 			Tween.to(btnBtnPanel,{y:1337},timeinterval,Laya.Ease.cubicOut,Handler.create(this,onTween));
@@ -358,7 +368,7 @@
 			btnCloseRecord.visible = false;
 			btn_enter_history.visible = true;
 
-			Tween.to(recordPanel,{y:-1260},timeinterval,Laya.Ease.cubicIn,Handler.create(this,null));
+			Tween.to(recordPanel,{y:-1337},timeinterval,Laya.Ease.cubicIn,Handler.create(this,null));
 			SoundManager.playSound("sound/click.mp3");
 			console.log("onBtnHideRecord");
 		}
@@ -372,7 +382,7 @@
 				if (focusedPinyin != null)
 				{
 					if(focusedPinyin.text.length > 5)
-						showToastMsg("你不觉得这拼音太长了么");
+						showChatMsg("","你不觉得这拼音太长了么");
 					else
 						focusedPinyin.text = focusedPinyin.text + sendEvent.target.name.toUpperCase();
 				}
@@ -400,7 +410,7 @@
 						var historyRescord = _gamelogic.getUserList().Exist(pinyinstr);
 						if(historyRescord)
 						{
-							showChatMsg(historyRescord.UserName() + "用过了", pinyinstr);
+							showToastMsg(checkResult, historyRescord);
 							return false;							
 						}
 						else
@@ -422,7 +432,7 @@
 				if(pinyincells[currentFocusIndex].text.trim().length == 0)
 				{
 					console.log(currentFocusIndex + "！不能为空");			
-					showToastMsg("请输入拼音后再点OK！");	
+					showChatMsg("","请输入拼音后再点OK！");	
 				}
 				else
 				{								
@@ -463,21 +473,19 @@
 							//wordsArray[i].text = checkResult[i];
 							wordsArray[i].text = "";
 						}							
-
-						if(currentFocusIndex < 3)
-							currentFocusIndex ++;
-						else
+						
+						if(currentFocusIndex == 3)
 						{
-							currentFocusIndex ++;
 							checkFinished();
 						}
-						//unflashTheWord(0);
+						currentFocusIndex ++;
 
 						flashTheWord(checkSingleResult ,currentFocusIndex-1);
 						moveFocus(currentFocusIndex);
+						currentFocusIndex = Math.min(3, currentFocusIndex);
 					}
 					else
-						showToastMsg("这拼音不对，删了重来！");
+						showChatMsg("","这拼音不对，删了重来！");
 				}								
 			}
 
