@@ -1,14 +1,14 @@
 D .
 D main_ui
-P 88225BD4 arrow.png
-P 2551F8A6 btn_cancel.png
+R 88225BD4 arrow.png
+R 2551F8A6 btn_cancel.png
 P CC1DA17C btn_key.png
-P 5BB46BB4 btn_ok.png
-P 2271E536 btn_return.png
+R 5BB46BB4 btn_ok.png
+R 2271E536 btn_return.png
 P B85EAE16 lilith_logo.png
-P 6E08BE67 panel_bg.png
-P DA217DF2 panel_title.png
-P 7E990267 vscroll.png
+R 6E08BE67 panel_bg.png
+R DA217DF2 panel_title.png
+R 7E990267 vscroll.png
 D pic
 P B3C89E0F background.png
 P 09D8ED6C blackmask.png
@@ -19,18 +19,19 @@ P 6D65FE41 keyboard_key_del.png
 P E861AB44 keyboard_key_letter.png
 P BDEE7DA5 keyboard_key_ok.png
 P BA423BF7 list_scrollbar.png
-P 7DC101E1 list_scrollbar_pointer.png
-P 13B30807 player_avatar_bg.png
+P 71183D9A list_scrollbar_pointer.png
+R 13B30807 player_avatar_bg.png
 P 2ED1F939 popup_overtime.png
 P 1F5570C6 popup_success.png
-P DA40F58A progress.png
+R DA40F58A progress.png
 P 1C72318B progress_bg.png
-R 98065BD1 QQ20171203-110914@2x.png
 P CB4CD1AF rule_bg.png
 P 64CC99AA rule_iknow.png
 P 671CC71B rule_title.png
 P 69975037 rule_underline.png
-P F7674569 tip_chat_bg.png
-P 51F23DAF tip_warning_bg.png
+R D9C81DA9 temp_chat.png
+R 0C7988D7 temp_warning.png
+R F7674569 tip_chat_bg.png
+R 51F23DAF tip_warning_bg.png
 P 13592725 words_bg_locked.png
 P F835EF68 words_bg_unlock.png

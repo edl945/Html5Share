@@ -37,8 +37,8 @@
 
     function init() {
         var res = [];
-        res.push({url: "res/atlas/main_ui.json", type: Loader.ATLAS});
-        res.push({url: "res/atlas/pic.json", type: Loader.ATLAS});
+        res.push({url: "res/atlas/main_ui.atlas", type: Loader.ATLAS});
+        res.push({url: "res/atlas/pic.atlas", type: Loader.ATLAS});
         res.push({url: "res/atlas/main_ui.png", type: Loader.IMAGE});
         res.push({url: "res/atlas/pic.png", type: Loader.IMAGE});
         res.push({url: "res/atlas/pic1.png", type: Loader.IMAGE});
