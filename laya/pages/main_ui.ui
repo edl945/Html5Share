@@ -1,8 +1,8 @@
 {
     "x":0,
     "type":"View",
-    "selectedBox":29,
-    "selecteID":200,
+    "selectedBox":1,
+    "selecteID":23,
     "props":{"width":750,"sceneColor":"#000000","height":1334},
     "nodeParent":-1,
     "label":"View",
@@ -23,12 +23,13 @@
             "hasChild":false,
             "compId":196,
             "child":[
-                ]
+                ],
+            "$HIDDEN":false
         },
         {
             "x":15,
             "type":"Panel",
-            "props":{"y":550,"x":0,"width":750,"var":"pan_mytopic","height":374},
+            "props":{"y":600,"x":0,"width":750,"var":"pan_mytopic","height":402},
             "nodeParent":1,
             "label":"Panel(pan_mytopic)",
             "isOpen":true,
@@ -53,22 +54,8 @@
                 },
                 {
                     "x":30,
-                    "type":"Image",
-                    "props":{"y":0,"x":0,"width":750,"skin":"main_ui/panel_title.png","sizeGrid":"10,10,10,10","height":24},
-                    "nodeParent":13,
-                    "label":"Image",
-                    "isOpen":true,
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":14,
-                    "child":[
-                        ]
-                },
-                {
-                    "x":30,
                     "type":"View",
-                    "props":{"y":29,"x":0,"width":746,"height":165},
+                    "props":{"y":1,"x":0,"width":750,"height":123},
                     "nodeParent":13,
                     "label":"View",
                     "isOpen":true,
@@ -80,19 +67,47 @@
                         {
                             "x":45,
                             "type":"Image",
-                            "props":{"y":5,"x":29,"width":23,"skin":"main_ui/arrow.png","height":23},
+                            "props":{"y":131,"x":171,"skin":"pic/progress_bg.png"},
                             "nodeParent":28,
                             "label":"Image",
                             "isOpen":true,
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":203,
+                            "child":[
+                                ],
+                            "$HIDDEN":false
+                        },
+                        {
+                            "x":45,
+                            "type":"UIView",
+                            "source":"words.ui",
+                            "props":{"y":164,"x":124,"var":"topicpanel"},
+                            "nodeParent":28,
+                            "label":"UIView(topicpanel)",
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":83,
+                            "child":[
+                                ]
+                        },
+                        {
+                            "x":45,
+                            "type":"Image",
+                            "props":{"y":5,"x":48,"width":23,"height":23},
+                            "nodeParent":28,
+                            "label":"Image",
+                            "isOpen":false,
                             "isDirectory":true,
                             "isAniNode":true,
                             "hasChild":true,
                             "compId":29,
                             "child":[
                                 {
-                                    "x":60,
                                     "type":"Label",
-                                    "props":{"y":-3,"x":27,"text":"你的答案","fontSize":30,"color":"#030303"},
+                                    "props":{"y":43,"x":-21,"text":"你的答案：","fontSize":35,"color":"#4e0100"},
                                     "nodeParent":29,
                                     "label":"Label",
                                     "isDirectory":false,
@@ -103,46 +118,30 @@
                                         ]
                                 },
                                 {
-                                    "x":60,
                                     "type":"Label",
-                                    "props":{"y":3,"x":615,"width":66,"var":"countDownNumber","valign":"middle","text":"30","height":62,"fontSize":45,"color":"#000000","align":"center"},
+                                    "props":{"y":-3,"x":355,"width":66,"var":"countDownNumber","valign":"middle","text":"30","height":62,"fontSize":45,"color":"#4e0100","align":"center"},
                                     "nodeParent":29,
                                     "label":"Label(countDownNumber)",
-                                    "isDirectory":false,
+                                    "isOpen":true,
+                                    "isDirectory":true,
                                     "isAniNode":true,
-                                    "hasChild":false,
+                                    "hasChild":true,
                                     "compId":200,
                                     "child":[
-                                        ]
-                                }]
-                        }],
-                    "$HIDDEN":false
-                },
-                {
-                    "x":30,
-                    "type":"View",
-                    "props":{"y":24,"x":122,"width":400,"height":71},
-                    "nodeParent":13,
-                    "label":"View",
-                    "isOpen":true,
-                    "isDirectory":true,
-                    "isAniNode":true,
-                    "hasChild":true,
-                    "compId":51,
-                    "child":[
-                        {
-                            "x":45,
-                            "type":"UIView",
-                            "source":"words.ui",
-                            "props":{"y":98,"x":2,"var":"topicpanel"},
-                            "nodeParent":51,
-                            "label":"UIView(topicpanel)",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":83,
-                            "child":[
-                                ]
+                                        {
+                                            "type":"Label",
+                                            "props":{"y":-2,"x":-148,"width":66,"valign":"middle","text":"倒计时：","height":62,"fontSize":45,"color":"#4e0100","align":"center"},
+                                            "nodeParent":200,
+                                            "label":"Label",
+                                            "isDirectory":false,
+                                            "isAniNode":true,
+                                            "hasChild":false,
+                                            "compId":201,
+                                            "child":[
+                                                ]
+                                        }]
+                                }],
+                            "$HIDDEN":false
                         }],
                     "$HIDDEN":false
                 }],
@@ -151,7 +150,7 @@
         {
             "x":15,
             "type":"Panel",
-            "props":{"y":0,"x":0,"width":747,"name":"pan_result","height":549},
+            "props":{"y":0,"x":0,"width":747,"var":"pan_result","height":549},
             "nodeParent":1,
             "label":"Panel(pan_result)",
             "isOpen":true,
@@ -171,25 +170,13 @@
                     "hasChild":false,
                     "compId":24,
                     "child":[
-                        ]
-                },
-                {
-                    "x":30,
-                    "type":"Image",
-                    "props":{"y":0,"x":0,"width":750,"skin":"main_ui/panel_title.png","height":30},
-                    "nodeParent":23,
-                    "label":"Image",
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":25,
-                    "child":[
-                        ]
+                        ],
+                    "$HIDDEN":false
                 },
                 {
                     "x":30,
                     "type":"List",
-                    "props":{"y":86,"x":0,"width":750,"var":"lst_players","vScrollBarSkin":"main_ui/vscroll.png","repeatY":4,"repeatX":1,"height":463},
+                    "props":{"y":77,"x":0,"width":750,"var":"lst_players","vScrollBarSkin":"pic/list_scrollbar.png","repeatY":10,"repeatX":1,"height":472},
                     "nodeParent":23,
                     "label":"List(lst_players)",
                     "isOpen":true,
@@ -201,7 +188,7 @@
                         {
                             "x":45,
                             "type":"Box",
-                            "props":{"y":0,"x":107,"name":"render"},
+                            "props":{"y":0,"x":0,"width":750,"name":"render","height":243},
                             "nodeParent":26,
                             "label":"Box(render)",
                             "isOpen":true,
@@ -213,19 +200,32 @@
                                 {
                                     "x":60,
                                     "type":"View",
-                                    "props":{"var":"_boxview","name":"boxview"},
+                                    "props":{"y":13,"x":117,"var":"_boxview","name":"boxview"},
                                     "nodeParent":57,
                                     "label":"View(_boxview)",
-                                    "isOpen":true,
+                                    "isOpen":false,
                                     "isDirectory":true,
                                     "isAniNode":false,
                                     "hasChild":true,
                                     "compId":58,
                                     "child":[
                                         {
-                                            "x":75,
+                                            "type":"UIView",
+                                            "source":"words.ui",
+                                            "props":{"y":45,"x":63,"name":"words"},
+                                            "nodeParent":58,
+                                            "label":"UIView(words)",
+                                            "isDirectory":false,
+                                            "isAniNode":false,
+                                            "hasChild":false,
+                                            "compId":82,
+                                            "child":[
+                                                ],
+                                            "$HIDDEN":false
+                                        },
+                                        {
                                             "type":"Image",
-                                            "props":{"var":"_playerico","skin":"main_ui/btn_key.png","name":"playerico"},
+                                            "props":{"y":3,"x":-38,"var":"_playerico","skin":"main_ui/btn_key.png","name":"playerico"},
                                             "nodeParent":58,
                                             "label":"Image(_playerico)",
                                             "isDirectory":false,
@@ -233,12 +233,12 @@
                                             "hasChild":false,
                                             "compId":59,
                                             "child":[
-                                                ]
+                                                ],
+                                            "$HIDDEN":false
                                         },
                                         {
-                                            "x":75,
                                             "type":"Label",
-                                            "props":{"y":5,"x":45,"var":"_playername","text":"这是一个人的名字","name":"playername"},
+                                            "props":{"y":6,"x":16,"var":"_playername","text":"这是一个人的名字","name":"playername","fontSize":30},
                                             "nodeParent":58,
                                             "label":"Label(_playername)",
                                             "isDirectory":false,
@@ -250,36 +250,33 @@
                                             "$LOCKED":false
                                         },
                                         {
-                                            "x":75,
                                             "type":"Label",
-                                            "props":{"y":5,"x":373,"var":"_playertime","text":"6s","name":"playertime"},
+                                            "props":{"y":6,"x":531,"width":36,"var":"_playertime","text":"30","name":"playertime","height":34,"fontSize":30,"color":"#3e0100","align":"right"},
                                             "nodeParent":58,
                                             "label":"Label(_playertime)",
-                                            "isDirectory":false,
+                                            "isOpen":true,
+                                            "isDirectory":true,
                                             "isAniNode":false,
-                                            "hasChild":false,
+                                            "hasChild":true,
                                             "compId":61,
                                             "child":[
-                                                ]
-                                        },
-                                        {
-                                            "x":75,
-                                            "type":"UIView",
-                                            "source":"words.ui",
-                                            "props":{"y":37,"x":-2,"name":"words"},
-                                            "nodeParent":58,
-                                            "label":"UIView(words)",
-                                            "isDirectory":false,
-                                            "isAniNode":false,
-                                            "hasChild":false,
-                                            "compId":82,
-                                            "child":[
-                                                ],
-                                            "$HIDDEN":false
+                                                {
+                                                    "type":"Label",
+                                                    "props":{"y":1,"x":34,"text":"秒","fontSize":30},
+                                                    "nodeParent":61,
+                                                    "label":"Label",
+                                                    "isDirectory":false,
+                                                    "isAniNode":false,
+                                                    "hasChild":false,
+                                                    "compId":205,
+                                                    "child":[
+                                                        ]
+                                                }]
                                         }],
                                     "$HIDDEN":false
                                 }]
-                        }]
+                        }],
+                    "$HIDDEN":false
                 }],
             "$HIDDEN":false
         },
@@ -315,7 +312,7 @@
             "x":15,
             "type":"UIView",
             "source":"game_ui.ui",
-            "props":{"y":911,"x":3,"width":750,"var":"keyboard","height":419},
+            "props":{"y":911,"x":0,"width":750,"var":"keyboard","height":419},
             "nodeParent":1,
             "label":"UIView(keyboard)",
             "isDirectory":false,
@@ -329,7 +326,7 @@
         {
             "x":15,
             "type":"View",
-            "props":{"var":"popup_success"},
+            "props":{"y":0,"x":0,"width":750,"var":"popup_success","height":1334},
             "nodeParent":1,
             "label":"View(popup_success)",
             "isOpen":false,
@@ -405,7 +402,7 @@
         {
             "x":15,
             "type":"View",
-            "props":{"y":10,"x":10,"var":"popup_overtime"},
+            "props":{"y":0,"x":0,"width":750,"var":"popup_overtime","height":1334},
             "nodeParent":1,
             "label":"View(popup_overtime)",
             "isOpen":false,
@@ -416,7 +413,7 @@
             "child":[
                 {
                     "type":"Image",
-                    "props":{"y":52,"x":66,"skin":"pic/popup_overtime.png"},
+                    "props":{"y":52,"x":39,"skin":"pic/popup_overtime.png"},
                     "nodeParent":176,
                     "label":"Image",
                     "isDirectory":false,
@@ -493,7 +490,7 @@
         {
             "x":15,
             "type":"View",
-            "props":{"y":911,"x":3,"width":750,"var":"readyPanel","height":419},
+            "props":{"y":917,"x":0,"width":750,"var":"readyPanel","height":419},
             "nodeParent":1,
             "label":"View(readyPanel)",
             "isOpen":false,

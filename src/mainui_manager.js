@@ -37,19 +37,19 @@
 		boxview.getChildByName("playername").text = userinfo.UserName();
 		boxview.getChildByName("playertime").text = userinfo.Time();
 
-		var wordspanel = boxview.getChildByName("words");
+		var wordpanel = boxview.getChildByName("words");
 		var words = checkIfChengyuMatch(userinfo.Pinyins()) ;
 		var pinyinarray = userinfo.PinyinArray();
-		wordspanel.pinyin1.text = pinyinarray[0];
-		wordspanel.word1.text = words[0];
-		wordspanel.pinyin2.text = pinyinarray[1];
-		wordspanel.word2.text = words[1];
-		wordspanel.pinyin3.text = pinyinarray[2];
-		wordspanel.word3.text = words[2];
-		wordspanel.pinyin4.text = pinyinarray[3];
-		wordspanel.word4.text = words[3];
+		wordpanel.pinyin1.text = pinyinarray[0];
+		wordpanel.word1.text = words[0];
+		wordpanel.pinyin2.text = pinyinarray[1];
+		wordpanel.word2.text = words[1];
+		wordpanel.pinyin3.text = pinyinarray[2];
+		wordpanel.word3.text = words[2];
+		wordpanel.pinyin4.text = pinyinarray[3];
+		wordpanel.word4.text = words[3];
 
-		formatWordPanel(wordspanel);
+		formatWordPanel(wordpanel);
 	}
 
 	function main_ui()
@@ -61,10 +61,13 @@
 		var btnRule = this.btn_rule_ready;
 		var btnBtnPanel = this.readyPanel;
 		var wordspanel = this.topicpanel;
+		var mytopicpanel = this.pan_mytopic;
 		var keyboard = this.keyboard;
 		var panelSuccess =this.popup_success;
 		var panelFailed = this.popup_overtime;
 		var countDownNumber = this.countDownNumber;
+		var recordPanel = this.pan_result;
+
 		var focusedPinyin = null;
 		var currentFocusIndex = 1;
 
@@ -78,6 +81,7 @@
 		this.lst_players.array = arr;//给list赋值更改list的显示			
 		this.lst_players.renderHandler = new Handler(this, onListRender);//还可以自定义list渲染方式，可以打开下面注释看一下效果
 		this.lst_players.scrollBar.value = 9999;
+
 
 		keyboard.y = 1337;
 		panelFailed.visible = false;
@@ -207,6 +211,7 @@
 		function startCountDown()
 		{
 			countdownleft = 30;
+			countDownNumber.visible = true;			
 			countloopfunc = function onLoop()
 			{
 				countdownleft--;
@@ -242,6 +247,8 @@
 			}
 			Tween.to(btnBtnPanel,{y:1337},timeinterval,Laya.Ease.cubicOut,Handler.create(this,onTween));
 			Tween.to(keyboard,{y:911},timeinterval,Laya.Ease.cubicIn,Handler.create(this,null));
+			Tween.to(mytopicpanel,{y:500},timeinterval,Laya.Ease.cubicIn,Handler.create(this,null));			
+			Tween.to(recordPanel,{y:-100},timeinterval,Laya.Ease.cubicIn,Handler.create(this,null));						
 		}
 		function movePanelToRady()
 		{
