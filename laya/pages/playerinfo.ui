@@ -2,7 +2,7 @@
     "x":0,
     "type":"View",
     "selectedBox":1,
-    "selecteID":4,
+    "selecteID":3,
     "props":{"width":480,"sceneColor":"#000000","height":80},
     "nodeParent":-1,
     "label":"View",
@@ -14,21 +14,8 @@
     "child":[
         {
             "x":15,
-            "type":"Image",
-            "props":{"y":9,"x":75,"var":"player_ico","skin":"main_ui/lilith_logo.png"},
-            "nodeParent":1,
-            "label":"Image(player_ico)",
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":2,
-            "child":[
-                ]
-        },
-        {
-            "x":15,
             "type":"Label",
-            "props":{"y":26,"x":201,"var":"player_name","text":"这是一个人的名字","fontSize":30,"color":"#ffffff"},
+            "props":{"y":26,"x":182,"var":"player_name","text":"这是一个人的名字","fontSize":30,"color":"#5d343a","bold":true},
             "nodeParent":1,
             "label":"Label(player_name)",
             "isDirectory":false,
@@ -41,7 +28,7 @@
         {
             "x":15,
             "type":"Label",
-            "props":{"y":26,"x":4,"visible":false,"var":"player_no","text":"1楼","fontSize":30,"color":"#ffffff"},
+            "props":{"y":26,"x":4,"visible":false,"var":"player_no","text":"1楼","fontSize":30,"color":"#a7433e","bold":true},
             "nodeParent":1,
             "label":"Label(player_no)",
             "isDirectory":false,
@@ -51,6 +38,33 @@
             "child":[
                 ],
             "$HIDDEN":false
+        },
+        {
+            "x":15,
+            "type":"Image",
+            "props":{"y":7,"x":73,"skin":"pic/player_avatar_bg.png"},
+            "nodeParent":1,
+            "label":"Image",
+            "isOpen":true,
+            "isDirectory":true,
+            "isAniNode":true,
+            "hasChild":true,
+            "compId":5,
+            "child":[
+                {
+                    "x":30,
+                    "type":"Image",
+                    "props":{"y":2,"x":2,"width":64,"var":"player_ico","height":64},
+                    "nodeParent":5,
+                    "label":"Image(player_ico)",
+                    "isOpen":true,
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":2,
+                    "child":[
+                        ]
+                }]
         }],
     "animations":[
         {

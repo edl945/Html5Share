@@ -11,4 +11,9 @@
    <item name="pic/list_scrollbar_pointer.png" type="Image" compress="0" pack="0" quality="80" props="" picType="0"/>
    <item name="pic/progress_bg.png" type="Image" compress="0" pack="0" quality="80" props="" picType="0"/>
    <item name="pic/progress.png" type="Image" compress="0" pack="0" quality="80" props="" picType="0"/>
+   <item name="pic/lasttopic_unshown.png" type="Image" compress="0" pack="1" quality="80" props="" picType="0"/>
+   <item name="pic/temp_chat.png" type="Image" compress="0" pack="1" quality="80" props="" picType="0"/>
+   <item name="pic/temp_listbox.png" type="Image" compress="0" pack="1" quality="80" props="" picType="0"/>
+   <item name="pic/temp_main.png" type="Image" compress="0" pack="1" quality="80" props="" picType="0"/>
+   <item name="pic/rule.png" type="Image" compress="0" pack="1" quality="80" props="" picType="0"/>
 </res>

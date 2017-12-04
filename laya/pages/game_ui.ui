@@ -1,8 +1,8 @@
 {
     "x":0,
     "type":"View",
-    "selectedBox":9,
-    "selecteID":141,
+    "selectedBox":169,
+    "selecteID":202,
     "props":{"width":750,"sceneColor":"#000000","height":419},
     "nodeParent":-1,
     "label":"View",
@@ -40,27 +40,38 @@
                 {
                     "x":30,
                     "type":"Button",
-                    "props":{"y":10,"x":19,"width":65,"var":"btn_q","labelSize":50,"labelFont":"Arial","labelBold":true,"labelAlign":"center","label":" Q","height":112},
+                    "props":{"y":10,"x":19,"width":65,"var":"btn_q","labelSize":50,"labelFont":"Arial","labelBold":true,"labelAlign":"center","height":112},
                     "nodeParent":9,
                     "label":"Button(btn_q)",
-                    "isOpen":true,
+                    "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
                     "compId":10,
                     "child":[
                         {
-                            "x":45,
                             "type":"Image",
                             "props":{"skin":"pic/keyboard_key_letter.png"},
                             "nodeParent":10,
                             "label":"Image",
-                            "isDirectory":false,
+                            "isOpen":true,
+                            "isDirectory":true,
                             "isAniNode":true,
-                            "hasChild":false,
+                            "hasChild":true,
                             "compId":143,
                             "child":[
-                                ],
+                                {
+                                    "type":"Image",
+                                    "props":{"skin":"pic/letters/Q.png"},
+                                    "nodeParent":143,
+                                    "label":"Image",
+                                    "isDirectory":false,
+                                    "isAniNode":true,
+                                    "hasChild":false,
+                                    "compId":177,
+                                    "child":[
+                                        ]
+                                }],
                             "$HIDDEN":false
                         }],
                     "$LOCKED":false
@@ -68,486 +79,684 @@
                 {
                     "x":30,
                     "type":"Button",
-                    "props":{"y":10,"x":91,"width":65,"var":"btn_w","labelSize":50,"labelBold":true,"labelAlign":"center","label":" W","height":112},
+                    "props":{"y":10,"x":91,"width":65,"var":"btn_w","labelSize":50,"labelBold":true,"labelAlign":"center","height":112},
                     "nodeParent":9,
                     "label":"Button(btn_w)",
-                    "isOpen":true,
+                    "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
                     "compId":116,
                     "child":[
                         {
-                            "x":45,
                             "type":"Image",
                             "props":{"skin":"pic/keyboard_key_letter.png"},
                             "nodeParent":116,
                             "label":"Image",
-                            "isDirectory":false,
+                            "isOpen":true,
+                            "isDirectory":true,
                             "isAniNode":true,
-                            "hasChild":false,
+                            "hasChild":true,
                             "compId":145,
                             "child":[
-                                ]
+                                {
+                                    "type":"Image",
+                                    "props":{"skin":"pic/letters/W.png"},
+                                    "nodeParent":145,
+                                    "label":"Image",
+                                    "isDirectory":false,
+                                    "isAniNode":true,
+                                    "hasChild":false,
+                                    "compId":178,
+                                    "child":[
+                                        ]
+                                }]
                         }],
                     "$LOCKED":false
                 },
                 {
                     "x":30,
                     "type":"Button",
-                    "props":{"y":10,"x":163,"width":65,"var":"btn_e","label":"E","height":112},
+                    "props":{"y":10,"x":163,"width":65,"var":"btn_e","height":112},
                     "nodeParent":9,
                     "label":"Button(btn_e)",
-                    "isOpen":true,
+                    "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
                     "compId":117,
                     "child":[
                         {
-                            "x":45,
                             "type":"Image",
                             "props":{"skin":"pic/keyboard_key_letter.png"},
                             "nodeParent":117,
                             "label":"Image",
-                            "isDirectory":false,
+                            "isOpen":true,
+                            "isDirectory":true,
                             "isAniNode":true,
-                            "hasChild":false,
+                            "hasChild":true,
                             "compId":146,
                             "child":[
-                                ]
+                                {
+                                    "type":"Image",
+                                    "props":{"skin":"pic/letters/E.png"},
+                                    "nodeParent":146,
+                                    "label":"Image",
+                                    "isDirectory":false,
+                                    "isAniNode":true,
+                                    "hasChild":false,
+                                    "compId":201,
+                                    "child":[
+                                        ]
+                                }]
                         }],
                     "$LOCKED":false
                 },
                 {
                     "x":30,
                     "type":"Button",
-                    "props":{"y":10,"x":235,"width":65,"var":"btn_r","label":"R","height":112},
+                    "props":{"y":10,"x":235,"width":65,"var":"btn_r","height":112},
                     "nodeParent":9,
                     "label":"Button(btn_r)",
-                    "isOpen":true,
+                    "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
                     "compId":118,
                     "child":[
                         {
-                            "x":45,
                             "type":"Image",
                             "props":{"skin":"pic/keyboard_key_letter.png"},
                             "nodeParent":118,
                             "label":"Image",
-                            "isDirectory":false,
+                            "isOpen":true,
+                            "isDirectory":true,
                             "isAniNode":true,
-                            "hasChild":false,
+                            "hasChild":true,
                             "compId":147,
                             "child":[
-                                ]
+                                {
+                                    "type":"Image",
+                                    "props":{"skin":"pic/letters/R.png"},
+                                    "nodeParent":147,
+                                    "label":"Image",
+                                    "isDirectory":false,
+                                    "isAniNode":true,
+                                    "hasChild":false,
+                                    "compId":200,
+                                    "child":[
+                                        ]
+                                }]
                         }],
                     "$LOCKED":false
                 },
                 {
                     "x":30,
                     "type":"Button",
-                    "props":{"y":10,"x":307,"width":65,"var":"btn_t","label":"T","height":112},
+                    "props":{"y":10,"x":307,"width":65,"var":"btn_t","height":112},
                     "nodeParent":9,
                     "label":"Button(btn_t)",
-                    "isOpen":true,
+                    "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
                     "compId":119,
                     "child":[
                         {
-                            "x":45,
                             "type":"Image",
                             "props":{"skin":"pic/keyboard_key_letter.png"},
                             "nodeParent":119,
                             "label":"Image",
-                            "isDirectory":false,
+                            "isOpen":true,
+                            "isDirectory":true,
                             "isAniNode":true,
-                            "hasChild":false,
+                            "hasChild":true,
                             "compId":148,
                             "child":[
-                                ]
+                                {
+                                    "type":"Image",
+                                    "props":{"skin":"pic/letters/T.png"},
+                                    "nodeParent":148,
+                                    "label":"Image",
+                                    "isDirectory":false,
+                                    "isAniNode":true,
+                                    "hasChild":false,
+                                    "compId":199,
+                                    "child":[
+                                        ]
+                                }]
                         }],
                     "$LOCKED":false
                 },
                 {
                     "x":30,
                     "type":"Button",
-                    "props":{"y":10,"x":379,"width":65,"var":"btn_y","label":"Y","height":112},
+                    "props":{"y":10,"x":379,"width":65,"var":"btn_y","height":112},
                     "nodeParent":9,
                     "label":"Button(btn_y)",
-                    "isOpen":true,
+                    "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
                     "compId":120,
                     "child":[
                         {
-                            "x":45,
                             "type":"Image",
                             "props":{"skin":"pic/keyboard_key_letter.png"},
                             "nodeParent":120,
                             "label":"Image",
-                            "isDirectory":false,
+                            "isOpen":true,
+                            "isDirectory":true,
                             "isAniNode":true,
-                            "hasChild":false,
+                            "hasChild":true,
                             "compId":149,
                             "child":[
-                                ]
+                                {
+                                    "type":"Image",
+                                    "props":{"skin":"pic/letters/Y.png"},
+                                    "nodeParent":149,
+                                    "label":"Image",
+                                    "isDirectory":false,
+                                    "isAniNode":true,
+                                    "hasChild":false,
+                                    "compId":198,
+                                    "child":[
+                                        ]
+                                }]
                         }],
                     "$LOCKED":false
                 },
                 {
                     "x":30,
                     "type":"Button",
-                    "props":{"y":10,"x":451,"width":65,"var":"btn_u","label":"U","height":112},
+                    "props":{"y":10,"x":451,"width":65,"var":"btn_u","height":112},
                     "nodeParent":9,
                     "label":"Button(btn_u)",
-                    "isOpen":true,
+                    "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
                     "compId":121,
                     "child":[
                         {
-                            "x":45,
                             "type":"Image",
                             "props":{"skin":"pic/keyboard_key_letter.png"},
                             "nodeParent":121,
                             "label":"Image",
-                            "isDirectory":false,
+                            "isOpen":true,
+                            "isDirectory":true,
                             "isAniNode":true,
-                            "hasChild":false,
+                            "hasChild":true,
                             "compId":151,
                             "child":[
-                                ]
+                                {
+                                    "type":"Image",
+                                    "props":{"skin":"pic/letters/U.png"},
+                                    "nodeParent":151,
+                                    "label":"Image",
+                                    "isDirectory":false,
+                                    "isAniNode":true,
+                                    "hasChild":false,
+                                    "compId":197,
+                                    "child":[
+                                        ]
+                                }]
                         }],
                     "$LOCKED":false
                 },
                 {
                     "x":30,
                     "type":"Button",
-                    "props":{"y":10,"x":523,"width":65,"var":"btn_i","label":"I","height":112},
+                    "props":{"y":10,"x":523,"width":65,"var":"btn_i","height":112},
                     "nodeParent":9,
                     "label":"Button(btn_i)",
-                    "isOpen":true,
+                    "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
                     "compId":122,
                     "child":[
                         {
-                            "x":45,
                             "type":"Image",
                             "props":{"skin":"pic/keyboard_key_letter.png"},
                             "nodeParent":122,
                             "label":"Image",
-                            "isDirectory":false,
+                            "isOpen":true,
+                            "isDirectory":true,
                             "isAniNode":true,
-                            "hasChild":false,
+                            "hasChild":true,
                             "compId":152,
                             "child":[
-                                ]
+                                {
+                                    "type":"Image",
+                                    "props":{"skin":"pic/letters/I.png"},
+                                    "nodeParent":152,
+                                    "label":"Image",
+                                    "isDirectory":false,
+                                    "isAniNode":true,
+                                    "hasChild":false,
+                                    "compId":196,
+                                    "child":[
+                                        ]
+                                }]
                         }],
                     "$LOCKED":false
                 },
                 {
                     "x":30,
                     "type":"Button",
-                    "props":{"y":10,"x":595,"width":65,"var":"btn_o","label":"O","height":112},
+                    "props":{"y":10,"x":595,"width":65,"var":"btn_o","height":112},
                     "nodeParent":9,
                     "label":"Button(btn_o)",
-                    "isOpen":true,
+                    "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
                     "compId":123,
                     "child":[
                         {
-                            "x":45,
                             "type":"Image",
                             "props":{"skin":"pic/keyboard_key_letter.png"},
                             "nodeParent":123,
                             "label":"Image",
-                            "isDirectory":false,
+                            "isOpen":true,
+                            "isDirectory":true,
                             "isAniNode":true,
-                            "hasChild":false,
+                            "hasChild":true,
                             "compId":153,
                             "child":[
-                                ]
+                                {
+                                    "type":"Image",
+                                    "props":{"skin":"pic/letters/O.png"},
+                                    "nodeParent":153,
+                                    "label":"Image",
+                                    "isDirectory":false,
+                                    "isAniNode":true,
+                                    "hasChild":false,
+                                    "compId":195,
+                                    "child":[
+                                        ]
+                                }]
                         }],
                     "$LOCKED":false
                 },
                 {
                     "x":30,
                     "type":"Button",
-                    "props":{"y":10,"x":667,"width":65,"var":"btn_p","label":"P","height":112},
+                    "props":{"y":10,"x":667,"width":65,"var":"btn_p","height":112},
                     "nodeParent":9,
                     "label":"Button(btn_p)",
-                    "isOpen":true,
+                    "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
                     "compId":124,
                     "child":[
                         {
-                            "x":45,
                             "type":"Image",
                             "props":{"skin":"pic/keyboard_key_letter.png"},
                             "nodeParent":124,
                             "label":"Image",
-                            "isDirectory":false,
+                            "isOpen":true,
+                            "isDirectory":true,
                             "isAniNode":true,
-                            "hasChild":false,
+                            "hasChild":true,
                             "compId":155,
                             "child":[
-                                ]
+                                {
+                                    "type":"Image",
+                                    "props":{"skin":"pic/letters/P.png"},
+                                    "nodeParent":155,
+                                    "label":"Image",
+                                    "isDirectory":false,
+                                    "isAniNode":true,
+                                    "hasChild":false,
+                                    "compId":194,
+                                    "child":[
+                                        ]
+                                }]
                         }],
                     "$LOCKED":false
                 },
                 {
                     "x":30,
                     "type":"Button",
-                    "props":{"y":155,"x":49,"width":65,"var":"btn_a","label":"A","height":112},
+                    "props":{"y":155,"x":49,"width":65,"var":"btn_a","height":112},
                     "nodeParent":9,
                     "label":"Button(btn_a)",
-                    "isOpen":true,
+                    "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
                     "compId":125,
                     "child":[
                         {
-                            "x":45,
                             "type":"Image",
                             "props":{"skin":"pic/keyboard_key_letter.png"},
                             "nodeParent":125,
                             "label":"Image",
-                            "isDirectory":false,
+                            "isOpen":true,
+                            "isDirectory":true,
                             "isAniNode":true,
-                            "hasChild":false,
+                            "hasChild":true,
                             "compId":156,
                             "child":[
-                                ]
+                                {
+                                    "type":"Image",
+                                    "props":{"skin":"pic/letters/A.png"},
+                                    "nodeParent":156,
+                                    "label":"Image",
+                                    "isDirectory":false,
+                                    "isAniNode":true,
+                                    "hasChild":false,
+                                    "compId":176,
+                                    "child":[
+                                        ]
+                                }]
                         }],
                     "$LOCKED":false
                 },
                 {
                     "x":30,
                     "type":"Button",
-                    "props":{"y":155,"x":121,"width":65,"var":"btn_s","label":"S","height":112},
+                    "props":{"y":155,"x":121,"width":65,"var":"btn_s","height":112},
                     "nodeParent":9,
                     "label":"Button(btn_s)",
-                    "isOpen":true,
+                    "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
                     "compId":126,
                     "child":[
                         {
-                            "x":45,
                             "type":"Image",
                             "props":{"skin":"pic/keyboard_key_letter.png"},
                             "nodeParent":126,
                             "label":"Image",
-                            "isDirectory":false,
+                            "isOpen":true,
+                            "isDirectory":true,
                             "isAniNode":true,
-                            "hasChild":false,
+                            "hasChild":true,
                             "compId":157,
                             "child":[
-                                ]
+                                {
+                                    "type":"Image",
+                                    "props":{"skin":"pic/letters/S.png"},
+                                    "nodeParent":157,
+                                    "label":"Image",
+                                    "isDirectory":false,
+                                    "isAniNode":true,
+                                    "hasChild":false,
+                                    "compId":193,
+                                    "child":[
+                                        ]
+                                }]
                         }],
                     "$LOCKED":false
                 },
                 {
                     "x":30,
                     "type":"Button",
-                    "props":{"y":155,"x":193,"width":65,"var":"btn_d","label":"D","height":112},
+                    "props":{"y":155,"x":193,"width":65,"var":"btn_d","height":112},
                     "nodeParent":9,
                     "label":"Button(btn_d)",
-                    "isOpen":true,
+                    "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
                     "compId":127,
                     "child":[
                         {
-                            "x":45,
                             "type":"Image",
                             "props":{"skin":"pic/keyboard_key_letter.png"},
                             "nodeParent":127,
                             "label":"Image",
-                            "isDirectory":false,
+                            "isOpen":true,
+                            "isDirectory":true,
                             "isAniNode":true,
-                            "hasChild":false,
+                            "hasChild":true,
                             "compId":158,
                             "child":[
-                                ]
+                                {
+                                    "type":"Image",
+                                    "props":{"skin":"pic/letters/D.png"},
+                                    "nodeParent":158,
+                                    "label":"Image",
+                                    "isDirectory":false,
+                                    "isAniNode":true,
+                                    "hasChild":false,
+                                    "compId":192,
+                                    "child":[
+                                        ]
+                                }]
                         }],
                     "$LOCKED":false
                 },
                 {
                     "x":30,
                     "type":"Button",
-                    "props":{"y":155,"x":265,"width":65,"var":"btn_f","label":"F","height":112},
+                    "props":{"y":155,"x":265,"width":65,"var":"btn_f","height":112},
                     "nodeParent":9,
                     "label":"Button(btn_f)",
-                    "isOpen":true,
+                    "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
                     "compId":128,
                     "child":[
                         {
-                            "x":45,
                             "type":"Image",
                             "props":{"skin":"pic/keyboard_key_letter.png"},
                             "nodeParent":128,
                             "label":"Image",
-                            "isDirectory":false,
+                            "isOpen":true,
+                            "isDirectory":true,
                             "isAniNode":true,
-                            "hasChild":false,
+                            "hasChild":true,
                             "compId":159,
                             "child":[
-                                ]
+                                {
+                                    "type":"Image",
+                                    "props":{"skin":"pic/letters/F.png"},
+                                    "nodeParent":159,
+                                    "label":"Image",
+                                    "isDirectory":false,
+                                    "isAniNode":true,
+                                    "hasChild":false,
+                                    "compId":191,
+                                    "child":[
+                                        ]
+                                }]
                         }],
                     "$LOCKED":false
                 },
                 {
                     "x":30,
                     "type":"Button",
-                    "props":{"y":155,"x":337,"width":65,"var":"btn_g","label":"G","height":112},
+                    "props":{"y":155,"x":337,"width":65,"var":"btn_g","height":112},
                     "nodeParent":9,
                     "label":"Button(btn_g)",
-                    "isOpen":true,
+                    "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
                     "compId":129,
                     "child":[
                         {
-                            "x":45,
                             "type":"Image",
                             "props":{"skin":"pic/keyboard_key_letter.png"},
                             "nodeParent":129,
                             "label":"Image",
-                            "isDirectory":false,
+                            "isOpen":true,
+                            "isDirectory":true,
                             "isAniNode":true,
-                            "hasChild":false,
+                            "hasChild":true,
                             "compId":160,
                             "child":[
-                                ]
+                                {
+                                    "type":"Image",
+                                    "props":{"skin":"pic/letters/G.png"},
+                                    "nodeParent":160,
+                                    "label":"Image",
+                                    "isDirectory":false,
+                                    "isAniNode":true,
+                                    "hasChild":false,
+                                    "compId":190,
+                                    "child":[
+                                        ]
+                                }]
                         }],
                     "$LOCKED":false
                 },
                 {
                     "x":30,
                     "type":"Button",
-                    "props":{"y":155,"x":409,"width":65,"var":"btn_h","label":"H","height":112},
+                    "props":{"y":155,"x":409,"width":65,"var":"btn_h","height":112},
                     "nodeParent":9,
                     "label":"Button(btn_h)",
-                    "isOpen":true,
+                    "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
                     "compId":130,
                     "child":[
                         {
-                            "x":45,
                             "type":"Image",
                             "props":{"skin":"pic/keyboard_key_letter.png"},
                             "nodeParent":130,
                             "label":"Image",
-                            "isDirectory":false,
+                            "isOpen":true,
+                            "isDirectory":true,
                             "isAniNode":true,
-                            "hasChild":false,
+                            "hasChild":true,
                             "compId":161,
                             "child":[
-                                ]
+                                {
+                                    "type":"Image",
+                                    "props":{"skin":"pic/letters/H.png"},
+                                    "nodeParent":161,
+                                    "label":"Image",
+                                    "isDirectory":false,
+                                    "isAniNode":true,
+                                    "hasChild":false,
+                                    "compId":189,
+                                    "child":[
+                                        ]
+                                }]
                         }],
                     "$LOCKED":false
                 },
                 {
                     "x":30,
                     "type":"Button",
-                    "props":{"y":155,"x":481,"width":65,"var":"btn_j","label":"J","height":112},
+                    "props":{"y":155,"x":481,"width":65,"var":"btn_j","height":112},
                     "nodeParent":9,
                     "label":"Button(btn_j)",
-                    "isOpen":true,
+                    "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
                     "compId":131,
                     "child":[
                         {
-                            "x":45,
                             "type":"Image",
                             "props":{"skin":"pic/keyboard_key_letter.png"},
                             "nodeParent":131,
                             "label":"Image",
-                            "isDirectory":false,
+                            "isOpen":true,
+                            "isDirectory":true,
                             "isAniNode":true,
-                            "hasChild":false,
+                            "hasChild":true,
                             "compId":162,
                             "child":[
-                                ]
+                                {
+                                    "type":"Image",
+                                    "props":{"skin":"pic/letters/J.png"},
+                                    "nodeParent":162,
+                                    "label":"Image",
+                                    "isDirectory":false,
+                                    "isAniNode":true,
+                                    "hasChild":false,
+                                    "compId":188,
+                                    "child":[
+                                        ]
+                                }]
                         }],
                     "$LOCKED":false
                 },
                 {
                     "x":30,
                     "type":"Button",
-                    "props":{"y":155,"x":553,"width":65,"var":"btn_k","label":"K","height":112},
+                    "props":{"y":155,"x":553,"width":65,"var":"btn_k","height":112},
                     "nodeParent":9,
                     "label":"Button(btn_k)",
-                    "isOpen":true,
+                    "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
                     "compId":132,
                     "child":[
                         {
-                            "x":45,
                             "type":"Image",
                             "props":{"skin":"pic/keyboard_key_letter.png"},
                             "nodeParent":132,
                             "label":"Image",
-                            "isDirectory":false,
+                            "isOpen":true,
+                            "isDirectory":true,
                             "isAniNode":true,
-                            "hasChild":false,
+                            "hasChild":true,
                             "compId":163,
                             "child":[
-                                ]
+                                {
+                                    "type":"Image",
+                                    "props":{"skin":"pic/letters/K.png"},
+                                    "nodeParent":163,
+                                    "label":"Image",
+                                    "isDirectory":false,
+                                    "isAniNode":true,
+                                    "hasChild":false,
+                                    "compId":187,
+                                    "child":[
+                                        ]
+                                }]
                         }],
                     "$LOCKED":false
                 },
                 {
                     "x":30,
                     "type":"Button",
-                    "props":{"y":155,"x":625,"width":65,"var":"btn_l","label":"L","height":112},
+                    "props":{"y":155,"x":625,"width":65,"var":"btn_l","height":112},
                     "nodeParent":9,
                     "label":"Button(btn_l)",
-                    "isOpen":true,
+                    "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
                     "compId":133,
                     "child":[
                         {
-                            "x":45,
                             "type":"Image",
                             "props":{"skin":"pic/keyboard_key_letter.png"},
                             "nodeParent":133,
                             "label":"Image",
-                            "isDirectory":false,
+                            "isOpen":true,
+                            "isDirectory":true,
                             "isAniNode":true,
-                            "hasChild":false,
+                            "hasChild":true,
                             "compId":164,
                             "child":[
-                                ]
+                                {
+                                    "type":"Image",
+                                    "props":{"skin":"pic/letters/L.png"},
+                                    "nodeParent":164,
+                                    "label":"Image",
+                                    "isDirectory":false,
+                                    "isAniNode":true,
+                                    "hasChild":false,
+                                    "compId":186,
+                                    "child":[
+                                        ]
+                                }]
                         }],
                     "$LOCKED":false
                 },
@@ -557,14 +766,13 @@
                     "props":{"y":300,"x":523,"width":76,"var":"btn_del","labelColors":"#ff0000","height":112},
                     "nodeParent":9,
                     "label":"Button(btn_del)",
-                    "isOpen":true,
+                    "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
                     "compId":134,
                     "child":[
                         {
-                            "x":45,
                             "type":"Image",
                             "props":{"skin":"pic/keyboard_key_del.png"},
                             "nodeParent":134,
@@ -581,88 +789,121 @@
                 {
                     "x":30,
                     "type":"Button",
-                    "props":{"y":300,"x":19,"width":65,"var":"btn_z","label":"Z","height":112},
+                    "props":{"y":300,"x":19,"width":65,"var":"btn_z","height":112},
                     "nodeParent":9,
                     "label":"Button(btn_z)",
-                    "isOpen":true,
+                    "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
                     "compId":135,
                     "child":[
                         {
-                            "x":45,
                             "type":"Image",
                             "props":{"skin":"pic/keyboard_key_letter.png"},
                             "nodeParent":135,
                             "label":"Image",
-                            "isDirectory":false,
+                            "isOpen":true,
+                            "isDirectory":true,
                             "isAniNode":true,
-                            "hasChild":false,
+                            "hasChild":true,
                             "compId":166,
                             "child":[
-                                ]
+                                {
+                                    "type":"Image",
+                                    "props":{"skin":"pic/letters/Z.png"},
+                                    "nodeParent":166,
+                                    "label":"Image",
+                                    "isDirectory":false,
+                                    "isAniNode":true,
+                                    "hasChild":false,
+                                    "compId":185,
+                                    "child":[
+                                        ]
+                                }]
                         }],
                     "$LOCKED":false
                 },
                 {
                     "x":30,
                     "type":"Button",
-                    "props":{"y":300,"x":91,"width":65,"var":"btn_x","label":"X","height":112},
+                    "props":{"y":300,"x":91,"width":65,"var":"btn_x","height":112},
                     "nodeParent":9,
                     "label":"Button(btn_x)",
-                    "isOpen":true,
+                    "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
                     "compId":136,
                     "child":[
                         {
-                            "x":45,
                             "type":"Image",
                             "props":{"skin":"pic/keyboard_key_letter.png"},
                             "nodeParent":136,
                             "label":"Image",
-                            "isDirectory":false,
+                            "isOpen":true,
+                            "isDirectory":true,
                             "isAniNode":true,
-                            "hasChild":false,
+                            "hasChild":true,
                             "compId":167,
                             "child":[
-                                ]
+                                {
+                                    "type":"Image",
+                                    "props":{"skin":"pic/letters/X.png"},
+                                    "nodeParent":167,
+                                    "label":"Image",
+                                    "isDirectory":false,
+                                    "isAniNode":true,
+                                    "hasChild":false,
+                                    "compId":184,
+                                    "child":[
+                                        ]
+                                }]
                         }],
                     "$LOCKED":false
                 },
                 {
                     "x":30,
                     "type":"Button",
-                    "props":{"y":300,"x":163,"width":65,"var":"btn_c","label":"C","height":112},
+                    "props":{"y":300,"x":163,"width":65,"var":"btn_c","height":112},
                     "nodeParent":9,
                     "label":"Button(btn_c)",
-                    "isOpen":true,
+                    "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
                     "compId":137,
                     "child":[
                         {
-                            "x":45,
                             "type":"Image",
                             "props":{"skin":"pic/keyboard_key_letter.png"},
                             "nodeParent":137,
                             "label":"Image",
-                            "isDirectory":false,
+                            "isOpen":true,
+                            "isDirectory":true,
                             "isAniNode":true,
-                            "hasChild":false,
+                            "hasChild":true,
                             "compId":168,
                             "child":[
-                                ]
+                                {
+                                    "type":"Image",
+                                    "props":{"skin":"pic/letters/C.png"},
+                                    "nodeParent":168,
+                                    "label":"Image",
+                                    "isDirectory":false,
+                                    "isAniNode":true,
+                                    "hasChild":false,
+                                    "compId":183,
+                                    "child":[
+                                        ]
+                                }]
                         }],
                     "$LOCKED":false
                 },
                 {
                     "x":30,
                     "type":"Button",
-                    "props":{"y":300,"x":235,"width":65,"var":"btn_v","label":"Ü","height":112},
+                    "props":{"y":300,"x":235,"width":65,"var":"btn_v","height":112},
                     "nodeParent":9,
                     "label":"Button(btn_v)",
                     "isOpen":true,
@@ -677,120 +918,177 @@
                             "props":{"skin":"pic/keyboard_key_letter.png"},
                             "nodeParent":138,
                             "label":"Image",
-                            "isDirectory":false,
+                            "isOpen":true,
+                            "isDirectory":true,
                             "isAniNode":true,
-                            "hasChild":false,
+                            "hasChild":true,
                             "compId":169,
                             "child":[
-                                ]
+                                {
+                                    "x":60,
+                                    "type":"Image",
+                                    "props":{"skin":"pic/letters/V.png"},
+                                    "nodeParent":169,
+                                    "label":"Image",
+                                    "isDirectory":false,
+                                    "isAniNode":true,
+                                    "hasChild":false,
+                                    "compId":202,
+                                    "child":[
+                                        ]
+                                }]
                         }],
                     "$LOCKED":false
                 },
                 {
                     "x":30,
                     "type":"Button",
-                    "props":{"y":300,"x":307,"width":65,"var":"btn_b","label":"B","height":112},
+                    "props":{"y":300,"x":307,"width":65,"var":"btn_b","height":112},
                     "nodeParent":9,
                     "label":"Button(btn_b)",
-                    "isOpen":true,
+                    "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
                     "compId":139,
                     "child":[
                         {
-                            "x":45,
                             "type":"Image",
                             "props":{"skin":"pic/keyboard_key_letter.png"},
                             "nodeParent":139,
                             "label":"Image",
-                            "isDirectory":false,
+                            "isOpen":true,
+                            "isDirectory":true,
                             "isAniNode":true,
-                            "hasChild":false,
+                            "hasChild":true,
                             "compId":170,
                             "child":[
-                                ]
+                                {
+                                    "type":"Image",
+                                    "props":{"skin":"pic/letters/B.png"},
+                                    "nodeParent":170,
+                                    "label":"Image",
+                                    "isDirectory":false,
+                                    "isAniNode":true,
+                                    "hasChild":false,
+                                    "compId":182,
+                                    "child":[
+                                        ]
+                                }]
                         }],
                     "$LOCKED":false
                 },
                 {
                     "x":30,
                     "type":"Button",
-                    "props":{"y":300,"x":379,"width":65,"var":"btn_n","label":"N","height":112},
+                    "props":{"y":300,"x":379,"width":65,"var":"btn_n","height":112},
                     "nodeParent":9,
                     "label":"Button(btn_n)",
-                    "isOpen":true,
+                    "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
                     "compId":140,
                     "child":[
                         {
-                            "x":45,
                             "type":"Image",
                             "props":{"skin":"pic/keyboard_key_letter.png"},
                             "nodeParent":140,
                             "label":"Image",
-                            "isDirectory":false,
+                            "isOpen":true,
+                            "isDirectory":true,
                             "isAniNode":true,
-                            "hasChild":false,
+                            "hasChild":true,
                             "compId":171,
                             "child":[
-                                ]
+                                {
+                                    "type":"Image",
+                                    "props":{"skin":"pic/letters/N.png"},
+                                    "nodeParent":171,
+                                    "label":"Image",
+                                    "isDirectory":false,
+                                    "isAniNode":true,
+                                    "hasChild":false,
+                                    "compId":181,
+                                    "child":[
+                                        ]
+                                }]
                         }],
                     "$LOCKED":false
                 },
                 {
                     "x":30,
                     "type":"Button",
-                    "props":{"y":300,"x":451,"width":65,"var":"btn_m","label":"M","height":112},
+                    "props":{"y":300,"x":451,"width":65,"var":"btn_m","height":112},
                     "nodeParent":9,
                     "label":"Button(btn_m)",
-                    "isOpen":true,
+                    "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
                     "compId":141,
                     "child":[
                         {
-                            "x":45,
                             "type":"Image",
                             "props":{"skin":"pic/keyboard_key_letter.png"},
                             "nodeParent":141,
                             "label":"Image",
-                            "isDirectory":false,
+                            "isOpen":true,
+                            "isDirectory":true,
                             "isAniNode":true,
-                            "hasChild":false,
+                            "hasChild":true,
                             "compId":175,
                             "child":[
-                                ]
+                                {
+                                    "type":"Image",
+                                    "props":{"skin":"pic/letters/M.png"},
+                                    "nodeParent":175,
+                                    "label":"Image",
+                                    "isDirectory":false,
+                                    "isAniNode":true,
+                                    "hasChild":false,
+                                    "compId":180,
+                                    "child":[
+                                        ]
+                                }]
                         }],
                     "$LOCKED":false
                 },
                 {
                     "x":30,
                     "type":"Button",
-                    "props":{"y":300,"x":607,"width":123,"var":"btn_ok","labelColors":"#0000ff","label":"OK","height":112},
+                    "props":{"y":300,"x":607,"width":123,"var":"btn_ok","labelColors":"#0000ff","height":112},
                     "nodeParent":9,
                     "label":"Button(btn_ok)",
-                    "isOpen":true,
+                    "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
                     "compId":142,
                     "child":[
                         {
-                            "x":45,
                             "type":"Image",
                             "props":{"skin":"pic/keyboard_key_ok.png"},
                             "nodeParent":142,
                             "label":"Image",
-                            "isDirectory":false,
+                            "isOpen":true,
+                            "isDirectory":true,
                             "isAniNode":true,
-                            "hasChild":false,
+                            "hasChild":true,
                             "compId":174,
                             "child":[
-                                ]
+                                {
+                                    "type":"Image",
+                                    "props":{"skin":"pic/letters/OK.png"},
+                                    "nodeParent":174,
+                                    "label":"Image",
+                                    "isDirectory":false,
+                                    "isAniNode":true,
+                                    "hasChild":false,
+                                    "compId":179,
+                                    "child":[
+                                        ]
+                                }]
                         }],
                     "$LOCKED":false
                 }],

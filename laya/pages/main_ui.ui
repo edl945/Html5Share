@@ -2,7 +2,7 @@
     "x":0,
     "type":"View",
     "selectedBox":1,
-    "selecteID":23,
+    "selecteID":211,
     "props":{"width":750,"sceneColor":"#000000","height":1334},
     "nodeParent":-1,
     "label":"View",
@@ -12,6 +12,20 @@
     "hasChild":true,
     "compId":1,
     "child":[
+        {
+            "x":15,
+            "type":"Image",
+            "props":{"y":0,"x":0,"visible":false,"skin":"pic/temp_main.png"},
+            "nodeParent":1,
+            "label":"Image",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":215,
+            "child":[
+                ],
+            "$HIDDEN":true
+        },
         {
             "x":15,
             "type":"Image",
@@ -42,29 +56,56 @@
                     "x":30,
                     "type":"UIView",
                     "source":"words.ui",
-                    "props":{"y":106,"x":123,"var":"lasttopicpanel"},
+                    "props":{"y":168,"x":115,"var":"lasttopicpanel"},
                     "nodeParent":13,
                     "label":"UIView(lasttopicpanel)",
+                    "isOpen":true,
                     "isDirectory":false,
                     "isAniNode":true,
                     "hasChild":false,
                     "compId":207,
                     "child":[
-                        ]
+                        ],
+                    "$HIDDEN":false
                 },
                 {
                     "x":30,
-                    "type":"Image",
-                    "props":{"y":429,"x":-4,"width":750,"height":381},
+                    "type":"View",
+                    "props":{"y":164,"x":109,"var":"lasttopicPanel_unshown"},
                     "nodeParent":13,
-                    "label":"Image",
-                    "isDirectory":false,
+                    "label":"View(lasttopicPanel_unshown)",
+                    "isOpen":false,
+                    "isDirectory":true,
                     "isAniNode":true,
-                    "hasChild":false,
-                    "compId":16,
+                    "hasChild":true,
+                    "compId":216,
                     "child":[
-                        ],
-                    "$HIDDEN":false
+                        {
+                            "type":"Image",
+                            "props":{"skin":"pic/lasttopic_unshown.png"},
+                            "nodeParent":216,
+                            "label":"Image",
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":217,
+                            "child":[
+                                ]
+                        },
+                        {
+                            "type":"Label",
+                            "props":{"y":197,"x":154,"text":"开始答题后揭晓","fontSize":30,"color":"#5d343a","bold":true,"align":"center"},
+                            "nodeParent":216,
+                            "label":"Label",
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":218,
+                            "child":[
+                                ],
+                            "$HIDDEN":false
+                        }],
+                    "$HIDDEN":true
                 },
                 {
                     "x":30,
@@ -80,24 +121,9 @@
                     "child":[
                         {
                             "x":45,
-                            "type":"Image",
-                            "props":{"y":131,"x":171,"skin":"pic/progress_bg.png"},
-                            "nodeParent":28,
-                            "label":"Image",
-                            "isOpen":true,
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":203,
-                            "child":[
-                                ],
-                            "$HIDDEN":false
-                        },
-                        {
-                            "x":45,
                             "type":"UIView",
                             "source":"words.ui",
-                            "props":{"y":164,"x":124,"var":"topicpanel"},
+                            "props":{"y":204,"x":115,"var":"topicpanel"},
                             "nodeParent":28,
                             "label":"UIView(topicpanel)",
                             "isDirectory":false,
@@ -109,53 +135,43 @@
                         },
                         {
                             "x":45,
-                            "type":"Image",
-                            "props":{"y":5,"x":48,"width":23,"height":23},
+                            "type":"Label",
+                            "props":{"y":96,"x":57,"var":"your_answer","text":"你的答案：","fontSize":27,"font":"SimSun","color":"#a7433e","bold":true},
                             "nodeParent":28,
-                            "label":"Image",
-                            "isOpen":false,
-                            "isDirectory":true,
+                            "label":"Label(your_answer)",
+                            "isDirectory":false,
                             "isAniNode":true,
-                            "hasChild":true,
-                            "compId":29,
+                            "hasChild":false,
+                            "compId":30,
                             "child":[
-                                {
-                                    "type":"Label",
-                                    "props":{"y":43,"x":-21,"text":"你的答案：","fontSize":35,"color":"#4e0100"},
-                                    "nodeParent":29,
-                                    "label":"Label",
-                                    "isDirectory":false,
-                                    "isAniNode":true,
-                                    "hasChild":false,
-                                    "compId":30,
-                                    "child":[
-                                        ]
-                                },
-                                {
-                                    "type":"Label",
-                                    "props":{"y":-3,"x":355,"width":66,"var":"countDownNumber","valign":"middle","text":"30","height":62,"fontSize":45,"color":"#4e0100","align":"center"},
-                                    "nodeParent":29,
-                                    "label":"Label(countDownNumber)",
-                                    "isOpen":true,
-                                    "isDirectory":true,
-                                    "isAniNode":true,
-                                    "hasChild":true,
-                                    "compId":200,
-                                    "child":[
-                                        {
-                                            "type":"Label",
-                                            "props":{"y":-2,"x":-148,"width":66,"valign":"middle","text":"倒计时：","height":62,"fontSize":45,"color":"#4e0100","align":"center"},
-                                            "nodeParent":200,
-                                            "label":"Label",
-                                            "isDirectory":false,
-                                            "isAniNode":true,
-                                            "hasChild":false,
-                                            "compId":201,
-                                            "child":[
-                                                ]
-                                        }]
-                                }],
-                            "$HIDDEN":false
+                                ]
+                        },
+                        {
+                            "x":45,
+                            "type":"Label",
+                            "props":{"y":-37,"x":289,"width":108,"var":"countdown","valign":"middle","text":"倒计时：","height":62,"fontSize":30,"color":"#a7433e","bold":true,"align":"center"},
+                            "nodeParent":28,
+                            "label":"Label(countdown)",
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":201,
+                            "child":[
+                                ]
+                        },
+                        {
+                            "x":45,
+                            "type":"Label",
+                            "props":{"y":-44,"x":399,"width":83,"var":"countDownNumber","valign":"middle","text":"30","height":75,"fontSize":80,"font":"SimSun","color":"#a7433e","bold":true,"align":"center"},
+                            "nodeParent":28,
+                            "label":"Label(countDownNumber)",
+                            "isOpen":true,
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":200,
+                            "child":[
+                                ]
                         }],
                     "$HIDDEN":false
                 },
@@ -163,7 +179,7 @@
                     "x":30,
                     "type":"UIView",
                     "source":"playerinfo.ui",
-                    "props":{"y":-11,"x":17},
+                    "props":{"y":37,"x":43},
                     "nodeParent":13,
                     "label":"UIView",
                     "isDirectory":false,
@@ -416,7 +432,7 @@
                         }],
                     "$HIDDEN":false
                 }],
-            "$HIDDEN":false
+            "$HIDDEN":true
         },
         {
             "x":15,
@@ -433,7 +449,7 @@
                 {
                     "x":30,
                     "type":"Image",
-                    "props":{"y":0,"x":0,"width":750,"skin":"main_ui/btn_cancel.png","sizeGrid":"5,5,5,5","height":1334},
+                    "props":{"y":0,"x":0,"width":750,"skin":"pic/background.png","sizeGrid":"5,5,5,5","height":1334},
                     "nodeParent":23,
                     "label":"Image",
                     "isDirectory":false,
@@ -447,7 +463,7 @@
                 {
                     "x":30,
                     "type":"List",
-                    "props":{"y":77,"x":0,"width":750,"var":"lst_players","vScrollBarSkin":"pic/list_scrollbar.png","repeatY":10,"repeatX":1,"height":1179},
+                    "props":{"y":77,"x":0,"width":750,"var":"lst_players","vScrollBarSkin":"pic/scrollbar/1p_trans.png","repeatY":10,"repeatX":1,"height":1179},
                     "nodeParent":23,
                     "label":"List(lst_players)",
                     "isOpen":true,
@@ -459,7 +475,7 @@
                         {
                             "x":45,
                             "type":"Box",
-                            "props":{"y":0,"x":0,"width":750,"name":"render","height":243},
+                            "props":{"y":0,"x":0,"width":750,"name":"render","height":305},
                             "nodeParent":26,
                             "label":"Box(render)",
                             "isOpen":true,
@@ -470,20 +486,35 @@
                             "child":[
                                 {
                                     "x":60,
+                                    "type":"Image",
+                                    "props":{"y":0,"x":0,"visible":false,"skin":"pic/temp_listbox.png"},
+                                    "nodeParent":57,
+                                    "label":"Image",
+                                    "isDirectory":false,
+                                    "isAniNode":false,
+                                    "hasChild":false,
+                                    "compId":219,
+                                    "child":[
+                                        ],
+                                    "$HIDDEN":true
+                                },
+                                {
+                                    "x":60,
                                     "type":"View",
                                     "props":{"y":13,"x":117,"var":"_boxview","name":"boxview"},
                                     "nodeParent":57,
                                     "label":"View(_boxview)",
-                                    "isOpen":false,
+                                    "isOpen":true,
                                     "isDirectory":true,
                                     "isAniNode":false,
                                     "hasChild":true,
                                     "compId":58,
                                     "child":[
                                         {
+                                            "x":75,
                                             "type":"UIView",
                                             "source":"words.ui",
-                                            "props":{"y":45,"x":63,"name":"words"},
+                                            "props":{"y":104,"x":44,"name":"words"},
                                             "nodeParent":58,
                                             "label":"UIView(words)",
                                             "isDirectory":false,
@@ -495,21 +526,36 @@
                                             "$HIDDEN":false
                                         },
                                         {
+                                            "x":75,
                                             "type":"Image",
-                                            "props":{"y":3,"x":-38,"var":"_playerico","skin":"main_ui/btn_key.png","name":"playerico"},
+                                            "props":{"y":10,"x":14,"skin":"pic/player_avatar_bg.png"},
                                             "nodeParent":58,
-                                            "label":"Image(_playerico)",
-                                            "isDirectory":false,
+                                            "label":"Image",
+                                            "isOpen":true,
+                                            "isDirectory":true,
                                             "isAniNode":false,
-                                            "hasChild":false,
-                                            "compId":59,
+                                            "hasChild":true,
+                                            "compId":220,
                                             "child":[
-                                                ],
-                                            "$HIDDEN":false
+                                                {
+                                                    "x":90,
+                                                    "type":"Image",
+                                                    "props":{"y":2,"x":2,"width":64,"var":"_playerico","name":"playerico","height":64},
+                                                    "nodeParent":220,
+                                                    "label":"Image(_playerico)",
+                                                    "isOpen":true,
+                                                    "isDirectory":false,
+                                                    "isAniNode":false,
+                                                    "hasChild":false,
+                                                    "compId":221,
+                                                    "child":[
+                                                        ]
+                                                }]
                                         },
                                         {
+                                            "x":75,
                                             "type":"Label",
-                                            "props":{"y":6,"x":16,"var":"_playername","text":"这是一个人的名字","name":"playername","fontSize":30},
+                                            "props":{"y":28,"x":102,"var":"_playername","text":"这是一个人的名字","name":"playername","fontSize":30,"font":"SimSun","color":"#533c3b","bold":true},
                                             "nodeParent":58,
                                             "label":"Label(_playername)",
                                             "isDirectory":false,
@@ -521,8 +567,9 @@
                                             "$LOCKED":false
                                         },
                                         {
+                                            "x":75,
                                             "type":"Label",
-                                            "props":{"y":6,"x":531,"width":36,"var":"_playertime","text":"30","name":"playertime","height":34,"fontSize":30,"color":"#3e0100","align":"right"},
+                                            "props":{"y":30,"x":513,"width":36,"var":"_playertime","text":"30","name":"playertime","height":34,"fontSize":27,"font":"SimSun","color":"#533c3b","bold":true,"align":"right"},
                                             "nodeParent":58,
                                             "label":"Label(_playertime)",
                                             "isOpen":true,
@@ -532,8 +579,9 @@
                                             "compId":61,
                                             "child":[
                                                 {
+                                                    "x":90,
                                                     "type":"Label",
-                                                    "props":{"y":1,"x":34,"text":"秒","fontSize":30},
+                                                    "props":{"y":1,"x":34,"text":"s","fontSize":27,"font":"SimSun","color":"#533c3b","bold":true},
                                                     "nodeParent":61,
                                                     "label":"Label",
                                                     "isDirectory":false,
@@ -545,6 +593,19 @@
                                                 }]
                                         }],
                                     "$HIDDEN":false
+                                },
+                                {
+                                    "x":60,
+                                    "type":"Image",
+                                    "props":{"skin":"pic/list_scrollbar.png"},
+                                    "nodeParent":57,
+                                    "label":"Image",
+                                    "isDirectory":false,
+                                    "isAniNode":false,
+                                    "hasChild":false,
+                                    "compId":222,
+                                    "child":[
+                                        ]
                                 }]
                         }],
                     "$HIDDEN":false
@@ -568,42 +629,119 @@
         {
             "x":15,
             "type":"View",
-            "props":{"y":394,"x":0,"width":750,"visible":false,"var":"toast","height":500},
+            "props":{"y":394,"x":0,"width":372,"visible":false,"var":"toast","height":141},
             "nodeParent":1,
             "label":"View(toast)",
-            "isOpen":true,
+            "isOpen":false,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":197,
             "child":[
                 {
-                    "x":30,
                     "type":"Image",
-                    "props":{"y":133,"x":0,"width":747,"skin":"pic/blackmask.png","height":211},
+                    "props":{"y":0,"x":0,"skin":"pic/tip_warning_bg.png"},
                     "nodeParent":197,
                     "label":"Image",
                     "isOpen":true,
-                    "isDirectory":true,
+                    "isDirectory":false,
                     "isAniNode":true,
-                    "hasChild":true,
+                    "hasChild":false,
                     "compId":198,
                     "child":[
-                        {
-                            "x":45,
-                            "type":"Label",
-                            "props":{"y":0,"x":0,"width":750,"var":"toastMsg","valign":"middle","text":"这是一个提示","height":210,"fontSize":35,"color":"#ffffff","align":"center"},
-                            "nodeParent":198,
-                            "label":"Label(toastMsg)",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":199,
-                            "child":[
-                                ]
-                        }]
+                        ]
+                },
+                {
+                    "type":"Label",
+                    "props":{"y":50,"x":106,"width":233,"var":"toastMsg","valign":"middle","text":"已经被我使用过啦！","height":59,"fontSize":25,"font":"SimSun","color":"#5d343a","bold":true,"align":"left"},
+                    "nodeParent":197,
+                    "label":"Label(toastMsg)",
+                    "isOpen":true,
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":199,
+                    "child":[
+                        ]
+                },
+                {
+                    "type":"Image",
+                    "props":{"y":31,"x":30,"width":64,"var":"toast_avatar_pic","height":64},
+                    "nodeParent":197,
+                    "label":"Image(toast_avatar_pic)",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":209,
+                    "child":[
+                        ]
+                },
+                {
+                    "type":"Label",
+                    "props":{"y":15,"x":106,"width":233,"var":"toastMsg_words","valign":"middle","text":"“呼风唤雨”","height":59,"fontSize":25,"font":"SimSun","color":"#a7433e","bold":true,"align":"left"},
+                    "nodeParent":197,
+                    "label":"Label(toastMsg_words)",
+                    "isOpen":true,
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":210,
+                    "child":[
+                        ]
                 }],
             "$HIDDEN":true
+        },
+        {
+            "x":15,
+            "type":"View",
+            "props":{"y":232,"x":172,"width":421,"var":"chat","height":141},
+            "nodeParent":1,
+            "label":"View(chat)",
+            "isOpen":false,
+            "isDirectory":true,
+            "isAniNode":true,
+            "hasChild":true,
+            "compId":211,
+            "child":[
+                {
+                    "type":"Image",
+                    "props":{"skin":"pic/tip_chat_bg.png"},
+                    "nodeParent":211,
+                    "label":"Image",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":212,
+                    "child":[
+                        ]
+                },
+                {
+                    "type":"Label",
+                    "props":{"y":50,"x":60,"width":344,"var":"chatMsg","valign":"middle","text":"不是成语哦！","height":59,"fontSize":25,"font":"SimSun","color":"#5d343a","bold":true,"align":"center"},
+                    "nodeParent":211,
+                    "label":"Label(chatMsg)",
+                    "isOpen":true,
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":213,
+                    "child":[
+                        ]
+                },
+                {
+                    "type":"Label",
+                    "props":{"y":11,"x":61,"width":344,"var":"chatMsg_pingyin","valign":"middle","text":"\"HU HA HU HA\"","height":59,"fontSize":25,"font":"SimSun","color":"#a7433e","bold":true,"align":"center"},
+                    "nodeParent":211,
+                    "label":"Label(chatMsg_pingyin)",
+                    "isOpen":true,
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":214,
+                    "child":[
+                        ]
+                }],
+            "$HIDDEN":false
         }],
     "animations":[
         {

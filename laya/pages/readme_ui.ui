@@ -1,8 +1,8 @@
 {
     "x":0,
     "type":"Dialog",
-    "selectedBox":1,
-    "selecteID":5,
+    "selectedBox":5,
+    "selecteID":10,
     "props":{"width":750,"sceneColor":"#000000","height":1334},
     "nodeParent":-1,
     "label":"Dialog",
@@ -24,12 +24,12 @@
             "compId":18,
             "child":[
                 ],
-            "$HIDDEN":false
+            "$HIDDEN":true
         },
         {
             "x":15,
             "type":"Image",
-            "props":{"y":305,"x":84,"width":595,"skin":"pic/rule_bg.png","height":719,"alpha":0.9},
+            "props":{"y":305,"x":84,"width":595,"skin":"pic/rule.png","height":719,"alpha":0.9},
             "nodeParent":1,
             "label":"Image",
             "isOpen":true,
@@ -44,17 +44,16 @@
         {
             "x":15,
             "type":"View",
-            "props":{"y":649,"x":84,"width":480,"sceneColor":"#ffffff","height":93},
+            "props":{"y":649,"x":84,"width":480,"visible":false,"sceneColor":"#ffffff","height":93},
             "nodeParent":1,
             "label":"View",
-            "isOpen":true,
+            "isOpen":false,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":2,
             "child":[
                 {
-                    "x":30,
                     "type":"Image",
                     "props":{"y":-272,"x":218,"skin":"pic/rule_title.png"},
                     "nodeParent":2,
@@ -66,7 +65,6 @@
                     "compId":11,
                     "child":[
                         {
-                            "x":45,
                             "type":"Image",
                             "props":{"y":213,"x":-115,"skin":"pic/rule_underline.png"},
                             "nodeParent":11,
@@ -79,7 +77,6 @@
                                 ]
                         },
                         {
-                            "x":45,
                             "type":"Image",
                             "props":{"y":303,"x":-115,"skin":"pic/rule_underline.png"},
                             "nodeParent":11,
@@ -92,7 +89,6 @@
                                 ]
                         },
                         {
-                            "x":45,
                             "type":"Image",
                             "props":{"y":401,"x":-115,"skin":"pic/rule_underline.png"},
                             "nodeParent":11,
@@ -105,7 +101,6 @@
                                 ]
                         },
                         {
-                            "x":45,
                             "type":"Image",
                             "props":{"y":517,"x":-115,"skin":"pic/rule_underline.png"},
                             "nodeParent":11,
@@ -118,7 +113,7 @@
                                 ]
                         }]
                 }],
-            "$HIDDEN":false
+            "$HIDDEN":true
         },
         {
             "x":15,
