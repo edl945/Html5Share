@@ -62,6 +62,8 @@
 		var btnRecord = this.btn_record;
 		var btnBtnPanel = this.readyPanel;
 		var btn_rule_success = this.btn_rule_success;
+		var btn_rule_fail = this.btn_rule_fail;
+
 		var btn_share = this.btn_share;
 		var btnshareUrl = this.shareUrl;
 
@@ -74,6 +76,7 @@
 		var panelFailed = this.popup_overtime;
 		var countDownNumber = this.countDownNumber;
 		var recordPanel = this.pan_result;
+		var shareUrl_dialog  = this.shareUrl_dialog;
 
 		var focusedPinyin = null;
 		var currentFocusIndex = 1;
@@ -99,6 +102,8 @@
 		btnStart.on(Event.CLICK, this, onBtnStartClick);
 		btnRecord.on(Event.CLICK, this, onBtnShowRecord);
 		btn_rule_success.on(Event.CLICK, this, onBtnReadmeClick);
+		btn_rule_fail.on(Event.CLICK, this, onBtnReadmeClick);
+		
 		btn_share.on(Event.CLICK, this, onGenShreUrl);
 
 		registerKeyboard();
@@ -310,8 +315,10 @@
 			console.log("btn readme pressed");
 			SoundManager.playSound("sound/click.mp3");
 		}
+
 		function onGenShreUrl()
-		{						
+		{			
+			shareUrl_dialog.visible = true;			
 			var pinyinwords = wordspanel.pinyin1.text.trim() + "," + wordspanel.pinyin2.text.trim() + "," +wordspanel.pinyin3.text.trim() + "," +wordspanel.pinyin4.text.trim();
             _gamelogic.getUserList().insert("这是一个成功者", new player("这是一个成功者", pinyinwords.toLowerCase(), 30 - countdownleft));
 			btnshareUrl.text = window.location + "?id=" + _gamelogic.genJsonStr();
@@ -348,7 +355,7 @@
 					if(focusedPinyin.text.length > 5)
 						showToastMsg("你不觉得这拼音太长了么");
 					else
-						focusedPinyin.text = focusedPinyin.text + sendEvent.target.name;
+						focusedPinyin.text = focusedPinyin.text + sendEvent.target.name.toUpperCase();
 				}
 			}
 			function onDelWords()
@@ -404,6 +411,7 @@
 						{
 							Laya.timer.clear(this, countloopfunc);
 							panelSuccess.visible = true;
+							shareUrl_dialog.visible = false;
 						}
 						unflashTheWord(0);
 						moveFocus(currentFocusIndex);

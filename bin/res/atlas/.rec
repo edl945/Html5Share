@@ -13,6 +13,7 @@ D pic
 P B3C89E0F background.png
 P 09D8ED6C blackmask.png
 P EBCFDF31 button_red.png
+R 68DA154D history_button_bg.png
 P 54E5991B icon_monents.png
 P C2CFD5CE keyboard_bg.png
 P 6D65FE41 keyboard_key_del.png
@@ -38,6 +39,7 @@ P 56D95D16 temp_main.png
 P 0C7988D7 temp_warning.png
 P F7674569 tip_chat_bg.png
 P 51F23DAF tip_warning_bg.png
+P F6E2AA43 url_copy.png
 P 13592725 words_bg_locked.png
 P F835EF68 words_bg_unlock.png
 D sound
