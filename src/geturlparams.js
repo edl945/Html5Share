@@ -7,8 +7,7 @@ function LoadUrlGetValues(key)
 }
 
 var Lid = LoadUrlGetValues('id');
-if (Lid != null)
-    alert(Lid);
+//if (Lid != null)    alert(Lid);
 
 var jiathis_config = {
 	slide:{

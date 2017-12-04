@@ -18,6 +18,7 @@
 		function onBtnOkClick()
 		{
 			Laya.stage.removeChild(this);
+			SoundManager.playSound("sound/click.mp3");
 			console.log("btn onBtnReturnClick pressed");
 		}
 	}

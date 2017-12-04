@@ -50,6 +50,7 @@
         var _this = this;      
         
         game_logic = new GameLogic();
+        _this.playMusic();
     }
 
     _proto.startGame = function () {
@@ -57,7 +58,7 @@
 
         mainui_manager = new mainuiManager();
         mainui_manager.init_ui(this, game_logic); 
-        //_this.playMusic();      
+       // _this.playMusic();
     }
 
     _proto.showGameUI = function()
@@ -80,7 +81,7 @@
 
     _proto.playMusic = function () {
         SoundManager.autoStopMusic = false;
-        bgMusicChannel = SoundManager.playMusic("res/got.mp3", 0);
+        bgMusicChannel = SoundManager.playMusic("sound/BGM.mp3", 0);
     }
 
     _proto.removeLetter = function (letter) {

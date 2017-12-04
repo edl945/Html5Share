@@ -118,6 +118,7 @@
 		{
 			toastpanel.visible = true;
 			toastmsg.text = msg;
+			SoundManager.playSound("sound/tip.mp3");
 			function hideToast()
 			{
 				toastpanel.visible = false;
@@ -134,6 +135,7 @@
 			chatpanel.visible = true;
 			chatMsg.text = msg;
 			chatMsg_pingyin.text = pinyin;
+			SoundManager.playSound("sound/tip.mp3");
 			function hideChat()
 			{
 				chatpanel.visible = false;
@@ -300,6 +302,7 @@
 		//	Laya.stage.removeChild(this);
 			_parent.showReadme();
 			console.log("btn readme pressed");
+			SoundManager.playSound("sound/click.mp3");
 		}
 
 		function onBtnStartClick()
@@ -307,6 +310,7 @@
 			//Laya.stage.removeChild(this);
 			//_parent.showGameUI();
 			movePanelToGamemode();
+			SoundManager.playSound("sound/click.mp3");
 			console.log("btn start pressed");
 		}
 
@@ -319,6 +323,7 @@
 			{
 				Tween.to(recordPanel,{y:0},timeinterval,Laya.Ease.cubicIn,Handler.create(this,null));
 			}
+			SoundManager.playSound("sound/click.mp3");
 			console.log("btn start pressed");
 		}
 
@@ -327,17 +332,19 @@
 			function onKeyEnter(sendEvent)
 			{
 				console.log("Key: " + sendEvent.target.name);
+				SoundManager.playSound("sound/click.mp3");
 				if (focusedPinyin != null)
 				{
 					if(focusedPinyin.text.length > 5)
 						showToastMsg("你不觉得这拼音太长了么");
 					else
-						focusedPinyin.text = focusedPinyin.text + sendEvent.target.label;
+						focusedPinyin.text = focusedPinyin.text + sendEvent.target.name;
 				}
 			}
 			function onDelWords()
 			{
 				console.log("Key: del");
+				SoundManager.playSound("sound/click.mp3");
 				if (focusedPinyin != null)
 				{
 					var newwords ="";
@@ -349,6 +356,7 @@
 			function onRetun()
 			{
 				console.log("Key: ok");
+				SoundManager.playSound("sound/click.mp3");
 				if(pinyincells[currentFocusIndex].text.trim().length == 0)
 				{
 					console.log(currentFocusIndex + "！不能为空");			
