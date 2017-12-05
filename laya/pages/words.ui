@@ -1,8 +1,8 @@
 {
     "x":0,
     "type":"View",
-    "selectedBox":2,
-    "selecteID":18,
+    "selectedBox":1,
+    "selecteID":31,
     "props":{"width":525,"sceneColor":"#000000","height":170},
     "nodeParent":-1,
     "label":"View",
@@ -15,7 +15,7 @@
         {
             "x":15,
             "type":"View",
-            "props":{"y":0,"x":0,"width":525,"height":170},
+            "props":{"y":0,"x":0,"width":525,"visible":true,"height":170},
             "nodeParent":1,
             "label":"View",
             "isOpen":true,
@@ -263,6 +263,20 @@
                         }]
                 }],
             "$HIDDEN":false
+        },
+        {
+            "x":15,
+            "type":"Image",
+            "props":{"y":2,"x":-3,"visible":false,"var":"_mask","skin":"pic/lasttopic_unshown.png"},
+            "nodeParent":1,
+            "label":"Image(_mask)",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":31,
+            "child":[
+                ],
+            "$HIDDEN":true
         }],
     "animations":[
         {

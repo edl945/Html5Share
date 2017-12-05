@@ -41,7 +41,6 @@
 		var icoindex = index % 9;
 		boxview.getChildByName("playericoframe").getChildByName("playerico").skin = "pic/avatar/" + icoindex + ".jpg";		
 
-
 		var wordpanel = boxview.getChildByName("words");
 		var words = checkIfChengyuMatch(userinfo.Pinyins()) ;
 		var pinyinarray = userinfo.PinyinArray();
@@ -53,6 +52,11 @@
 		wordpanel.word3.text = words[2];
 		wordpanel.pinyin4.text = pinyinarray[3];
 		wordpanel.word4.text = words[3];
+		
+		if (_gamelogic.getUserList().count() - 1 == index)
+		{
+			wordpanel._mask.visible = true;
+		}
 
 		formatWordPanel(wordpanel);
 	}
@@ -71,6 +75,7 @@
 		var btnBtnPanel = this.readyPanel;
 		var btn_rule_success = this.btn_rule_success;
 		var btn_rule_fail = this.btn_rule_fail;
+		var mytopicplayerinfopanel = this.mytopicplayerinfopanel;
 
 		var btn_share = this.btn_share;
 		var btnshareUrl = this.shareUrl;
@@ -540,6 +545,19 @@
 
 			keyboard.btn_del.on(Event.CLICK, this, onDelWords);
 			keyboard.btn_ok.on(Event.CLICK, this, onRetun);
+
+			function initTheLastMan()
+			{
+				var userlist = _gamelogic.getUserList();
+				var index = _gamelogic.getUserList().count();
+				var userinfo = userlist.at(index-1);			
+				var icoindex = index % 9;
+				mytopicplayerinfopanel.player_name.text = userinfo.UserName();
+				mytopicplayerinfopanel.player_no.text = index + "楼："; 
+				mytopicplayerinfopanel.player_no.visible = true;
+				mytopicplayerinfopanel.player_ico.skin = "pic/avatar/" + icoindex + ".jpg";		
+			}
+			initTheLastMan();
 		}
 	}
 
