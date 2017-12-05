@@ -178,20 +178,20 @@
 
 
 		var wordsArray = [wordspanel.word1,wordspanel.word2,wordspanel.word3,wordspanel.word4];
-		var loopfunc = null;
-		function unflashTheWord(index)
-		{
-			wordspanel.flashnode.removeChildren();
-			Laya.timer.clear(this, loopfunc)
-		}
-		function flashTheWord(flashwords, index)
-		{
-			var flashnodearr = [
+		var flashnodearr = [
 				wordspanel.flashnode1,
 				wordspanel.flashnode2,
 				wordspanel.flashnode3,
 				wordspanel.flashnode4
 			];
+		var loopfunc = [null,null,null,null];
+		function unflashTheWord(index)
+		{
+			wordspanel.flashnodearr[index].removeChildren();
+			Laya.timer.clear(this, loopfunc[index])
+		}
+		function flashTheWord(flashwords, index)
+		{
 			var flashnode = flashnodearr[index];
 			flashnode.removeChildren();
 			var flasharr = new Array();
@@ -211,7 +211,7 @@
 				flashnode.addChild(newlabel);
 				flasharr[i] = newlabel;
 			}
-			loopfunc = function onLoop()
+			loopfunc[index] = function onLoop()
 			{
 				framecount++;
 				var childcount = flasharr.length;
@@ -226,7 +226,7 @@
 				}
 			}
         	//创建一个帧循环，更新容器位置
-			Laya.timer.frameLoop(10, this, loopfunc)
+			Laya.timer.frameLoop(10, this, loopfunc[index])
 		}
 
 		function switchToBegin(flashwords, lastPinyin)
@@ -283,6 +283,8 @@
 				if(countdownleft == 0)
 				{
 					panelFailed.visible = true;
+					panelFailed.alpha = 0;
+					Tween.to(panelFailed,{alpha:1},1000,Laya.Ease.cubicOut,Handler.null);
 					Laya.timer.clear(this, countloopfunc)
 				}
 			}
@@ -420,9 +422,21 @@
 						}
 						else
 						{
-							Laya.timer.clear(this, countloopfunc);
-							panelSuccess.visible = true;
+							Laya.timer.clear(this, countloopfunc);							
 							shareUrl_dialog.visible = false;
+
+							//设定
+							for(var i=0; i<4; i++){
+								unflashTheWord[i];
+								wordsArray[i].text = checkResult[i];
+							}
+							//弹框
+							function onDealyTween(){									
+								panelSuccess.visible = true;
+								panelSuccess.alpha = 0;								
+								Tween.to(panelSuccess,{alpha:1},1000,Laya.Ease.cubicOut,null);
+							}
+							Laya.timer.once(1000, this, onDealyTween)							
 							return true;	
 						}						
 					}
@@ -555,7 +569,7 @@
 				mytopicplayerinfopanel.player_name.text = userinfo.UserName();
 				mytopicplayerinfopanel.player_no.text = index + "楼："; 
 				mytopicplayerinfopanel.player_no.visible = true;
-				mytopicplayerinfopanel.player_ico.skin = "pic/avatar/" + icoindex + ".jpg";		
+				mytopicplayerinfopanel.player_ico.skin = "pic/avatar/" + (icoindex - 1) + ".jpg";		
 			}
 			initTheLastMan();
 		}
