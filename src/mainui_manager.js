@@ -348,7 +348,7 @@
 		{			
 			shareUrl_dialog.visible = true;			
 			var pinyinwords = wordspanel.pinyin1.text.trim() + "," + wordspanel.pinyin2.text.trim() + "," +wordspanel.pinyin3.text.trim() + "," +wordspanel.pinyin4.text.trim();
-            _gamelogic.getUserList().insert("这是一个成功者", new player("这是一个成功者", pinyinwords.toLowerCase(), 30 - countdownleft));
+            _gamelogic.getUserList().insert("软白嬾小组演示", new player("软白嬾小组演示", pinyinwords.toLowerCase(), 30 - countdownleft));
 			btnshareUrl.text = window.location + "?id=" + _gamelogic.genJsonStr();
 		}
 

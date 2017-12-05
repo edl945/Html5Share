@@ -1,8 +1,8 @@
 {
     "x":0,
     "type":"View",
-    "selectedBox":13,
-    "selecteID":208,
+    "selectedBox":239,
+    "selecteID":226,
     "props":{"width":750,"sceneColor":"#000000","height":1334},
     "nodeParent":-1,
     "label":"View",
@@ -102,13 +102,14 @@
                     "props":{"y":430,"x":-4,"width":750,"height":123},
                     "nodeParent":13,
                     "label":"View",
-                    "isOpen":false,
+                    "isOpen":true,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
                     "compId":28,
                     "child":[
                         {
+                            "x":45,
                             "type":"UIView",
                             "source":"words.ui",
                             "props":{"y":204,"x":115,"var":"topicpanel"},
@@ -122,6 +123,7 @@
                                 ]
                         },
                         {
+                            "x":45,
                             "type":"Label",
                             "props":{"y":96,"x":57,"var":"your_answer","text":"你的答案：","fontSize":27,"font":"SimSun","color":"#a7433e","bold":true},
                             "nodeParent":28,
@@ -134,29 +136,30 @@
                                 ]
                         },
                         {
-                            "type":"Label",
-                            "props":{"y":-37,"x":289,"width":108,"var":"countdown","valign":"middle","text":"倒计时：","height":62,"fontSize":30,"color":"#a7433e","bold":true,"align":"center"},
-                            "nodeParent":28,
-                            "label":"Label(countdown)",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":201,
-                            "child":[
-                                ]
-                        },
-                        {
+                            "x":45,
                             "type":"Label",
                             "props":{"y":-44,"x":399,"width":83,"var":"countDownNumber","valign":"middle","text":"30","height":75,"fontSize":80,"font":"SimSun","color":"#a7433e","bold":true,"align":"center"},
                             "nodeParent":28,
                             "label":"Label(countDownNumber)",
                             "isOpen":true,
-                            "isDirectory":false,
+                            "isDirectory":true,
                             "isAniNode":true,
-                            "hasChild":false,
+                            "hasChild":true,
                             "compId":200,
                             "child":[
-                                ]
+                                {
+                                    "x":60,
+                                    "type":"Label",
+                                    "props":{"y":7,"x":-110,"width":108,"var":"countdown","valign":"middle","text":"倒计时：","height":62,"fontSize":30,"color":"#a7433e","bold":true,"align":"center"},
+                                    "nodeParent":200,
+                                    "label":"Label(countdown)",
+                                    "isDirectory":false,
+                                    "isAniNode":true,
+                                    "hasChild":false,
+                                    "compId":201,
+                                    "child":[
+                                        ]
+                                }]
                         }],
                     "$HIDDEN":false
                 },
@@ -207,6 +210,19 @@
                 {
                     "x":30,
                     "type":"Image",
+                    "props":{"y":0,"x":0,"width":750,"skin":"pic/blackmask.png","height":1334,"alpha":0.8},
+                    "nodeParent":173,
+                    "label":"Image",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":240,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"Image",
                     "props":{"y":58,"x":53,"skin":"pic/popup_success.png"},
                     "nodeParent":173,
                     "label":"Image",
@@ -233,7 +249,7 @@
                         {
                             "x":45,
                             "type":"TextInput",
-                            "props":{"y":152,"x":79,"wordWrap":true,"width":476,"var":"shareUrl","multiline":true,"height":214,"fontSize":20,"editable":false},
+                            "props":{"y":152,"x":79,"wordWrap":true,"width":476,"var":"shareUrl","multiline":true,"height":214,"fontSize":20,"editable":true},
                             "nodeParent":239,
                             "label":"TextInput(shareUrl)",
                             "isOpen":true,
@@ -339,6 +355,19 @@
             "hasChild":true,
             "compId":176,
             "child":[
+                {
+                    "x":30,
+                    "type":"Image",
+                    "props":{"y":10,"x":10,"width":750,"skin":"pic/blackmask.png","height":1334,"alpha":0.8},
+                    "nodeParent":176,
+                    "label":"Image",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":241,
+                    "child":[
+                        ]
+                },
                 {
                     "x":30,
                     "type":"Image",
@@ -820,7 +849,7 @@
                     "child":[
                         ]
                 }],
-            "$HIDDEN":false
+            "$HIDDEN":true
         },
         {
             "x":15,
