@@ -187,8 +187,9 @@
 		var loopfunc = [null,null,null,null];
 		function unflashTheWord(index)
 		{
-			wordspanel.flashnodearr[index].removeChildren();
-			Laya.timer.clear(this, loopfunc[index])
+			flashnodearr[index].removeChildren();
+			if(loopfunc[index] != null)
+				Laya.timer.clear(this, loopfunc[index])
 		}
 		function flashTheWord(flashwords, index)
 		{
@@ -284,7 +285,7 @@
 				{
 					panelFailed.visible = true;
 					panelFailed.alpha = 0;
-					Tween.to(panelFailed,{alpha:1},1000,Laya.Ease.cubicOut,Handler.null);
+					Tween.to(panelFailed,{alpha:1},500,Laya.Ease.cubicOut,Handler.null);
 					Laya.timer.clear(this, countloopfunc)
 				}
 			}
@@ -350,7 +351,7 @@
 		{			
 			shareUrl_dialog.visible = true;			
 			var pinyinwords = wordspanel.pinyin1.text.trim() + "," + wordspanel.pinyin2.text.trim() + "," +wordspanel.pinyin3.text.trim() + "," +wordspanel.pinyin4.text.trim();
-            _gamelogic.getUserList().insert("软白嬾小组演示", new player("软白嬾小组演示", pinyinwords.toLowerCase(), 30 - countdownleft));
+            _gamelogic.getUserList().insert("软白嫩小组演示", new player("软白嫩小组演示", pinyinwords.toLowerCase(), 30 - countdownleft));
 			btnshareUrl.text = window.location + "?id=" + _gamelogic.genJsonStr();
 		}
 
@@ -427,16 +428,16 @@
 
 							//设定
 							for(var i=0; i<4; i++){
-								unflashTheWord[i];
+								unflashTheWord(i);
 								wordsArray[i].text = checkResult[i];
 							}
 							//弹框
 							function onDealyTween(){									
 								panelSuccess.visible = true;
 								panelSuccess.alpha = 0;								
-								Tween.to(panelSuccess,{alpha:1},1000,Laya.Ease.cubicOut,null);
+								Tween.to(panelSuccess,{alpha:1},500,Laya.Ease.cubicOut,null);
 							}
-							Laya.timer.once(1000, this, onDealyTween)							
+							Laya.timer.once(1500, this, onDealyTween)							
 							return true;	
 						}						
 					}
